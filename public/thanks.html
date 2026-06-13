@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You - MILO</title>
+  <meta name="robots" content="noindex, nofollow">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16">
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Space Grotesk', 'Inter', 'sans-serif'],
+          },
+          colors: {
+            milo: {
+              purple: "#6B5BFF",
+              indigo: "#5C4BFF",
+              pink: "#F093FB",
+              blue: "#4FACFE",
+              slate: "#0F172A",
+            },
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      background-color: #030712;
+      color: #f8fafc;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-slate-950 text-slate-100 flex items-center justify-center">
+  <div class="max-w-2xl mx-auto px-6 py-16 text-center">
+    <!-- Success Icon -->
+    <div class="mb-8 inline-flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-green-400 to-green-600 text-white shadow-lg">
+      <i class="fa-solid fa-check text-3xl"></i>
+    </div>
+    
+    <!-- Heading -->
+    <h1 class="font-display text-4xl font-bold text-white mb-4">
+      You're on the list!
+    </h1>
+    
+    <!-- Message -->
+    <p class="text-lg text-slate-300 mb-3">
+      Thank you for joining the MILO TestFlight waitlist. We'll notify you as soon as spots are available.
+    </p>
+    
+    <p class="text-slate-400 mb-8">
+      In the meantime, follow us on social media to stay updated on development progress and be the first to hear about new features.
+    </p>
+    
+    <!-- Social Share Buttons -->
+    <div class="flex flex-wrap items-center justify-center gap-4 mb-10">
+      <a 
+        href="https://twitter.com/intent/tweet?text=I%20just%20joined%20the%20waitlist%20for%20MILO%2C%20a%20hands-free%20AI%20assistant%20for%20iOS!%20%F0%9F%8E%99%EF%B8%8F%20%F0%9F%9A%97&url=https://luongnv89.github.io/milo-website&via=luongnv89" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-blue-500 hover:bg-blue-600 text-white font-medium transition"
+      >
+        <i class="fa-brands fa-twitter"></i>
+        Share on Twitter
+      </a>
+      
+      <a 
+        href="https://www.linkedin.com/sharing/share-offsite/?url=https://luongnv89.github.io/milo-website"
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-blue-700 hover:bg-blue-800 text-white font-medium transition"
+      >
+        <i class="fa-brands fa-linkedin"></i>
+        Share on LinkedIn
+      </a>
+    </div>
+    
+    <!-- CTA -->
+    <a 
+      href="./" 
+      class="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-milo-blue to-milo-pink px-8 py-4 text-lg font-semibold text-white shadow-lg hover:shadow-milo-blue/50 transition-all hover:scale-105"
+    >
+      <i class="fa-solid fa-arrow-left"></i>
+      Back to Home
+    </a>
+    
+    <!-- Footer Info -->
+    <div class="mt-12 pt-8 border-t border-white/10">
+      <p class="text-sm text-slate-400">
+        Questions? Reach out at <a href="mailto:luongnv89@gmail.com" class="text-milo-blue hover:underline">luongnv89@gmail.com</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

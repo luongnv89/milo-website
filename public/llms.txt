@@ -1,0 +1,44 @@
+# MILO
+
+> MILO is an iOS app that gives Siri the brains of frontier AI. On iOS, only
+> Siri can be triggered hands-free and system-wide — but Siri itself is limited.
+> MILO routes your spoken request to the AI model you choose (GPT, Claude,
+> Gemini, and more), so you can ask brilliant models anything hands-free —
+> while driving, walking, or with your hands full. Works on iPhone and CarPlay,
+> iOS 17.6+. Currently in TestFlight beta; App Store release coming soon.
+
+## How it works
+
+- Say "Hey Siri, ask MILO…" from the lock screen, headphones, or CarPlay.
+- Siri hands the request off to the AI provider and model you picked.
+- The answer is spoken back, hands-free.
+
+## Providers (8)
+
+You bring your own API keys (cloud providers) and switch by voice:
+
+- OpenAI — GPT-5.5, GPT-5.4 and mini.
+- Anthropic Claude — Claude Opus 4.8, Sonnet 4.6, Haiku.
+- Google Gemini — Gemini 3.5 Flash and 3.1 Pro; generous free tier.
+- Mistral AI — Large, Medium, Small; European, cost-tiered.
+- Groq — Llama, GPT-OSS, Qwen, Kimi; extremely fast inference.
+- OpenRouter — 200+ models behind one key; many free.
+- Apple Intelligence — on-device foundation model; no key, nothing leaves the phone.
+- Ollama (Local) — run Llama, Mistral and more fully offline.
+
+## Privacy
+
+- API keys are stored in the iOS Keychain.
+- Conversation history stays on-device via SwiftData.
+- No accounts; no analytics on your prompts. Only the provider you enable sees them.
+- Apple Intelligence and Ollama never leave the phone.
+
+## Pages
+
+- [Home](https://luongnv89.github.io/milo-website/): Product overview, providers, founder story, FAQ.
+- [Privacy Policy](https://luongnv89.github.io/milo-website/privacy-policy.html): How MILO handles data.
+- [Terms](https://luongnv89.github.io/milo-website/terms.html): Terms of use.
+
+## Optional
+
+- [Founder](https://github.com/luongnv89): MILO is built by Luong (@luongnv89).
