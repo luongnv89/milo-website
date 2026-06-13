@@ -1,12 +1,15 @@
 import {
   Brain,
+  Bug,
   Car,
   CheckCircle2,
   Cpu,
   Github,
   Layers3,
+  Lightbulb,
   Linkedin,
   Mail,
+  MessageSquare,
   Mic,
   PenSquare,
   ShieldCheck,
@@ -28,6 +31,47 @@ export const navLinks = [
   { label: 'Story', href: '#story' },
   { label: 'Help', href: '#help' },
   { label: 'FAQ', href: '#faq' },
+  { label: 'Feedback', href: '#feedback' },
+];
+
+// Bugs and feature requests are filed as issues on the public GitHub repo
+// that also hosts this site. Each card below deep-links to a guided issue
+// form defined in .github/ISSUE_TEMPLATE/.
+export const FEEDBACK_REPO = 'luongnv89/milo-website';
+const FEEDBACK_ISSUE_URL = `https://github.com/${FEEDBACK_REPO}/issues/new`;
+
+export const feedbackIntro = {
+  title: 'Help shape MILO',
+  description:
+    'MILO is built and used daily by one person. Bugs, ideas, and questions go to a public GitHub issue tracker — pick a card and the form is pre-filled for you. A free GitHub account is all you need.',
+  repoUrl: `https://github.com/${FEEDBACK_REPO}`,
+};
+
+export const feedbackOptions = [
+  {
+    id: 'bug',
+    icon: Bug,
+    label: 'Report a bug',
+    description: 'Something broken or behaving oddly? Tell me what happened.',
+    href: `${FEEDBACK_ISSUE_URL}?template=bug_report.yml&labels=bug`,
+    gradient: 'from-rose-500 to-orange-500',
+  },
+  {
+    id: 'feature',
+    icon: Lightbulb,
+    label: 'Request a feature',
+    description: 'Have an idea for a model, shortcut, or workflow? Pitch it.',
+    href: `${FEEDBACK_ISSUE_URL}?template=feature_request.yml&labels=enhancement`,
+    gradient: 'from-milo-blue to-cyan-400',
+  },
+  {
+    id: 'general',
+    icon: MessageSquare,
+    label: 'General feedback',
+    description: 'Questions, praise, or anything that doesn’t fit the others.',
+    href: `${FEEDBACK_ISSUE_URL}?template=feedback.yml`,
+    gradient: 'from-violet-500 to-fuchsia-500',
+  },
 ];
 
 export const heroChecklist = [

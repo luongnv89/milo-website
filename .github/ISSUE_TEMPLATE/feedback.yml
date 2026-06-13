@@ -1,0 +1,23 @@
+name: 💬 General feedback
+description: Questions, praise, or anything that isn't a bug or feature request.
+title: "[Feedback]: "
+labels: ["feedback"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for sharing your thoughts on MILO!
+  - type: textarea
+    id: message
+    attributes:
+      label: Your feedback
+      description: What's on your mind?
+    validations:
+      required: true
+  - type: input
+    id: contact
+    attributes:
+      label: Contact (optional)
+      description: Leave an email or handle if you'd like a reply outside GitHub.
+    validations:
+      required: false

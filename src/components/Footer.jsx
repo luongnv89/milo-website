@@ -6,6 +6,7 @@ const productLinks = [
   { label: 'Providers', href: '#providers' },
   { label: 'Help', href: '#help' },
   { label: 'FAQ', href: '#faq' },
+  { label: 'Feedback', href: '#feedback' },
 ];
 
 export function Footer() {

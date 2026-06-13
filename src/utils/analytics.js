@@ -43,4 +43,7 @@ export const EVENTS = {
 
   // Social
   SOCIAL_LINK_CLICKED: 'Social Link Clicked',
+
+  // Feedback
+  FEEDBACK_LINK_CLICKED: 'Feedback Link Clicked',
 };

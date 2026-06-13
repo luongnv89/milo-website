@@ -5,6 +5,7 @@ import { FounderStory } from './components/FounderStory.jsx';
 import { CompareSection } from './components/CompareSection.jsx';
 import { HelpSection } from './components/HelpSection.jsx';
 import { FAQSection } from './components/FAQSection.jsx';
+import { FeedbackSection } from './components/FeedbackSection.jsx';
 import { Footer } from './components/Footer.jsx';
 import { FloatingCTA } from './components/FloatingCTA.jsx';
 
@@ -26,6 +27,7 @@ function App() {
         <CompareSection />
         <HelpSection />
         <FAQSection />
+        <FeedbackSection />
       </main>
       <Footer />
 

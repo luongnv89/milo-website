@@ -1,0 +1,72 @@
+name: 🐞 Bug report
+description: Report something in MILO that is broken or behaving incorrectly.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! The more detail you give, the faster it can be fixed.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the bug — what you did and what went wrong.
+      placeholder: When I ask Siri to "ask MILO…", it…
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+      description: What should have happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: How can this be reproduced?
+      placeholder: |
+        1. Open MILO
+        2. Say "Hey Siri, ask MILO…"
+        3. …
+    validations:
+      required: false
+  - type: dropdown
+    id: provider
+    attributes:
+      label: Which AI provider were you using?
+      options:
+        - "Not sure / not relevant"
+        - OpenAI (GPT)
+        - Anthropic (Claude)
+        - Google (Gemini)
+        - Mistral
+        - Groq
+        - OpenRouter
+        - Apple Intelligence (on-device)
+        - Ollama (local)
+    validations:
+      required: false
+  - type: input
+    id: ios-version
+    attributes:
+      label: iOS version & device
+      placeholder: "e.g. iPhone 15 Pro, iOS 17.6"
+    validations:
+      required: false
+  - type: input
+    id: milo-version
+    attributes:
+      label: MILO version
+      placeholder: "e.g. 1.0.0 (TestFlight build 42)"
+    validations:
+      required: false
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?
+      description: Screenshots, screen recordings, or logs are welcome.
+    validations:
+      required: false
