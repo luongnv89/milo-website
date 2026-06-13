@@ -3,7 +3,7 @@
 The marketing website for **MILO**, an iOS app that gives Siri the brains of
 GPT, Claude, Gemini, and 200+ AI models — hands-free, even in CarPlay.
 
-🔗 **Live:** https://luongnv89.github.io/milo-website/
+🔗 **Live:** https://luongnv.com/milo-website/
 
 ## Tech stack
 

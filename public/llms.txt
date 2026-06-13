@@ -35,9 +35,9 @@ You bring your own API keys (cloud providers) and switch by voice:
 
 ## Pages
 
-- [Home](https://luongnv89.github.io/milo-website/): Product overview, providers, founder story, FAQ.
-- [Privacy Policy](https://luongnv89.github.io/milo-website/privacy-policy.html): How MILO handles data.
-- [Terms](https://luongnv89.github.io/milo-website/terms.html): Terms of use.
+- [Home](https://luongnv.com/milo-website/): Product overview, providers, founder story, FAQ.
+- [Privacy Policy](https://luongnv.com/milo-website/privacy-policy.html): How MILO handles data.
+- [Terms](https://luongnv.com/milo-website/terms.html): Terms of use.
 
 ## Optional
 
