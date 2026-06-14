@@ -1,5 +1,6 @@
 import { Navbar } from './components/Navbar.jsx';
 import { HeroSection } from './components/HeroSection.jsx';
+import { ProblemSection } from './components/ProblemSection.jsx';
 import { FeaturesSection } from './components/FeaturesSection.jsx';
 import { ScreenshotsSection } from './components/ScreenshotsSection.jsx';
 import { FounderStory } from './components/FounderStory.jsx';
@@ -23,6 +24,7 @@ function App() {
       <Navbar />
       <HeroSection />
       <main id="main-content" className="relative z-10">
+        <ProblemSection />
         <FeaturesSection />
         <ScreenshotsSection />
         <FounderStory />

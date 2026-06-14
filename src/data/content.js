@@ -103,7 +103,7 @@ export const featureCards = [
   {
     title: '8 providers, your keys',
     description:
-      'OpenAI, Claude, Gemini, Mistral, Groq, OpenRouter (200+ models), Apple Intelligence on-device, and local Ollama. You bring your own keys and switch by voice.',
+      'Use the model that’s best for the question — and switch by voice mid-conversation. Eight providers, 200+ models, plus on-device Apple Intelligence and local Ollama. Bring your own keys.',
     icon: Layers3,
   },
   {
@@ -137,6 +137,17 @@ export const comparisonRows = [
     others: 'Subscription only',
   },
 ];
+
+// PAS "agitate" beat — sits between the hero and the feature list so the
+// features land as relief, not just a spec sheet.
+export const problemSection = {
+  eyebrow: 'The problem',
+  title: 'You already talk to your phone. It just talks back badly.',
+  paragraphs: [
+    'Ask Siri something real and you get “here’s what I found on the web.” So you glance down, tap, and read — exactly what you couldn’t do with your hands on the wheel.',
+    'The smart models that could actually answer are locked behind taps you can’t make while driving, walking, or carrying groceries. The one assistant you can trigger by voice is the one that gives up first.',
+  ],
+};
 
 export const founderStory = {
   eyebrow: 'Why I built MILO',
@@ -362,6 +373,16 @@ export const faqItems = [
     question: 'Do I need my own API keys?',
     answer:
       'For the cloud providers, yes — that keeps costs transparent and under your control, and many offer generous free tiers. Apple Intelligence (on-device) and Ollama (local) need no key.',
+  },
+  {
+    question: 'Is it free?',
+    answer:
+      'MILO itself is free. You bring your own API keys, so you pay the providers directly — many have free tiers, and Apple Intelligence (on-device) and Ollama (local) cost nothing at all.',
+  },
+  {
+    question: 'How do I install the beta?',
+    answer:
+      'MILO is in TestFlight, Apple’s free beta program. Install Apple’s TestFlight app, open the MILO invite link, and tap Install — it works just like a normal app. The public App Store release is coming soon.',
   },
   {
     question: 'Where does it run?',

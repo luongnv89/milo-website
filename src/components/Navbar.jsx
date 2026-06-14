@@ -31,11 +31,11 @@ export function Navbar() {
           ))}
           <a
             href={APP_STORE_URL}
-            onClick={() => trackEvent(EVENTS.NAVBAR_CTA_CLICKED, { location: 'navbar_desktop', text: 'Get the App' })}
+            onClick={() => trackEvent(EVENTS.NAVBAR_CTA_CLICKED, { location: 'navbar_desktop', text: 'Join the beta' })}
             className="inline-flex items-center gap-2 rounded-full bg-milo-blue px-5 py-2.5 font-semibold text-white shadow-lg transition hover:scale-105"
           >
             <Apple className="h-4 w-4" />
-            Get the App
+            Join the beta
           </a>
         </div>
       </div>
@@ -57,11 +57,11 @@ export function Navbar() {
               className="inline-flex items-center justify-center gap-2 rounded-full bg-milo-blue px-6 py-3 font-semibold text-white shadow-lg"
               onClick={() => {
                 setIsOpen(false);
-                trackEvent(EVENTS.NAVBAR_CTA_CLICKED, { location: 'navbar_mobile', text: 'Get the App' });
+                trackEvent(EVENTS.NAVBAR_CTA_CLICKED, { location: 'navbar_mobile', text: 'Join the beta' });
               }}
             >
               <Apple className="h-4 w-4" />
-              Get the App
+              Join the beta
             </a>
           </div>
         </div>

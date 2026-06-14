@@ -5,9 +5,11 @@ import { trackEvent, EVENTS } from '../utils/analytics.js';
 
 /**
  * Single source of truth for the primary download CTA.
- * Links to APP_STORE_URL (placeholder '#' until the App Store listing is live).
+ * Links to APP_STORE_URL (placeholder '#' until the TestFlight / App Store
+ * listing is live). MILO is in TestFlight beta, so the default label invites
+ * a beta join rather than promising an App Store download that doesn't exist.
  */
-export function AppStoreButton({ location = 'unknown', label = 'Get MILO on the App Store', variant = 'primary' }) {
+export function AppStoreButton({ location = 'unknown', label = 'Join the TestFlight beta', variant = 'primary' }) {
   return (
     <a
       href={APP_STORE_URL}
