@@ -26,20 +26,6 @@ MILO is built and used daily by one person. Every issue is read.
 
 ## What MILO does
 
-```mermaid
-graph LR
-    A["Hey Siri, ask MILO…"] --> B[Siri captures voice]
-    B --> C[MILO]
-    C --> D{Pick model by voice}
-    D --> E[GPT / Claude / Gemini]
-    D --> F[Apple Intelligence on-device]
-    D --> G[Local Ollama]
-    E --> H[Spoken answer]
-    F --> H
-    G --> H
-    H --> I[CarPlay keeps it short and safe]
-```
-
 On iOS, only Siri can be triggered hands-free system-wide. MILO hands that voice
 off to the model you choose — so you get a real AI answer while driving, walking,
 or multitasking.
