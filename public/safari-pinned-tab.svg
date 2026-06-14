@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="256" height="256" rx="64" fill="#4FACFE"/>
-  <path d="M128 80L160 128L128 176H96L64 128L96 80H128Z" fill="white"/>
-  <path d="M160 96L192 128L160 160H128L160 96Z" fill="white" fill-opacity="0.8"/>
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- single-color mask for Safari pinned tab — all #000, no opacity -->
+  <g transform="translate(32,32)" fill="#000000">
+    <circle cx="0" cy="0" r="6"/>
+    <path d="M 9.75 -6.75 A 12 12 0 0 1 9.75 6.75" stroke="#000000" stroke-width="3.2" stroke-linecap="round" fill="none"/>
+    <path d="M -9.75 -6.75 A 12 12 0 0 0 -9.75 6.75" stroke="#000000" stroke-width="3.2" stroke-linecap="round" fill="none"/>
+    <path d="M 15.75 -11.5 A 19.5 19.5 0 0 1 15.75 11.5" stroke="#000000" stroke-width="3.2" stroke-linecap="round" fill="none"/>
+    <path d="M -15.75 -11.5 A 19.5 19.5 0 0 0 -15.75 11.5" stroke="#000000" stroke-width="3.2" stroke-linecap="round" fill="none"/>
+  </g>
 </svg>
