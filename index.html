@@ -42,11 +42,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://plausible.io" />
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
 
     <!-- DNS prefetch for third-party domains -->
     <link rel="dns-prefetch" href="https://plausible.io" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 
     <script defer data-domain="askmilo.pro" src="https://plausible.io/js/script.js"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9777JT54WG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-9777JT54WG');
+    </script>
 
     <!--
       Structured data (JSON-LD). MILO's landing page is a client-rendered SPA,
