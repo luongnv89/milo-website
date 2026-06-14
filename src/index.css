@@ -54,6 +54,22 @@ body {
   box-shadow: var(--shadow-glow);
 }
 
+/* Slide entrance for the screenshots carousel.
+   Honors prefers-reduced-motion via the global rule at the bottom of this file. */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in {
+  animation: fade-in 0.35s ease-out;
+}
+
 /* Soft accent glow used once behind the hero */
 .hero-glow::before {
   content: '';
