@@ -19,12 +19,16 @@ function buildSlides(groups) {
 
 function PhoneShot({ shot }) {
   return (
-    <div className="w-56">
-      {/* iPhone frame — same mockup as the hero, fixed width so every shot matches */}
-      <div className="w-full rounded-[2.25rem] bg-slate-900 p-[6px] shadow-2xl ring-1 ring-white/10">
-        <div className="relative overflow-hidden rounded-[1.9rem] bg-black">
-          {/* Dynamic Island */}
-          <div className="absolute left-1/2 top-2.5 z-20 h-[22px] w-[72px] -translate-x-1/2 rounded-full bg-black" />
+    // Scale the mockup up with the viewport so the in-app content stays legible.
+    // This is the reading-focused carousel, so it runs a touch larger than the
+    // hero mockup (w-64 sm:w-72). The 9:19.5 ratio is very tall, so we cap the
+    // growth at lg to avoid the phone dominating the card vertically.
+    <div className="w-64 sm:w-72 lg:w-80">
+      {/* iPhone frame — same mockup as the hero, scales so every shot matches */}
+      <div className="w-full rounded-[2.5rem] bg-slate-900 p-[6px] shadow-2xl ring-1 ring-white/10">
+        <div className="relative overflow-hidden rounded-[2.2rem] bg-black">
+          {/* Dynamic Island — sized to match the hero mockup at this width */}
+          <div className="absolute left-1/2 top-3 z-20 h-[28px] w-[90px] -translate-x-1/2 rounded-full bg-black" />
           <div className="relative aspect-[9/19.5]">
             <img
               src={`${import.meta.env.BASE_URL}${shot.src}`}
