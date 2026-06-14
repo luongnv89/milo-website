@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 import { screenshotGroups } from '../data/content.js';
@@ -11,7 +11,6 @@ function buildSlides(groups) {
   return groups.flatMap((group) =>
     group.shots.map((shot) => ({
       ...shot,
-      groupId: group.id,
       groupTitle: group.title,
       groupDescription: group.description,
     }))
@@ -98,8 +97,9 @@ export function ScreenshotsSection() {
             <p className="mt-3 text-sm leading-relaxed text-white/70">{current.groupDescription}</p>
           </div>
 
-          {/* Slides — only the active one is shown; the rest stay mounted but hidden
-              so lazy-loaded images can warm up and assistive tech can count them. */}
+          {/* Slides — only the active one is shown (the rest are display:none, so
+              they're out of the a11y tree and not focusable). Keeping every slide
+              mounted keeps the markup simple and the keys stable across navigation. */}
           <div className="mt-10 flex items-start justify-center">
             {slides.map((shot, index) => {
               const isActive = index === active;
@@ -134,15 +134,14 @@ export function ScreenshotsSection() {
               <ChevronLeft className="h-5 w-5" />
             </button>
 
-            <div className="flex items-center gap-2" role="tablist" aria-label="Choose screenshot">
+            <div className="flex items-center gap-2">
               {slides.map((shot, index) => {
                 const isActive = index === active;
                 return (
                   <button
                     key={shot.src}
                     type="button"
-                    role="tab"
-                    aria-selected={isActive}
+                    aria-current={isActive ? 'true' : undefined}
                     aria-label={`Go to screenshot ${index + 1}: ${shot.caption}`}
                     onClick={() => goTo(index)}
                     className={`h-2.5 rounded-full transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-milo-blue ${
