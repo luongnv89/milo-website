@@ -15,8 +15,8 @@ export function HeroSection() {
           </div>
 
           <h1 className="font-display text-hero font-bold text-white">
-            Give Siri the brains of{' '}
-            <span className="text-milo-sky">GPT, Claude &amp; Gemini</span>.
+            Siri can hear you.{' '}
+            <span className="text-milo-sky">Now it can actually answer.</span>
           </h1>
 
           <p className="mt-6 max-w-md text-lg text-slate-100/80 sm:text-xl lg:mx-0 mx-auto">
