@@ -15,12 +15,13 @@ export function HeroSection() {
           </div>
 
           <h1 className="font-display text-hero font-bold text-white">
-            Siri can hear you.{' '}
-            <span className="text-milo-sky">Now it can actually answer.</span>
+            <span className="text-milo-sky">Hands-free AI</span> on iOS — just ask Siri, even while
+            driving.
           </h1>
 
           <p className="mt-6 max-w-md text-lg text-slate-100/80 sm:text-xl lg:mx-0 mx-auto">
-            Hands-free AI on iOS — just ask Siri, even while driving.
+            Say “Hey Siri, ask MILO” and get a real spoken answer — driving, walking, or hands full. No
+            app to open, no typing.
           </p>
 
           <div className="mt-9 flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start">
