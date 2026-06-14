@@ -13,6 +13,8 @@ export function AppStoreButton({ location = 'unknown', label = 'Join the TestFli
   return (
     <a
       href={APP_STORE_URL}
+      target="_blank"
+      rel="noopener noreferrer"
       onClick={() => trackEvent(EVENTS.CTA_CLICKED, { location, text: label })}
       className={variant === 'ghost' ? 'btn-ghost' : 'btn-primary'}
     >

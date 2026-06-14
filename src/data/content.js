@@ -19,9 +19,9 @@ import {
   Zap,
 } from 'lucide-react';
 
-// Primary download destination.
-// TODO: replace '#' with the real App Store / TestFlight URL at launch.
-export const APP_STORE_URL = '#';
+// Primary download destination — the public TestFlight beta.
+// Swap this for the App Store listing URL at full launch.
+export const APP_STORE_URL = 'https://testflight.apple.com/join/rea1m7wb';
 
 // When MILO was first built and used daily by its maker.
 export const MONTHS_IN_USE = 8;

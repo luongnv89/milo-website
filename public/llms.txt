@@ -36,6 +36,7 @@ You bring your own API keys (cloud providers) and switch by voice:
 ## Pages
 
 - [Home](https://luongnv.com/milo-website/): Product overview, providers, founder story, FAQ.
+- [Join the TestFlight beta](https://testflight.apple.com/join/rea1m7wb): Install MILO via Apple's free TestFlight beta.
 - [Privacy Policy](https://luongnv.com/milo-website/privacy-policy.html): How MILO handles data.
 - [Terms](https://luongnv.com/milo-website/terms.html): Terms of use.
 
