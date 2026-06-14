@@ -28,6 +28,7 @@ export const MONTHS_IN_USE = 8;
 
 export const navLinks = [
   { label: 'Features', href: '#features' },
+  { label: 'Screens', href: '#screens' },
   { label: 'Story', href: '#story' },
   { label: 'Help', href: '#help' },
   { label: 'FAQ', href: '#faq' },
@@ -195,6 +196,89 @@ export const siriExamples = [
       { prompt: 'Ask MILO → Summarize the news', helper: 'Brief, spoken answers' },
       { prompt: 'Ask MILO → What’s the traffic like?', helper: 'Eyes on the road' },
       { prompt: 'Ask MILO → Find nearby gas stations', helper: 'Location-based help' },
+    ],
+  },
+];
+
+// In-app screenshots, grouped by theme. File names map exactly (case included)
+// to the PNGs in public/1.0.0/ — GitHub Pages serves from a case-sensitive
+// filesystem, so the `.PNG` extension must match byte-for-byte.
+export const screenshotGroups = [
+  {
+    id: 'chat',
+    title: 'Talk to any model, hands-free',
+    description:
+      'Ask by voice through Siri, switch models mid-conversation, and get short spoken answers tuned for the car.',
+    shots: [
+      {
+        src: '1.0.0/car-play-mode.PNG',
+        alt: 'MILO in CarPlay mode showing a hands-free chat answered by Gemini',
+        caption: 'CarPlay mode — brief, spoken answers',
+      },
+      {
+        src: '1.0.0/model-selection.PNG',
+        alt: 'MILO model picker letting you choose between Google Gemini, Mistral AI, and OpenRouter models',
+        caption: 'Switch models on the fly',
+      },
+    ],
+  },
+  {
+    id: 'history',
+    title: 'Every conversation, kept on device',
+    description:
+      'Browse your full history with token counts, response times, and per-message cost — all stored locally.',
+    shots: [
+      {
+        src: '1.0.0/history.PNG',
+        alt: 'MILO history screen listing past conversations with the model used and response time',
+        caption: 'Searchable conversation history',
+      },
+      {
+        src: '1.0.0/detail-history-conversation.PNG',
+        alt: 'MILO conversation detail showing provider, model, token usage, and estimated cost',
+        caption: 'Per-conversation usage & cost',
+      },
+    ],
+  },
+  {
+    id: 'providers',
+    title: 'Bring your own keys',
+    description:
+      'Configure eight providers, tune temperature and tokens per model, and keep keys encrypted in the iOS Keychain.',
+    shots: [
+      {
+        src: '1.0.0/setting-first.PNG',
+        alt: 'MILO settings showing configured providers like Gemini, Mistral, and OpenRouter marked active',
+        caption: 'Pick a default provider',
+      },
+      {
+        src: '1.0.0/provider-setting-first.PNG',
+        alt: 'MILO per-provider settings with model, temperature, max tokens, and system prompt controls',
+        caption: 'Tune each model',
+      },
+      {
+        src: '1.0.0/api-keys-management.PNG',
+        alt: 'MILO API keys screen explaining keys are stored locally and encrypted in the iOS Keychain',
+        caption: 'Keys stay in the Keychain',
+      },
+    ],
+  },
+  {
+    id: 'guide',
+    title: 'Find your way around',
+    description:
+      'A built-in guide for talking to Siri, plus a sidebar for history, help, and settings.',
+    shots: [
+      {
+        src: '1.0.0/help-guide.PNG',
+        alt: 'MILO Help & Guide screen with example "Hey Siri, ask MILO" prompts',
+        caption: 'Step-by-step Siri guide',
+      },
+      {
+        src: '1.0.0/sidebar-menu.PNG',
+        alt: 'MILO sidebar menu with History, Help & Guide, and Settings entries',
+        caption: 'Sidebar navigation',
+      },
     ],
   },
 ];

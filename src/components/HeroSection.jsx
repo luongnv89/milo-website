@@ -1,6 +1,5 @@
-import { Mic, ShieldCheck, Sparkles } from 'lucide-react';
+import { Mic } from 'lucide-react';
 
-import { heroChecklist, heroBadges } from '../data/content.js';
 import { AppStoreButton } from './AppStoreButton.jsx';
 
 export function HeroSection() {
@@ -20,10 +19,8 @@ export function HeroSection() {
             <span className="text-milo-sky">GPT, Claude &amp; Gemini</span>.
           </h1>
 
-          <p className="mt-6 max-w-xl text-lg text-slate-100/80 sm:text-xl lg:mx-0 mx-auto">
-            iOS only lets Siri listen hands-free, everywhere — but Siri isn’t very smart. MILO bridges
-            that gap, routing your voice to the AI model you choose. Ask while driving, walking, or
-            multitasking. No typing, no app switching.
+          <p className="mt-6 max-w-md text-lg text-slate-100/80 sm:text-xl lg:mx-0 mx-auto">
+            Hands-free AI on iOS — just ask Siri, even while driving.
           </p>
 
           <div className="mt-9 flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start">
@@ -32,59 +29,35 @@ export function HeroSection() {
               Why I built it
             </a>
           </div>
-
-          <div className="mt-8 flex flex-col items-center gap-4 lg:items-start">
-            <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-white/80 lg:justify-start">
-              {heroChecklist.map(({ label, icon: Icon }) => (
-                <span key={label} className="inline-flex items-center gap-2">
-                  <Icon className="h-4 w-4 text-milo-sky" />
-                  {label}
-                </span>
-              ))}
-            </div>
-            <div className="flex flex-wrap justify-center gap-2 text-xs text-white/70 lg:justify-start">
-              {heroBadges.map(({ label }) => (
-                <span
-                  key={label}
-                  className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1"
-                >
-                  <span className="h-1.5 w-1.5 rounded-full bg-milo-sky" />
-                  {label}
-                </span>
-              ))}
-            </div>
-          </div>
         </div>
 
-        <div className="relative mx-auto w-full max-w-md">
-          <div className="glass relative overflow-hidden rounded-3xl p-6 shadow-glow">
-            <div className="relative aspect-[9/17] overflow-hidden rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 shadow-2xl">
-              <img
-                src={`${import.meta.env.BASE_URL}screenshot.png`}
-                alt="MILO iOS app connecting Siri to GPT, Claude, and Gemini for hands-free voice answers"
-                className="absolute inset-0 h-full w-full object-contain"
-                loading="eager"
-                fetchpriority="high"
-                width="390"
-                height="844"
-              />
-            </div>
-            <div className="absolute -bottom-3 -right-3 rounded-xl bg-milo-blue px-4 py-2 shadow-2xl">
-              <p className="text-sm font-bold text-white">200+ AI Models</p>
-            </div>
-          </div>
+        {/* iPhone mockup — ported from the CUStats Go site (custats-info MobileApp) */}
+        <div className="relative flex justify-center">
+          {/* Glow effect */}
+          <div className="absolute inset-0 scale-110 rounded-3xl bg-gradient-to-t from-milo-blue/30 via-milo-blue/10 to-transparent blur-3xl" />
 
-          <div className="mt-6 rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-sm">
-            <p className="text-xs uppercase tracking-widest text-white/60">Powered by your keys</p>
-            <div className="mt-3 space-y-2 text-sm text-white/80">
-              <span className="flex items-start gap-2">
-                <Sparkles className="mt-0.5 h-4 w-4 flex-shrink-0 text-milo-sky" />
-                <span>OpenAI, Claude, Gemini, Mistral, Groq &amp; OpenRouter</span>
-              </span>
-              <span className="flex items-start gap-2">
-                <ShieldCheck className="mt-0.5 h-4 w-4 flex-shrink-0 text-milo-sky" />
-                <span>Plus on-device Apple Intelligence &amp; local Ollama</span>
-              </span>
+          {/* Phone frame */}
+          <div className="relative w-64 sm:w-72">
+            {/* Phone bezel — iPhone style */}
+            <div className="relative rounded-[2.5rem] bg-slate-900 p-[6px] shadow-2xl ring-1 ring-white/10">
+              {/* Screen container */}
+              <div className="relative overflow-hidden rounded-[2.2rem] bg-black">
+                {/* Dynamic Island */}
+                <div className="absolute left-1/2 top-3 z-20 h-[28px] w-[90px] -translate-x-1/2 rounded-full bg-black" />
+
+                {/* Screenshot — fills the entire screen */}
+                <div className="relative aspect-[9/19.5]">
+                  <img
+                    src={`${import.meta.env.BASE_URL}1.0.0/car-play-mode.PNG`}
+                    alt="MILO running in CarPlay mode, answering a hands-free voice question through Siri"
+                    className="h-full w-full object-cover object-top"
+                    loading="eager"
+                    fetchpriority="high"
+                    width="1170"
+                    height="2532"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
