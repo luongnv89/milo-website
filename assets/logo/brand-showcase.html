@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Milo — Brand Identity</title>
+<style>
+  :root{
+    --milo-blue:#3b82f6; --milo-sky:#60a5fa; --milo-indigo:#1d4ed8;
+    --slate:#0f172a; --bg:#030712; --paper:#fafafa;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:#e2e8f0;line-height:1.6}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+  section{padding:72px 0;border-bottom:1px solid rgba(255,255,255,0.06)}
+  h2{font-size:14px;letter-spacing:2px;text-transform:uppercase;color:var(--milo-sky);margin-bottom:28px;font-weight:600}
+  /* hero */
+  .hero{text-align:center;padding:120px 24px 96px;background:radial-gradient(circle at 50% 40%,rgba(59,130,246,0.18),transparent 60%)}
+  .hero img{width:104px;height:104px;margin-bottom:32px}
+  .hero h1{font-size:64px;font-weight:700;letter-spacing:-2px;color:#fff}
+  .hero p{font-size:19px;color:#94a3b8;margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto}
+  /* grid */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px}
+  .card{border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:28px;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:160px;gap:14px}
+  .card.light{background:var(--paper)}
+  .card.dark{background:var(--bg);border-color:rgba(255,255,255,0.14)}
+  .card.blue{background:var(--milo-blue)}
+  .card span{font-size:12px;color:#64748b;letter-spacing:.5px}
+  .card.light span{color:#94a3b8}
+  .card img{max-width:100%;max-height:72px}
+  /* concept */
+  .concept{display:grid;grid-template-columns:160px 1fr;gap:40px;align-items:center}
+  .concept img{width:160px;height:160px}
+  .concept p{color:#94a3b8;font-size:16px}
+  .concept p+p{margin-top:14px}
+  /* palette */
+  .swatches{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:16px}
+  .sw{border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.08)}
+  .sw .chip{height:88px}
+  .sw .meta{padding:12px 14px;background:rgba(255,255,255,0.03)}
+  .sw .name{font-size:13px;color:#e2e8f0;font-weight:600}
+  .sw .hex{font-size:12px;color:#64748b;font-family:ui-monospace,monospace;margin-top:2px}
+  /* type */
+  .type-row{display:flex;align-items:baseline;gap:24px;flex-wrap:wrap;color:#fff}
+  .type-row .t{font-weight:700;letter-spacing:-1px}
+  code{font-family:ui-monospace,monospace;background:rgba(255,255,255,0.06);padding:2px 7px;border-radius:5px;font-size:13px;color:var(--milo-sky)}
+  pre{background:#0b1220;border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:20px;overflow:auto;font-size:13px;color:#cbd5e1}
+  footer{text-align:center;padding:48px;color:#475569;font-size:13px}
+</style>
+</head>
+<body>
+  <div class="hero">
+    <img src="logo-icon.svg" alt="Milo icon">
+    <h1>Milo</h1>
+    <p>The voice-first AI assistant — the brains of GPT, Claude &amp; Gemini, hands-free.</p>
+  </div>
+
+  <div class="wrap">
+    <section>
+      <h2>The Concept</h2>
+      <div class="concept">
+        <img src="logo-mark.svg" alt="Milo mark">
+        <div>
+          <p><strong style="color:#fff">A listening pulse.</strong> A solid core orb sits at the center — Milo, present and ready. Sound waves pulse outward on both sides: the universal signal of a voice assistant actively listening and speaking.</p>
+          <p>The mark is built from one orb and four arcs — calm, friendly, and instantly legible from a 16px favicon up to an app icon. The outer waves fade, suggesting sound radiating into the room: hands-free, even in CarPlay.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Logo Variants</h2>
+      <div class="grid">
+        <div class="card light"><img src="logo-full.svg" alt="Full logo"><span>logo-full</span></div>
+        <div class="card light"><img src="logo-mark.svg" alt="Mark"><span>logo-mark</span></div>
+        <div class="card light"><img src="logo-wordmark.svg" alt="Wordmark"><span>logo-wordmark</span></div>
+        <div class="card blue"><img src="logo-white.svg" alt="White logo"><span style="color:rgba(255,255,255,.7)">logo-white</span></div>
+        <div class="card dark"><img src="logo-white.svg" alt="White on dark"><span>on dark bg</span></div>
+        <div class="card light"><img src="logo-black.svg" alt="Black logo"><span>logo-black</span></div>
+        <div class="card blue"><img src="logo-icon.svg" alt="App icon" style="max-height:96px"><span style="color:rgba(255,255,255,.7)">logo-icon</span></div>
+        <div class="card light"><img src="favicon.svg" alt="Favicon" style="width:48px;height:48px;max-height:48px"><span>favicon (16px)</span></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Color Palette</h2>
+      <div class="swatches">
+        <div class="sw"><div class="chip" style="background:#3b82f6"></div><div class="meta"><div class="name">Milo Blue</div><div class="hex">#3B82F6</div></div></div>
+        <div class="sw"><div class="chip" style="background:#60a5fa"></div><div class="meta"><div class="name">Milo Sky</div><div class="hex">#60A5FA</div></div></div>
+        <div class="sw"><div class="chip" style="background:#1d4ed8"></div><div class="meta"><div class="name">Milo Indigo</div><div class="hex">#1D4ED8</div></div></div>
+        <div class="sw"><div class="chip" style="background:#0f172a"></div><div class="meta"><div class="name">Slate</div><div class="hex">#0F172A</div></div></div>
+        <div class="sw"><div class="chip" style="background:#030712"></div><div class="meta"><div class="name">Base / BG</div><div class="hex">#030712</div></div></div>
+        <div class="sw"><div class="chip" style="background:#fafafa"></div><div class="meta"><div class="name">Paper</div><div class="hex">#FAFAFA</div></div></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Typography</h2>
+      <div class="type-row">
+        <span class="t" style="font-size:48px">Milo</span>
+        <span class="t" style="font-size:32px;color:#94a3b8">Milo</span>
+        <span class="t" style="font-size:20px;color:#64748b">Milo</span>
+      </div>
+      <p style="color:#94a3b8;margin-top:18px">Wordmark set in <strong style="color:#fff">Inter Bold (700)</strong>, letter-spacing −1, title case. Friendly and modern — Milo reads as a companion, not an acronym.</p>
+    </section>
+
+    <section>
+      <h2>Developer Reference</h2>
+      <p style="color:#94a3b8;margin-bottom:18px">Tailwind v4 <code>@theme</code> tokens (already in <code>src/index.css</code>):</p>
+      <pre>@theme {
+  --color-milo-blue:   #3b82f6;
+  --color-milo-sky:    #60a5fa;
+  --color-milo-indigo: #1d4ed8;
+  --color-milo-slate:  #0f172a;
+}</pre>
+    </section>
+  </div>
+
+  <footer>Milo brand identity — generated logo system. © Milo.</footer>
+</body>
+</html>
