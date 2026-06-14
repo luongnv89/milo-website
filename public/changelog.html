@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Changelog - MILO</title>
+  <meta name="description" content="Release notes for MILO — hands-free Siri routing to GPT, Claude, Gemini, and 200+ AI models on iOS and CarPlay.">
+
+  <link rel="canonical" href="https://askmilo.pro/changelog.html" />
+
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16">
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+  <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#3b82f6">
+  <meta name="theme-color" content="#3b82f6">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            milo: {
+              purple: "#6B5BFF",
+              indigo: "#5C4BFF",
+              pink: "#F093FB",
+              blue: "#4FACFE",
+              slate: "#0F172A",
+            },
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    body {
+      background-color: #030712;
+      color: #f8fafc;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-slate-950 text-slate-100">
+  <div class="max-w-3xl mx-auto px-6 py-16">
+    <div class="mb-12">
+      <a href="./" class="inline-flex items-center gap-2 text-milo-blue hover:text-milo-pink transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5" aria-hidden="true">
+          <path d="m15 18-6-6 6-6"/>
+        </svg>
+        Back to Home
+      </a>
+    </div>
+
+    <header class="mb-14">
+      <p class="text-sm font-medium uppercase tracking-wider text-milo-blue mb-2">Release notes</p>
+      <h1 class="text-3xl sm:text-4xl font-bold text-white mb-4">Changelog</h1>
+      <p class="text-slate-400 leading-relaxed">
+        What’s new in MILO for iOS and on <a href="https://askmilo.pro/" class="text-milo-blue hover:text-milo-pink transition-colors">askmilo.pro</a>.
+        MILO is in public TestFlight beta — updates ship as builds are ready.
+      </p>
+    </header>
+
+    <div class="space-y-16">
+      <!-- App -->
+      <article class="relative pl-0 sm:pl-8 sm:border-l sm:border-white/10">
+        <div class="sm:absolute sm:-left-[5px] sm:top-2 h-2.5 w-2.5 rounded-full bg-milo-blue ring-4 ring-slate-950 hidden sm:block" aria-hidden="true"></div>
+
+        <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-2">
+          <h2 class="text-2xl font-semibold text-white">1.0.0</h2>
+          <span class="inline-flex items-center rounded-full bg-milo-blue/15 px-2.5 py-0.5 text-xs font-medium text-milo-blue ring-1 ring-milo-blue/30">TestFlight beta</span>
+        </div>
+        <p class="text-sm text-slate-500 mb-6">June 2026 · iOS 17.6+</p>
+
+        <p class="text-slate-300 mb-6 leading-relaxed">
+          First public beta: hands-free Siri to the model you choose, with CarPlay-friendly answers and on-device history.
+        </p>
+
+        <h3 class="text-sm font-semibold uppercase tracking-wider text-white/50 mb-3">Added</h3>
+        <ul class="list-disc pl-6 space-y-2 text-slate-300 mb-8">
+          <li><strong class="text-white font-medium">Siri bridge</strong> — “Hey Siri, ask MILO…” from lock screen, headphones, or CarPlay.</li>
+          <li><strong class="text-white font-medium">Eight providers</strong> — OpenAI, Anthropic, Google Gemini, Mistral, Groq, OpenRouter (200+ models), Apple Intelligence, and local Ollama.</li>
+          <li><strong class="text-white font-medium">Voice model switching</strong> — change provider or model mid-conversation without opening the app.</li>
+          <li><strong class="text-white font-medium">CarPlay mode</strong> — shorter, spoken answers tuned for driving.</li>
+          <li><strong class="text-white font-medium">On-device history</strong> — searchable threads with tokens, latency, and estimated cost per conversation (SwiftData).</li>
+          <li><strong class="text-white font-medium">Provider settings</strong> — per-model temperature, max tokens, and system prompts.</li>
+          <li><strong class="text-white font-medium">API key management</strong> — keys stored locally and encrypted in the iOS Keychain.</li>
+          <li><strong class="text-white font-medium">Help &amp; Guide</strong> — built-in Siri phrase examples and sidebar navigation.</li>
+        </ul>
+
+        <p class="text-sm text-slate-500">
+          <a href="https://testflight.apple.com/join/rea1m7wb" class="text-milo-blue hover:text-milo-pink transition-colors">Join the TestFlight beta</a>
+          · Report issues on
+          <a href="https://github.com/luongnv89/milo-website/issues" class="text-milo-blue hover:text-milo-pink transition-colors">GitHub</a>.
+        </p>
+      </article>
+
+      <!-- Site -->
+      <article class="relative pl-0 sm:pl-8 sm:border-l sm:border-white/10">
+        <div class="sm:absolute sm:-left-[5px] sm:top-2 h-2.5 w-2.5 rounded-full bg-white/30 ring-4 ring-slate-950 hidden sm:block" aria-hidden="true"></div>
+
+        <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-2">
+          <h2 class="text-2xl font-semibold text-white">Website</h2>
+          <span class="text-sm text-slate-500">askmilo.pro</span>
+        </div>
+        <p class="text-sm text-slate-500 mb-6">June 2026</p>
+
+        <h3 class="text-sm font-semibold uppercase tracking-wider text-white/50 mb-3">Recent</h3>
+        <ul class="list-disc pl-6 space-y-2 text-slate-300">
+          <li>Screenshot carousel with larger, readable phone mockups.</li>
+          <li>Public feedback section — bug reports and feature requests via GitHub issue forms.</li>
+          <li>Custom domain <span class="text-white/80">askmilo.pro</span>, updated SEO, sitemap, and <code class="text-sm bg-white/5 px-1.5 py-0.5 rounded">llms.txt</code>.</li>
+          <li>Founder story, provider comparison, FAQ, and TestFlight CTAs across the landing page.</li>
+        </ul>
+      </article>
+    </div>
+
+    <p class="mt-16 pt-8 border-t border-white/10 text-sm text-slate-500">
+      Older builds and site changes are tracked in the
+      <a href="https://github.com/luongnv89/milo-website/commits/main" class="text-milo-blue hover:text-milo-pink transition-colors">GitHub commit history</a>.
+    </p>
+  </div>
+
+  <footer class="border-t border-white/10 bg-slate-950/80 py-10 mt-8">
+    <div class="max-w-3xl mx-auto px-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <img src="./AppIcon-80.png" alt="" class="h-10 w-10 rounded-xl shadow" width="40" height="40" />
+        <div>
+          <p class="font-semibold text-white">MILO</p>
+          <p class="text-xs text-white/50">Your voice. Any AI.</p>
+        </div>
+      </div>
+      <nav class="flex flex-wrap gap-x-6 gap-y-2 text-sm text-white/60" aria-label="Legal">
+        <a href="./privacy-policy.html" class="hover:text-white transition-colors">Privacy</a>
+        <a href="./terms.html" class="hover:text-white transition-colors">Terms</a>
+        <a href="./changelog.html" class="text-white/80 hover:text-white transition-colors" aria-current="page">Changelog</a>
+      </nav>
+      <p class="text-xs text-white/40 sm:text-right">© <span id="year"></span> MILO</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

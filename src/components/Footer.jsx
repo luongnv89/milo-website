@@ -49,6 +49,11 @@ export function Footer() {
                     Terms of Service
                   </a>
                 </li>
+                <li>
+                  <a href={`${import.meta.env.BASE_URL}changelog.html`} className="transition hover:text-white">
+                    Changelog
+                  </a>
+                </li>
               </ul>
             </div>
             <div>

@@ -39,6 +39,7 @@ You bring your own API keys (cloud providers) and switch by voice:
 - [Join the TestFlight beta](https://testflight.apple.com/join/rea1m7wb): Install MILO via Apple's free TestFlight beta.
 - [Privacy Policy](https://askmilo.pro/privacy-policy.html): How MILO handles data.
 - [Terms](https://askmilo.pro/terms.html): Terms of use.
+- [Changelog](https://askmilo.pro/changelog.html): MILO app and site release notes.
 
 ## Optional
 
