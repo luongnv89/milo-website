@@ -2,11 +2,10 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 
-// Served from GitHub Pages as a project site:
-// https://luongnv.com/milo-website/
-// The base path prefixes every Vite-processed asset so they resolve under
-// the /milo-website/ subpath instead of the domain root.
+// Served from GitHub Pages at the apex custom domain:
+// https://askmilo.pro/
+// Root domain, so assets resolve at the domain root (no subpath prefix).
 export default defineConfig({
-  base: '/milo-website/',
+  base: '/',
   plugins: [react(), tailwindcss()],
 });
