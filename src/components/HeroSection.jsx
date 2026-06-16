@@ -46,16 +46,17 @@ export function HeroSection() {
                 {/* Dynamic Island */}
                 <div className="absolute left-1/2 top-3 z-20 h-[28px] w-[90px] -translate-x-1/2 rounded-full bg-black" />
 
-                {/* Screenshot — fills the entire screen */}
+                {/* Promo video — fills the entire screen */}
                 <div className="relative aspect-[9/19.5]">
-                  <img
-                    src={`${import.meta.env.BASE_URL}1.0.0/car-play-mode.PNG`}
+                  <video
+                    src="/milo-promo-portrait-final.mp4"
                     alt="MILO running in CarPlay mode, answering a hands-free voice question through Siri"
                     className="h-full w-full object-cover object-top"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
                     loading="eager"
-                    fetchpriority="high"
-                    width="1170"
-                    height="2532"
                   />
                 </div>
               </div>

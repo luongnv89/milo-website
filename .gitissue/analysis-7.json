@@ -1,0 +1,16 @@
+{
+  "issue": 7,
+  "title": "Improve app screenshot readability in screens slideshow",
+  "type": "improvement",
+  "root_cause": "PhoneShot in ScreenshotsSection.jsx locks the phone mockup to a fixed w-56 (224px). The source screenshots are 1170x2532, so the in-app content is downscaled ~5.5x and text becomes unreadable. The hero mockup is larger (w-64 sm:w-72) but the screens carousel — the one meant for reading content — is the smallest mockup on the page.",
+  "lever": "Rendered pixel size only. object-cover does NOT crop here: image ratio 1170/2532=0.4620 vs container aspect-[9/19.5]=0.4615 are effectively identical. Do not change object-fit.",
+  "constraint": "9:19.5 is very tall; a wider phone gets tall fast (320px wide -> ~690px tall) in the single-column centered max-w-3xl card. Size has a practical ceiling on desktop.",
+  "options": {
+    "minimal": "Bump fixed width w-56 -> single larger fixed width. Rejected: no responsive behavior, risks mobile overflow.",
+    "balanced": "Responsive width bump on PhoneShot: w-64 sm:w-72 lg:w-80, scale Dynamic Island proportionally. Lowest risk, matches the reporter's literal ask, keeps a11y intact. SELECTED.",
+    "comprehensive": "Add click-to-zoom lightbox for full-res reading. Deferred: new interactive surface (modal, focus trap, escape handling) risks regressing the carousel's currently-clean a11y; only warranted if size alone is insufficient."
+  },
+  "selected": "balanced",
+  "scope": ["src/components/ScreenshotsSection.jsx"],
+  "verification": "vite build proves compile only. Real AC is perceptual -> must render via npm run dev and visually inspect at desktop + mobile widths."
+}
