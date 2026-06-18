@@ -391,7 +391,7 @@ export const faqItems = [
 ];
 
 export const socialLinks = [
-  { label: 'Twitter', href: 'https://twitter.com/luongnv89', icon: Twitter },
+  { label: 'X', href: 'https://x.com/luongnv89', icon: Twitter },
   { label: 'GitHub', href: 'https://github.com/luongnv89', icon: Github },
   { label: 'LinkedIn', href: 'https://linkedin.com/in/luongnv89', icon: Linkedin },
   { label: 'Blog', href: 'https://medium.com/@luongnv89', icon: PenSquare },
