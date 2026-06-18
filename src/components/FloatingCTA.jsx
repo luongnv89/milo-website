@@ -29,11 +29,11 @@ export function FloatingCTA() {
         href={APP_STORE_URL}
         target="_blank"
         rel="noopener noreferrer"
-        onClick={() => trackEvent(EVENTS.FLOATING_CTA_CLICKED, { location: 'floating_bar', text: 'Join the TestFlight beta' })}
+        onClick={() => trackEvent(EVENTS.FLOATING_CTA_CLICKED, { location: 'floating_bar', text: 'Download on the App Store' })}
         className="inline-flex items-center gap-3 rounded-full border border-white/20 bg-slate-900/95 px-8 py-4 font-semibold text-white shadow-2xl backdrop-blur transition hover:scale-105 hover:border-milo-blue/50"
       >
         <Apple className="h-5 w-5 text-milo-sky" />
-        <span>Join the TestFlight beta</span>
+        <span>Download on the App Store</span>
       </a>
     </div>
   );

@@ -19,9 +19,8 @@ import {
   Zap,
 } from 'lucide-react';
 
-// Primary download destination — the public TestFlight beta.
-// Swap this for the App Store listing URL at full launch.
-export const APP_STORE_URL = 'https://testflight.apple.com/join/rea1m7wb';
+// Primary download destination — the public App Store listing.
+export const APP_STORE_URL = 'https://apps.apple.com/app/ask-milo-ai-chat-assistant/id6780062368';
 
 // When MILO was first built and used daily by its maker.
 export const MONTHS_IN_USE = 8;
@@ -83,7 +82,7 @@ export const heroChecklist = [
 
 export const heroBadges = [
   { label: 'iOS 17.6+' },
-  { label: 'TestFlight beta open' },
+  { label: 'On the App Store' },
   { label: `Built & used daily for ${MONTHS_IN_USE} months` },
 ];
 
@@ -380,19 +379,19 @@ export const faqItems = [
       'MILO itself is free. You bring your own API keys, so you pay the providers directly — many have free tiers, and Apple Intelligence (on-device) and Ollama (local) cost nothing at all.',
   },
   {
-    question: 'How do I install the beta?',
+    question: 'How do I install MILO?',
     answer:
-      'MILO is in TestFlight, Apple’s free beta program. Install Apple’s TestFlight app, open the MILO invite link, and tap Install — it works just like a normal app. The public App Store release is coming soon.',
+      'MILO is on the App Store — open the listing on your iPhone and tap Get to download it like any other app. No invite or beta sign-up needed.',
   },
   {
     question: 'Where does it run?',
     answer:
-      'iPhone and CarPlay on iOS 17.6+. It’s in TestFlight beta now, with the App Store release coming soon.',
+      'iPhone and CarPlay on iOS 17.6+. It’s available now on the App Store.',
   },
 ];
 
 export const socialLinks = [
-  { label: 'Twitter', href: 'https://twitter.com/luongnv89', icon: Twitter },
+  { label: 'X', href: 'https://x.com/luongnv89', icon: Twitter },
   { label: 'GitHub', href: 'https://github.com/luongnv89', icon: Github },
   { label: 'LinkedIn', href: 'https://linkedin.com/in/luongnv89', icon: Linkedin },
   { label: 'Blog', href: 'https://medium.com/@luongnv89', icon: PenSquare },

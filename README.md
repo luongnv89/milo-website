@@ -1,5 +1,5 @@
 ![iOS](https://img.shields.io/badge/iOS-17.6%2B-black?logo=apple)
-![Beta](https://img.shields.io/badge/TestFlight-beta%20open-3b82f6)
+![App Store](https://img.shields.io/badge/App%20Store-available-3b82f6?logo=apple)
 ![Models](https://img.shields.io/badge/models-200%2B-06b6d4)
 
 # Hands-free AI for Siri and CarPlay
@@ -7,7 +7,7 @@
 MILO lets you say "Hey Siri, ask MILO…" and routes your voice to GPT, Claude,
 Gemini, or 200+ other models — from the lock screen, your headphones, or the car.
 
-[**Try the beta &rarr;**](https://testflight.apple.com/join/rea1m7wb) &nbsp;·&nbsp; [**Report a bug**](https://github.com/luongnv89/milo-website/issues/new?template=bug_report.yml&labels=bug) &nbsp;·&nbsp; [**Request a feature**](https://github.com/luongnv89/milo-website/issues/new?template=feature_request.yml&labels=enhancement)
+[**Download on the App Store &rarr;**](https://apps.apple.com/app/ask-milo-ai-chat-assistant/id6780062368) &nbsp;·&nbsp; [**Report a bug**](https://github.com/luongnv89/milo-website/issues/new?template=bug_report.yml&labels=bug) &nbsp;·&nbsp; [**Request a feature**](https://github.com/luongnv89/milo-website/issues/new?template=feature_request.yml&labels=enhancement)
 
 ---
 
@@ -39,13 +39,10 @@ or multitasking.
 | Private by default | Keys in the iOS Keychain; history stays on-device via SwiftData |
 | Bring your own keys | Pay providers directly; many have free tiers |
 
-## Get the beta
+## Get MILO
 
-1. Install Apple's free [TestFlight](https://apps.apple.com/app/testflight/id899247664) app.
-2. Open the [MILO invite link](https://testflight.apple.com/join/rea1m7wb).
-3. Tap Install — it works like a normal app. Requires iOS 17.6+.
-
-The public App Store release is coming soon.
+1. Open the [MILO listing on the App Store](https://apps.apple.com/app/ask-milo-ai-chat-assistant/id6780062368) on your iPhone.
+2. Tap Get to download it like any other app. Requires iOS 17.6+.
 
 ## This repo
 
