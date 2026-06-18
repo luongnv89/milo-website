@@ -5,7 +5,7 @@
 > MILO routes your spoken request to the AI model you choose (GPT, Claude,
 > Gemini, and more), so you can ask brilliant models anything hands-free —
 > while driving, walking, or with your hands full. Works on iPhone and CarPlay,
-> iOS 17.6+. Currently in TestFlight beta; App Store release coming soon.
+> iOS 17.6+. Available now on the App Store.
 
 ## How it works
 
@@ -36,7 +36,7 @@ You bring your own API keys (cloud providers) and switch by voice:
 ## Pages
 
 - [Home](https://askmilo.pro/): Product overview, providers, founder story, FAQ.
-- [Join the TestFlight beta](https://testflight.apple.com/join/rea1m7wb): Install MILO via Apple's free TestFlight beta.
+- [Download on the App Store](https://apps.apple.com/app/ask-milo-ai-chat-assistant/id6780062368): Install MILO from Apple's App Store.
 - [Privacy Policy](https://askmilo.pro/privacy-policy.html): How MILO handles data.
 - [Terms](https://askmilo.pro/terms.html): Terms of use.
 - [Changelog](https://askmilo.pro/changelog.html): MILO app and site release notes.
