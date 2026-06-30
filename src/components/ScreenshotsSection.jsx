@@ -79,9 +79,9 @@ export function ScreenshotsSection() {
     <section id="screens" className="bg-slate-950 py-20">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto mb-12 max-w-2xl text-center">
-          <h2 className="font-display text-section font-semibold text-white">See MILO in action</h2>
+          <h2 className="font-display text-section font-semibold text-white">Siri hands off to real AI</h2>
           <p className="mt-4 text-white/70">
-            A look inside the app — from hands-free CarPlay chats to on-device history and your own keys.
+            The core job: voice trigger → spoken answer. Power-user screens (history, keys) support it.
           </p>
         </div>
 
