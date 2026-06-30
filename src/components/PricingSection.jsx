@@ -28,24 +28,39 @@ export function PricingSection() {
               <span className="text-xs text-white/60">US price · Apple sets local pricing</span>
             </div>
 
-            {/* Regional price hint — informational, not a hard-coded table */}
+            {/* Regional price hint — semantic table for assistive technology */}
             <div className="mt-4 rounded-xl border border-white/10 bg-white/[0.03] p-4">
-              <p className="mb-2 text-xs font-medium uppercase tracking-wider text-white/40">Regional pricing (Apple sets exact prices)</p>
-              <div className="grid grid-cols-2 gap-x-6 gap-y-1.5 text-xs text-white/60">
-                <span>🇺🇸 United States</span>
-                <span className="text-right font-medium text-white/80">$8.99</span>
-                <span>🇪🇺 Europe</span>
-                <span className="text-right font-medium text-white/80">~€8.99</span>
-                <span>🇬🇧 United Kingdom</span>
-                <span className="text-right font-medium text-white/80">~£7.99</span>
-                <span>🇯🇵 Japan</span>
-                <span className="text-right font-medium text-white/80">~¥1,290</span>
-                <span>🇨🇦 Canada</span>
-                <span className="text-right font-medium text-white/80">~C$11.99</span>
-                <span>🇦🇺 Australia</span>
-                <span className="text-right font-medium text-white/80">~A$12.99</span>
-              </div>
-              <p className="mt-2 text-[11px] text-white/40">Exact prices shown on the App Store depend on your country. Prices marked with ~ are approximate.</p>
+              <p className="mb-2 text-xs font-medium uppercase tracking-wider text-white/60">Regional pricing (Apple sets exact prices)</p>
+              <table role="table" className="w-full text-xs text-white/60">
+                <caption className="sr-only">Regional pricing (Apple sets exact prices)</caption>
+                <tbody>
+                  <tr>
+                    <td>🇺🇸 United States</td>
+                    <td className="text-right font-medium text-white/80">$8.99</td>
+                  </tr>
+                  <tr>
+                    <td>🇪🇺 Europe</td>
+                    <td className="text-right font-medium text-white/80">~€8.99</td>
+                  </tr>
+                  <tr>
+                    <td>🇬🇧 United Kingdom</td>
+                    <td className="text-right font-medium text-white/80">~£7.99</td>
+                  </tr>
+                  <tr>
+                    <td>🇯🇵 Japan</td>
+                    <td className="text-right font-medium text-white/80">~¥1,290</td>
+                  </tr>
+                  <tr>
+                    <td>🇨🇦 Canada</td>
+                    <td className="text-right font-medium text-white/80">~C$11.99</td>
+                  </tr>
+                  <tr>
+                    <td>🇦🇺 Australia</td>
+                    <td className="text-right font-medium text-white/80">~A$12.99</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p className="mt-2 text-[12px] text-white/60">Exact prices shown on the App Store depend on your country. Prices marked with ~ are approximate.</p>
             </div>
 
             <div className="mt-2 text-xs text-white/50">One-time purchase. No subscription. No hidden fees.</div>

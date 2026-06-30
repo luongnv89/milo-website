@@ -42,7 +42,7 @@ export function HeroSection() {
               $8.99 USD
             </span>
           </div>
-          <p className="mt-2 text-center text-[11px] text-white/40 lg:text-left">
+          <p className="mt-2 text-center text-[12px] text-white/60 lg:text-left">
             US price · Apple sets local pricing in your country
           </p>
 
