@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import { Apple, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
-import { navLinks, APP_STORE_URL } from '../data/content.js';
+import { navLinks } from '../data/content.js';
+import { AppStoreButton } from './AppStoreButton.jsx';
 import { trackEvent, EVENTS } from '../utils/analytics.js';
 
 export function Navbar() {
@@ -29,16 +30,10 @@ export function Navbar() {
               {link.label}
             </a>
           ))}
-          <a
-            href={APP_STORE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => trackEvent(EVENTS.NAVBAR_CTA_CLICKED, { location: 'navbar_desktop', text: 'Get the app' })}
+          <AppStoreButton
+            location="navbar_desktop"
             className="inline-flex items-center gap-2 rounded-full bg-milo-blue px-5 py-2.5 font-semibold text-white shadow-lg transition hover:scale-105"
-          >
-            <Apple className="h-4 w-4" />
-            Get the app
-          </a>
+          />
         </div>
       </div>
       {isOpen && (
@@ -54,19 +49,10 @@ export function Navbar() {
                 {link.label}
               </a>
             ))}
-            <a
-              href={APP_STORE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <AppStoreButton
+              location="navbar_mobile"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-milo-blue px-6 py-3 font-semibold text-white shadow-lg"
-              onClick={() => {
-                setIsOpen(false);
-                trackEvent(EVENTS.NAVBAR_CTA_CLICKED, { location: 'navbar_mobile', text: 'Get the app' });
-              }}
-            >
-              <Apple className="h-4 w-4" />
-              Get the app
-            </a>
+            />
           </div>
         </div>
       )}
