@@ -5,11 +5,10 @@ export function CompareSection() {
     <section id="providers" className="mx-auto max-w-6xl px-6 py-20">
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="font-display text-section font-semibold text-white">
-          Eight providers. Your keys. One voice.
+          Choose your AI. Your keys. One Siri voice.
         </h2>
         <p className="mt-4 text-white/70">
-          Switch between frontier models by voice — or stay fully on-device. You decide who sees your
-          prompts, and you only pay the providers you use.
+          Pick any of 8 providers (200+ models) or stay on-device. Switch by voice. Keys stay yours; only the model you choose sees prompts.
         </p>
       </div>
 

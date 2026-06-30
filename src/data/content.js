@@ -36,7 +36,7 @@ export const PRICING_OFFER =
 export const heroContent = {
   headline: 'Give Siri 200+ AI brains — hands-free in the car.',
   subhead:
-    'Ask GPT, Claude, Gemini, Apple Intelligence, or local Ollama from the lock screen, headphones, or CarPlay. No app. No typing.',
+    'The core job: wake Siri and ask real AI (GPT, Claude, Gemini, Apple Intelligence, or local). From lock screen, headphones, or CarPlay. No tapping.',
 };
 
 export const navLinks = [
@@ -90,9 +90,9 @@ export const feedbackOptions = [
 ];
 
 export const heroChecklist = [
-  { label: 'Hands-free via Siri — no app to open', icon: CheckCircle2 },
-  { label: 'CarPlay-optimized answers', icon: CheckCircle2 },
-  { label: '8 providers, 200+ models', icon: CheckCircle2 },
+  { label: 'Ask by voice via Siri — no app to open', icon: CheckCircle2 },
+  { label: 'Short spoken answers in CarPlay', icon: CheckCircle2 },
+  { label: 'Pick any of 8 providers (your keys)', icon: CheckCircle2 },
 ];
 
 export const heroBadges = [
@@ -103,52 +103,61 @@ export const heroBadges = [
 
 export const featureCards = [
   {
-    title: 'Talk to any AI, hands-free',
+    title: 'Ask by voice through Siri',
     description:
-      'Say “Hey Siri, ask MILO…” from the lock screen, your headphones, or the car. iOS only lets Siri listen system-wide — MILO hands that voice off to the model you choose.',
+      'Say “Hey Siri, ask MILO…” from the lock screen, headphones, or car. The only system-wide hands-free trigger on iOS — MILO routes it to the real AI you choose.',
     icon: Mic,
   },
   {
-    title: 'Made for the car',
+    title: 'Get a short spoken answer',
     description:
-      'CarPlay mode automatically keeps answers short and spoken, so you get a real AI answer without taking your eyes off the road.',
+      'CarPlay mode keeps answers brief and spoken automatically. A real AI response without touching the phone or taking eyes off the road.',
     icon: Car,
   },
   {
-    title: '8 providers, your keys',
+    title: 'Choose the model you need',
     description:
-      'Use the model that’s best for the question — and switch by voice mid-conversation. Eight providers, 200+ models, plus on-device Apple Intelligence and local Ollama. Bring your own keys.',
+      'Switch providers and models by voice. 8 providers, 200+ models (plus Apple Intelligence and local Ollama). Bring your own keys.',
     icon: Layers3,
   },
   {
-    title: 'Private by default',
+    title: 'Keep it private on device',
     description:
-      'Keys live in the iOS Keychain. Conversations stay on your device with SwiftData. No accounts, no analytics on your prompts — only the provider you pick ever sees them.',
+      'Keys in iOS Keychain. History stays local with SwiftData. No accounts or prompt analytics — only the provider you pick sees anything.',
     icon: ShieldCheck,
   },
 ];
 
-// Slim comparison: what only MILO does on iOS, vs. the standalone AI apps.
+// Comparison vs named competitors (#74): MILO vs ChatGPT, Claude, Gemini on iPhone.
+// Refocused on core Siri job (#78): ask real AI hands-free. Advanced details subordinated.
 export const comparisonRows = [
   {
     feature: 'Invoke by voice, system-wide (no app to open)',
     milo: 'Yes — through Siri',
-    others: 'No — you must open the app first',
+    chatgpt: 'No — open app first',
+    claude: 'No — open app first',
+    gemini: 'No — open app first',
   },
   {
     feature: 'Short, spoken answers tuned for CarPlay',
     milo: 'Yes — automatic',
-    others: 'No',
+    chatgpt: 'Yes (iOS 26.4+)',
+    claude: 'No',
+    gemini: 'Limited',
   },
   {
     feature: 'Choice of AI provider & model',
     milo: '8 providers, 200+ models',
-    others: 'Locked to one model family',
+    chatgpt: 'OpenAI only',
+    claude: 'Anthropic only',
+    gemini: 'Google only',
   },
   {
     feature: 'Bring your own API keys',
-    milo: 'Yes — stored in Keychain',
-    others: 'Subscription only',
+    milo: 'Yes — Keychain',
+    chatgpt: 'Subscription',
+    claude: 'Account / sub',
+    gemini: 'Account / sub',
   },
 ];
 
@@ -156,10 +165,10 @@ export const comparisonRows = [
 // features land as relief, not just a spec sheet.
 export const problemSection = {
   eyebrow: 'The problem',
-  title: 'You already talk to your phone. It just talks back badly.',
+  title: 'Siri hears you. But the real AI can’t.',
   paragraphs: [
-    'Ask Siri something real and you get “here’s what I found on the web.” So you glance down, tap, and read — exactly what you couldn’t do with your hands on the wheel.',
-    'The smart models that could actually answer are locked behind taps you can’t make while driving, walking, or carrying groceries. The one assistant you can trigger by voice is the one that gives up first.',
+    'Ask Siri something real and you get “here’s what I found on the web.” You glance down, tap, read — exactly what you can’t do hands-free in the car or on the move.',
+    'The smart models (GPT, Claude, Gemini) are locked behind taps. Siri is the only system-wide voice you can trigger — but it’s the one that gives up first. MILO is the bridge: Siri voice to real AI.',
   ],
 };
 
@@ -167,17 +176,17 @@ export const founderStory = {
   eyebrow: 'Why I built MILO',
   name: 'Luong',
   paragraphs: [
-    'I built MILO for myself. On iOS, Siri has something no other assistant has — true hands-free, system-wide voice. The catch is that Siri just isn’t very smart. The models I actually rely on every day — GPT, Claude, Gemini — are brilliant, but they’re locked behind taps. You can’t reach them with your hands on the wheel.',
-    `So last October I wired Siri to those models and started using it every single day — in the car, on walks, with my hands full. I wasn’t planning to release it.`,
-    'I changed my mind when it became clear the smarter, AI-powered Siri many of us were waiting for kept slipping — and that the wait looked especially long here in the EU. I’d rather hand you the bridge today than keep waiting for it. That’s MILO.',
+    'On iOS, Siri has true hands-free, system-wide voice. No other assistant has that. The catch: Siri isn’t very smart. The models I rely on — GPT, Claude, Gemini — are locked behind taps you can’t make while driving.',
+    `So I wired Siri to those models. I used it every day in the car and on the move. I wasn’t planning to release it.`,
+    'The wait for a smarter built-in Siri kept slipping. I’d rather give you the bridge today: Siri voice to real AI. That’s MILO.',
   ],
   signoff: '— Luong, maker of MILO',
 };
 
 export const instructionFlow = {
-  title: 'How to talk to MILO',
+  title: 'How to ask real AI via Siri',
   description:
-    'Always do it in two moves: wake Siri, then hand off to MILO. The pause is what tells Siri to open the app instead of calling a contact named “Milo”.',
+    'Two moves: wake Siri, say “Ask MILO”. Siri hands off to the model you chose. The pause keeps the trigger reliable.',
   steps: [
     { speaker: 'user', text: 'Hey Siri' },
     { speaker: 'siri', text: 'Uh huh?' },
@@ -225,15 +234,14 @@ export const siriExamples = [
   },
 ];
 
-// In-app screenshots, grouped by theme. File names map exactly (case included)
-// to the PNGs in public/1.0.0/ — GitHub Pages serves from a case-sensitive
-// filesystem, so the `.PNG` extension must match byte-for-byte.
+// In-app screenshots, grouped by theme (refocused on core Siri job #78).
+// Power-user details (history, tuning) subordinated as supporting.
 export const screenshotGroups = [
   {
     id: 'chat',
-    title: 'Talk to any model, hands-free',
+    title: 'Siri voice → real AI answer',
     description:
-      'Ask by voice through Siri, switch models mid-conversation, and get short spoken answers tuned for the car.',
+      'Ask by voice through Siri. Switch models mid-conversation. Short spoken answers tuned for the car.',
     shots: [
       {
         src: '1.0.0/car-play-mode.PNG',
@@ -248,10 +256,28 @@ export const screenshotGroups = [
     ],
   },
   {
-    id: 'history',
-    title: 'Every conversation, kept on device',
+    id: 'guide',
+    title: 'How to ask via Siri',
     description:
-      'Browse your full history with token counts, response times, and per-message cost — all stored locally.',
+      'Built-in guide for the two-step Siri handoff plus sidebar navigation.',
+    shots: [
+      {
+        src: '1.0.0/help-guide.PNG',
+        alt: 'MILO Help & Guide screen with example "Hey Siri, ask MILO" prompts',
+        caption: 'Step-by-step Siri guide',
+      },
+      {
+        src: '1.0.0/sidebar-menu.PNG',
+        alt: 'MILO sidebar menu with History, Help & Guide, and Settings entries',
+        caption: 'Sidebar navigation',
+      },
+    ],
+  },
+  {
+    id: 'history',
+    title: 'Power user: on-device history',
+    description:
+      'Full history with token counts and costs — stored locally (supporting the core flow).',
     shots: [
       {
         src: '1.0.0/history.PNG',
@@ -267,9 +293,9 @@ export const screenshotGroups = [
   },
   {
     id: 'providers',
-    title: 'Bring your own keys',
+    title: 'Power user: your keys & providers',
     description:
-      'Configure eight providers, tune temperature and tokens per model, and keep keys encrypted in the iOS Keychain.',
+      'Configure providers and tune settings. Keys encrypted in Keychain (supporting the core flow).',
     shots: [
       {
         src: '1.0.0/setting-first.PNG',
@@ -285,24 +311,6 @@ export const screenshotGroups = [
         src: '1.0.0/api-keys-management.PNG',
         alt: 'MILO API keys screen explaining keys are stored locally and encrypted in the iOS Keychain',
         caption: 'Keys stay in the Keychain',
-      },
-    ],
-  },
-  {
-    id: 'guide',
-    title: 'Find your way around',
-    description:
-      'A built-in guide for talking to Siri, plus a sidebar for history, help, and settings.',
-    shots: [
-      {
-        src: '1.0.0/help-guide.PNG',
-        alt: 'MILO Help & Guide screen with example "Hey Siri, ask MILO" prompts',
-        caption: 'Step-by-step Siri guide',
-      },
-      {
-        src: '1.0.0/sidebar-menu.PNG',
-        alt: 'MILO sidebar menu with History, Help & Guide, and Settings entries',
-        caption: 'Sidebar navigation',
       },
     ],
   },
@@ -369,9 +377,9 @@ export const providers = [
 
 export const faqItems = [
   {
-    question: 'Why can’t I just use the ChatGPT or Claude apps with my voice?',
+    question: 'Why can’t I just use the ChatGPT, Claude, or Gemini apps with my voice?',
     answer:
-      'On iOS, only Siri can be triggered hands-free, system-wide. Every other AI app needs you to open it first. MILO connects Siri’s exclusive voice access to the model you choose — so you can ask while driving, walking, or multitasking.',
+      'On iOS, only Siri can be triggered hands-free, system-wide. ChatGPT, Claude, and Gemini apps need you to open them first. MILO connects Siri’s exclusive voice access to any model you choose — ask while driving or hands full.',
   },
   {
     question: 'Which AI models can I use?',
