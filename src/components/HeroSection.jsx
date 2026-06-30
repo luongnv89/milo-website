@@ -69,7 +69,7 @@ export function HeroSection() {
           {/* Pricing note — links to full pricing section */}
           <a
             href="#pricing"
-            className="mt-3 inline-block text-xs text-white/40 transition hover:text-white/60 lg:mx-0 mx-auto"
+            className="mt-3 inline-block text-xs text-white/70 transition hover:text-white lg:mx-0 mx-auto"
           >
             Prices vary by country — Apple sets local pricing
           </a>

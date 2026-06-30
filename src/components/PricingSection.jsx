@@ -35,27 +35,27 @@ export function PricingSection() {
                 <caption className="sr-only">Regional pricing (Apple sets exact prices)</caption>
                 <tbody>
                   <tr>
-                    <td>🇺🇸 United States</td>
+                    <td><span aria-hidden="true">🇺🇸</span> United States</td>
                     <td className="text-right font-medium text-white/80">$8.99</td>
                   </tr>
                   <tr>
-                    <td>🇪🇺 Europe</td>
+                    <td><span aria-hidden="true">🇪🇺</span> Europe</td>
                     <td className="text-right font-medium text-white/80">~€8.99</td>
                   </tr>
                   <tr>
-                    <td>🇬🇧 United Kingdom</td>
+                    <td><span aria-hidden="true">🇬🇧</span> United Kingdom</td>
                     <td className="text-right font-medium text-white/80">~£7.99</td>
                   </tr>
                   <tr>
-                    <td>🇯🇵 Japan</td>
+                    <td><span aria-hidden="true">🇯🇵</span> Japan</td>
                     <td className="text-right font-medium text-white/80">~¥1,290</td>
                   </tr>
                   <tr>
-                    <td>🇨🇦 Canada</td>
+                    <td><span aria-hidden="true">🇨🇦</span> Canada</td>
                     <td className="text-right font-medium text-white/80">~C$11.99</td>
                   </tr>
                   <tr>
-                    <td>🇦🇺 Australia</td>
+                    <td><span aria-hidden="true">🇦🇺</span> Australia</td>
                     <td className="text-right font-medium text-white/80">~A$12.99</td>
                   </tr>
                 </tbody>
