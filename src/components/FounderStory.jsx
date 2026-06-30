@@ -16,12 +16,30 @@ export function FounderStory() {
             ))}
           </div>
 
+          {founderStory.personalNote && (
+            <div className="mt-6 border-l-2 border-milo-blue pl-4 text-sm italic text-white/70">
+              {founderStory.personalNote}
+            </div>
+          )}
+
           <div className="mt-8 flex flex-col gap-6 border-t border-white/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
             <div className="flex items-center gap-4">
-              <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-milo-blue text-lg font-bold text-white">
-                {founderStory.name.charAt(0)}
-              </span>
-              <p className="font-display font-semibold text-white">{founderStory.signoff}</p>
+              {founderStory.photo ? (
+                <img
+                  src={founderStory.photo}
+                  alt={founderStory.name}
+                  className="h-12 w-12 rounded-full border-2 border-white/20 object-cover"
+                  loading="lazy"
+                />
+              ) : (
+                <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-milo-blue text-lg font-bold text-white">
+                  {founderStory.name.charAt(0)}
+                </span>
+              )}
+              <div>
+                <p className="font-display font-semibold text-white">{founderStory.signoff}</p>
+                <p className="text-xs text-white/50">One-person build • used daily</p>
+              </div>
             </div>
             <AppStoreButton location="founder_story" />
           </div>
