@@ -52,6 +52,7 @@ export function Navbar() {
             <AppStoreButton
               location="navbar_mobile"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-milo-blue px-6 py-3 font-semibold text-white shadow-lg"
+              onClick={() => setIsOpen(false)}
             />
           </div>
         </div>
