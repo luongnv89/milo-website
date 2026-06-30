@@ -3,7 +3,6 @@ import { Menu, X } from 'lucide-react';
 
 import { navLinks } from '../data/content.js';
 import { AppStoreButton } from './AppStoreButton.jsx';
-import { trackEvent, EVENTS } from '../utils/analytics.js';
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
