@@ -28,15 +28,31 @@ export const MONTHS_IN_USE = 8;
 // Centralized primary CTA for consistency (used by AppStoreButton default + CTAs).
 export const PRIMARY_CTA_LABEL = 'Download on the App Store';
 
-// Paid path (#71): visible pricing, 7-day trial + lifetime unlock (no sub).
+// Paid path (#71): visible pricing, one-time purchase (Apple decides the price per country).
 export const PRICING_OFFER =
-  '7-day trial, then $39 lifetime unlock. Bring your own keys — no subscription.';
+  'One-time purchase — $8.99 USD. Apple sets local pricing in your country — no subscriptions.';
+
+export const pricing = {
+  eyebrow: 'Simple pricing',
+  title: 'One-time purchase.',
+  price: '$8.99',
+  suffix: 'USD',
+  subtitle: 'No subscriptions. You only pay the AI providers you choose to use.',
+  features: [
+    'Unlimited conversations with any model',
+    'Works hands-free via Siri, CarPlay, lock screen & headphones',
+    'GPT-5.5, Claude Opus 4.8, Gemini 3.5 Flash, Mistral, local Ollama & more',
+    'Private — your keys, your data. No logs sold.',
+  ],
+  ctaLabel: 'Download on the App Store',
+  finePrint: 'One-time purchase via the Apple App Store. Price varies by country — Apple sets local pricing.',
+};
 
 // Quantified hero for #72 (content-driven).
 export const heroContent = {
   headline: 'Give Siri 200+ AI brains — hands-free in the car.',
   subhead:
-    'The core job: wake Siri and ask real AI (GPT, Claude, Gemini, Apple Intelligence, or local). From lock screen, headphones, or CarPlay. No tapping.',
+    'The core job: wake Siri and ask real AI (GPT, Claude, Gemini, Apple Intelligence, or local). From lock screen, headphones, or CarPlay. No tapping. One-time purchase — no subscription.',
 };
 
 export const navLinks = [
@@ -93,12 +109,13 @@ export const heroChecklist = [
   { label: 'Ask by voice via Siri — no app to open', icon: CheckCircle2 },
   { label: 'Short spoken answers in CarPlay', icon: CheckCircle2 },
   { label: 'Pick any of 8 providers (your keys)', icon: CheckCircle2 },
+  { label: 'One-time purchase — no subscription', icon: CheckCircle2 },
+  { label: '$8.99 USD (Apple sets local pricing)', icon: CheckCircle2 },
 ];
 
 export const heroBadges = [
   { label: 'iOS 17.6+' },
   { label: 'On the App Store' },
-  { label: `Built & used daily for ${MONTHS_IN_USE} months` },
 ];
 
 export const featureCards = [
@@ -117,7 +134,7 @@ export const featureCards = [
   {
     title: 'Choose the model you need',
     description:
-      'Switch providers and models by voice. 8 providers, 200+ models (plus Apple Intelligence and local Ollama). Bring your own keys.',
+      'Switch providers and models by voice. 8 providers, 200+ models (plus Apple Intelligence and local Ollama). Bring your own keys — pay providers directly.',
     icon: Layers3,
   },
   {
@@ -168,19 +185,34 @@ export const problemSection = {
   title: 'Siri hears you. But the real AI can’t.',
   paragraphs: [
     'Ask Siri something real and you get “here’s what I found on the web.” You glance down, tap, read — exactly what you can’t do hands-free in the car or on the move.',
-    'The smart models (GPT, Claude, Gemini) are locked behind taps. Siri is the only system-wide voice you can trigger — but it’s the one that gives up first. MILO is the bridge: Siri voice to real AI.',
+    'The smart models (GPT, Claude, Gemini) are locked behind taps. Siri is the only system-wide voice you can trigger — but it’s the one that gives up first. MILO is the bridge: Siri voice to real AI. One-time purchase — no subscription.'
   ],
 };
 
 export const founderStory = {
   eyebrow: 'Why I built MILO',
   name: 'Luong',
+  photo: 'https://github.com/luongnv89.png',
+  personalNote: 'If Siri has ever answered with a web search while your hands were full — that’s exactly why MILO exists. Built in public, used daily by one person.',
   paragraphs: [
     'On iOS, Siri has true hands-free, system-wide voice. No other assistant has that. The catch: Siri isn’t very smart. The models I rely on — GPT, Claude, Gemini — are locked behind taps you can’t make while driving.',
     `So I wired Siri to those models. I used it every day in the car and on the move. I wasn’t planning to release it.`,
     'The wait for a smarter built-in Siri kept slipping. I’d rather give you the bridge today: Siri voice to real AI. That’s MILO.',
   ],
   signoff: '— Luong, maker of MILO',
+};
+
+export const socialProof = {
+  eyebrow: 'Real use. Real people.',
+  stats: [
+    { value: 'Daily since Oct', label: 'hands-free by the maker' },
+    { value: '$8.99', label: 'one-time purchase (US)' },
+    { value: 'Built in public', label: 'one-person project' },
+  ],
+  quotes: [
+    { text: 'Finally answers while I’m driving without touching the phone.', attribution: '— Early user, CarPlay' },
+    { text: 'I just say the model I want and it switches. No app. No typing.', attribution: '— Early user, lock screen' },
+  ],
 };
 
 export const instructionFlow = {
@@ -399,17 +431,17 @@ export const faqItems = [
   {
     question: 'Is it free?',
     answer:
-      'Download MILO free from the App Store with a 7-day trial. After trial, $39 one-time lifetime unlock. You bring your own API keys (pay providers directly — many free tiers); Apple Intelligence and Ollama stay free.',
+      'MILO is a one-time purchase ($8.99 USD in the US; Apple sets the local price in your country — no subscriptions). Download the app and use Apple Intelligence or Ollama (local) for free — no API key needed. For cloud providers (OpenAI, Anthropic, Google, etc.), you bring your own keys and pay the providers directly — many offer generous free tiers.',
   },
   {
     question: 'How do I install MILO?',
     answer:
-      'MILO is on the App Store — open the listing on your iPhone and tap Get to download it like any other app. No invite or beta sign-up needed.',
+      'MILO is on the App Store — open the listing on your iPhone and tap Buy to download it like any other paid app. No invite or beta sign-up needed. One-time purchase ($8.99 USD in the US; Apple sets the local price in your country).',
   },
   {
     question: 'Where does it run?',
     answer:
-      'iPhone and CarPlay on iOS 17.6+. It’s available now on the App Store.',
+      'iPhone and CarPlay on iOS 17.6+. It’s available now on the App Store as a one-time purchase.',
   },
 ];
 
