@@ -26,6 +26,7 @@ export function FloatingCTA() {
       <AppStoreButton
         location="floating_bar"
         className="inline-flex items-center gap-3 rounded-full border border-white/20 bg-slate-900/95 px-8 py-4 font-semibold text-white shadow-2xl backdrop-blur transition hover:scale-105 hover:border-milo-blue/50"
+        iconClassName="h-5 w-5 text-milo-sky"
       />
     </div>
   );

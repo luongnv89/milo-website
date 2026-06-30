@@ -33,6 +33,7 @@ export function Navbar() {
           <AppStoreButton
             location="navbar_desktop"
             className="inline-flex items-center gap-2 rounded-full bg-milo-blue px-5 py-2.5 font-semibold text-white shadow-lg transition hover:scale-105"
+            iconClassName="h-4 w-4"
           />
         </div>
       </div>
@@ -53,6 +54,7 @@ export function Navbar() {
               location="navbar_mobile"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-milo-blue px-6 py-3 font-semibold text-white shadow-lg"
               onClick={() => setIsOpen(false)}
+              iconClassName="h-4 w-4"
             />
           </div>
         </div>

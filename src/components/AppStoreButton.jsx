@@ -8,7 +8,7 @@ import { trackEvent, EVENTS } from '../utils/analytics.js';
  * Links to APP_STORE_URL — MILO's live App Store listing.
  * Label content-driven; supports className override for special floating/nav styles.
  */
-export function AppStoreButton({ location = 'unknown', label, variant = 'primary', className = '', onClick }) {
+export function AppStoreButton({ location = 'unknown', label, variant = 'primary', className = '', onClick, iconClassName = 'h-5 w-5' }) {
   const effectiveLabel = label || PRIMARY_CTA_LABEL;
   const baseClass = variant === 'ghost' ? 'btn-ghost' : 'btn-primary';
   const finalClass = className || baseClass;
@@ -24,7 +24,7 @@ export function AppStoreButton({ location = 'unknown', label, variant = 'primary
       onClick={handleClick}
       className={finalClass}
     >
-      <Apple className="h-5 w-5" />
+      <Apple className={iconClassName} />
       {effectiveLabel}
     </a>
   );
