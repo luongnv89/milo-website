@@ -1,6 +1,7 @@
 import { Mic } from 'lucide-react';
 
 import { AppStoreButton } from './AppStoreButton.jsx';
+import { heroContent, PRICING_OFFER } from '../data/content.js';
 
 export function HeroSection() {
   return (
@@ -15,13 +16,11 @@ export function HeroSection() {
           </div>
 
           <h1 className="font-display text-hero font-bold text-white">
-            <span className="text-milo-sky">Hands-free AI</span> on iOS — just ask Siri, even while
-            driving.
+            {heroContent.headline}
           </h1>
 
           <p className="mt-6 max-w-md text-lg text-slate-100/80 sm:text-xl lg:mx-0 mx-auto">
-            Say “Hey Siri, ask MILO” and get a real spoken answer — driving, walking, or hands full. No
-            app to open, no typing.
+            {heroContent.subhead}
           </p>
 
           <div className="mt-9 flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start">
@@ -29,6 +28,11 @@ export function HeroSection() {
             <a href="#story" className="btn-ghost">
               Why I built it
             </a>
+          </div>
+
+          {/* Pricing path (#71) — discoverable section near primary CTA, repeated context */}
+          <div id="pricing" className="mt-4 max-w-md text-sm text-white/70 lg:mx-0 mx-auto">
+            <span className="font-medium text-milo-sky">{PRICING_OFFER}</span>
           </div>
         </div>
 
