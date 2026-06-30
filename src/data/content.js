@@ -25,8 +25,23 @@ export const APP_STORE_URL = 'https://apps.apple.com/app/ask-milo-ai-chat-assist
 // When MILO was first built and used daily by its maker.
 export const MONTHS_IN_USE = 8;
 
+// Centralized primary CTA for consistency (used by AppStoreButton default + CTAs).
+export const PRIMARY_CTA_LABEL = 'Download on the App Store';
+
+// Paid path (#71): visible pricing, 7-day trial + lifetime unlock (no sub).
+export const PRICING_OFFER =
+  '7-day trial, then $39 lifetime unlock. Bring your own keys — no subscription.';
+
+// Quantified hero for #72 (content-driven).
+export const heroContent = {
+  headline: 'Give Siri 200+ AI brains — hands-free in the car.',
+  subhead:
+    'Ask GPT, Claude, Gemini, Apple Intelligence, or local Ollama from the lock screen, headphones, or CarPlay. No app. No typing.',
+};
+
 export const navLinks = [
   { label: 'Features', href: '#features' },
+  { label: 'Pricing', href: '#pricing' },
   { label: 'Screens', href: '#screens' },
   { label: 'Story', href: '#story' },
   { label: 'Help', href: '#help' },
@@ -376,7 +391,7 @@ export const faqItems = [
   {
     question: 'Is it free?',
     answer:
-      'MILO itself is free. You bring your own API keys, so you pay the providers directly — many have free tiers, and Apple Intelligence (on-device) and Ollama (local) cost nothing at all.',
+      'Download MILO free from the App Store with a 7-day trial. After trial, $39 one-time lifetime unlock. You bring your own API keys (pay providers directly — many free tiers); Apple Intelligence and Ollama stay free.',
   },
   {
     question: 'How do I install MILO?',

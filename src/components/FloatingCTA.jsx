@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Apple } from 'lucide-react';
 
-import { APP_STORE_URL } from '../data/content.js';
-import { trackEvent, EVENTS } from '../utils/analytics.js';
+import { AppStoreButton } from './AppStoreButton.jsx';
 
 export function FloatingCTA() {
   const [isVisible, setIsVisible] = useState(false);
@@ -25,16 +23,11 @@ export function FloatingCTA() {
 
   return (
     <div className="fixed bottom-6 left-1/2 z-40 -translate-x-1/2 transition-all duration-300">
-      <a
-        href={APP_STORE_URL}
-        target="_blank"
-        rel="noopener noreferrer"
-        onClick={() => trackEvent(EVENTS.FLOATING_CTA_CLICKED, { location: 'floating_bar', text: 'Download on the App Store' })}
+      <AppStoreButton
+        location="floating_bar"
         className="inline-flex items-center gap-3 rounded-full border border-white/20 bg-slate-900/95 px-8 py-4 font-semibold text-white shadow-2xl backdrop-blur transition hover:scale-105 hover:border-milo-blue/50"
-      >
-        <Apple className="h-5 w-5 text-milo-sky" />
-        <span>Download on the App Store</span>
-      </a>
+        iconClassName="h-5 w-5 text-milo-sky"
+      />
     </div>
   );
 }

@@ -23,7 +23,7 @@ export function FounderStory() {
               </span>
               <p className="font-display font-semibold text-white">{founderStory.signoff}</p>
             </div>
-            <AppStoreButton location="founder_story" label="Try MILO" />
+            <AppStoreButton location="founder_story" />
           </div>
         </div>
       </div>
