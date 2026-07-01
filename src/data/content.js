@@ -41,7 +41,7 @@ export const pricing = {
   features: [
     'Unlimited conversations with any model',
     'Works hands-free via Siri, CarPlay, lock screen & headphones',
-    'GPT-5.5, Claude Opus 4.8, Gemini 3.5 Flash, Mistral, local Ollama & more',
+    'GPT-4o, Claude Opus 4, Gemini 2.5 Flash, Mistral, local Ollama & more',
     'Private — your keys, your data. No logs sold.',
   ],
   ctaLabel: 'Download on the App Store',
