@@ -1,7 +1,7 @@
 import { Mic } from 'lucide-react';
 
 import { AppStoreButton } from './AppStoreButton.jsx';
-import { heroContent, PRICING_OFFER } from '../data/content.js';
+import { heroContent, PRICING_OFFER, heroBadges, heroChecklist } from '../data/content.js';
 
 export function HeroSection() {
   return (
@@ -30,9 +30,54 @@ export function HeroSection() {
             </a>
           </div>
 
-          {/* Pricing path (#71) — discoverable section near primary CTA, repeated context */}
-          <div id="pricing" className="mt-4 max-w-md text-sm text-white/70 lg:mx-0 mx-auto">
-            <span className="font-medium text-milo-sky">{PRICING_OFFER}</span>
+          {/* Hero badges — pricing + platform */}
+          <div className="mt-5 flex flex-wrap items-center justify-center gap-3 lg:justify-start">
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">
+              iOS 17.6+
+            </span>
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">
+              On the App Store
+            </span>
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-milo-sky/30 bg-milo-sky/10 px-3 py-1 text-xs text-milo-sky">
+              $8.99 USD
+            </span>
+          </div>
+          <p className="mt-2 text-center text-[12px] text-white/60 lg:text-left">
+            US price · Apple sets local pricing in your country
+          </p>
+
+          {/* Hero checklist — pricing + features */}
+          <div className="mt-6 space-y-2 lg:mx-0 mx-auto">
+            {heroChecklist.map((item, index) => (
+              <div key={index} className="flex items-center gap-2 text-sm text-white/80">
+                <item.icon className="h-4 w-4 flex-shrink-0 text-milo-blue" />
+                <span>{item.label}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* Pricing teaser near hero CTA (#71) — links down to the full section */}
+          <a
+            href="#pricing"
+            className="mt-4 inline-block max-w-md text-sm text-white/70 transition hover:text-white lg:mx-0 mx-auto"
+          >
+            <span className="font-medium text-milo-sky underline decoration-dotted underline-offset-2">
+              {PRICING_OFFER}
+            </span>
+          </a>
+
+          {/* Pricing note — links to full pricing section */}
+          <a
+            href="#pricing"
+            className="mt-3 inline-block text-xs text-white/70 transition hover:text-white lg:mx-0 mx-auto"
+          >
+            Prices vary by country — Apple sets local pricing
+          </a>
+
+          {/* Pricing badge — one-time purchase, no subscription */}
+          <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-milo-blue/30 bg-milo-blue/10 px-4 py-1.5 text-sm font-medium text-milo-sky">
+            <span className="font-bold text-milo-sky">$8.99</span>
+            <span>one-time purchase · no subscription</span>
           </div>
         </div>
 
