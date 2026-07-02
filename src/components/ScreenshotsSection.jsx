@@ -1,7 +1,7 @@
 import { useCallback, useMemo, useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-import { screenshotGroups } from '../data/content.js';
+import { screenshotGroups, socialProof } from '../data/content.js';
 import { usePrefersReducedMotion } from '../hooks/usePrefersReducedMotion.js';
 
 // Flatten the themed groups into one slide per screenshot, carrying the group's
@@ -170,6 +170,32 @@ export function ScreenshotsSection() {
           <p className="mt-4 text-center text-xs text-white/45" aria-live="polite">
             {active + 1} / {count}
           </p>
+
+          {/* Social proof strip — immediately after the demo carousel per #73 */}
+          {socialProof && (
+            <div className="mt-10 border-t border-white/10 pt-8">
+              <p className="text-center text-[10px] font-semibold uppercase tracking-[0.3em] text-milo-sky/70">
+                {socialProof.eyebrow}
+              </p>
+              <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-3">
+                {socialProof.stats.map((s, i) => (
+                  <div key={i} className="glass rounded-2xl px-4 py-3 text-center">
+                    <div className="text-lg font-semibold text-white">{s.value}</div>
+                    <div className="text-xs text-white/60">{s.label}</div>
+                  </div>
+                ))}
+              </div>
+              {socialProof.quotes && socialProof.quotes.length > 0 && (
+                <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                  {socialProof.quotes.map((q, i) => (
+                    <blockquote key={i} className="glass rounded-2xl px-4 py-3 text-sm text-white/80">
+                      “{q.text}” <span className="block text-xs text-white/50 mt-1">— {q.attribution}</span>
+                    </blockquote>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
         </div>
       </div>
     </section>

@@ -5,6 +5,7 @@ import { FeaturesSection } from './components/FeaturesSection.jsx';
 import { ScreenshotsSection } from './components/ScreenshotsSection.jsx';
 import { FounderStory } from './components/FounderStory.jsx';
 import { CompareSection } from './components/CompareSection.jsx';
+import { PricingSection } from './components/PricingSection.jsx';
 import { HelpSection } from './components/HelpSection.jsx';
 import { FAQSection } from './components/FAQSection.jsx';
 import { FeedbackSection } from './components/FeedbackSection.jsx';
@@ -29,6 +30,7 @@ function App() {
         <ScreenshotsSection />
         <FounderStory />
         <CompareSection />
+        <PricingSection />
         <HelpSection />
         <FAQSection />
         <FeedbackSection />
