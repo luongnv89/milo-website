@@ -84,6 +84,8 @@ export function PricingSection() {
 
           <p className="mt-4 text-center text-xs text-white/50">{pricing.finePrint}</p>
 
+          <p className="mt-2 text-center text-xs text-white/50">{pricing.savingsNote}</p>
+
           <p className="mt-3 text-center text-xs text-white/40">
             You bring your own keys from OpenAI, Anthropic, Google, etc. MILO never sees your usage data or keys.
           </p>
