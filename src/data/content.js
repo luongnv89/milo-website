@@ -47,9 +47,10 @@ export const pricing = {
   ],
   ctaLabel: 'Download on the App Store',
   finePrint: 'One-time purchase via the Apple App Store. Price varies by country — Apple sets local pricing.',
-  // Savings vs. $20/mo AI subscriptions (ChatGPT Plus / Claude Pro), confirmed July 2026 (#23).
+  // Savings vs. the $20/mo subscription fee itself (ChatGPT Plus / Claude Pro), confirmed July
+  // 2026 (#23) — scoped to the subscription fee, not total AI usage cost (see BYOK note below).
   savingsNote:
-    'Skip a $20/month AI subscription (ChatGPT Plus, Claude Pro) — MILO’s $8.99 one-time price saves you $231 in year one, and the full $240/year every year after.',
+    'Skip the $20/month subscription fee (ChatGPT Plus, Claude Pro) — MILO is a one-time $8.99 purchase that beats a year of that fee by $231, and the full $240/year every year after, on top of whichever AI providers you choose to pay directly.',
 };
 
 // Quantified hero for #72 (content-driven).
