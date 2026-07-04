@@ -26,7 +26,8 @@ export const APP_STORE_URL = 'https://apps.apple.com/app/ask-milo-ai-chat-assist
 export const MONTHS_IN_USE = 8;
 
 // Centralized primary CTA for consistency (used by AppStoreButton default + CTAs).
-export const PRIMARY_CTA_LABEL = 'Download on the App Store';
+// Names the outcome (echoes heroContent's "200+ AI brains"), not the download mechanism (#20).
+export const PRIMARY_CTA_LABEL = 'Give Siri 200+ AI Brains';
 
 // Paid path (#71): visible pricing, one-time purchase (Apple decides the price per country).
 export const PRICING_OFFER =
