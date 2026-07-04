@@ -52,7 +52,7 @@ export const pricing = {
 export const heroContent = {
   headline: 'Give Siri 200+ AI brains — hands-free in the car.',
   subhead:
-    'The core job: wake Siri and ask real AI (GPT, Claude, Gemini, Apple Intelligence, or local). From lock screen, headphones, or CarPlay. No tapping. One-time purchase — no subscription.',
+    'Never glance down for an answer while driving. Wake Siri and ask real AI (GPT, Claude, Gemini, Apple Intelligence, or local) from your lock screen, headphones, or CarPlay. No tapping. One-time purchase — no subscription.',
 };
 
 export const navLinks = [
