@@ -185,15 +185,6 @@ export function ScreenshotsSection() {
                   </div>
                 ))}
               </div>
-              {socialProof.quotes && socialProof.quotes.length > 0 && (
-                <div className="mt-4 grid gap-3 sm:grid-cols-2">
-                  {socialProof.quotes.map((q, i) => (
-                    <blockquote key={i} className="glass rounded-2xl px-4 py-3 text-sm text-white/80">
-                      “{q.text}” <span className="block text-xs text-white/50 mt-1">— {q.attribution}</span>
-                    </blockquote>
-                  ))}
-                </div>
-              )}
             </div>
           )}
         </div>
