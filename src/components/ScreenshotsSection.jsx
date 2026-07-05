@@ -174,7 +174,7 @@ export function ScreenshotsSection() {
           {/* Social proof strip — immediately after the demo carousel per #73 */}
           {socialProof && (
             <div className="mt-10 border-t border-white/10 pt-8">
-              <p className="text-center text-[10px] font-semibold uppercase tracking-[0.3em] text-milo-sky/70">
+              <p className="text-center text-[10px] font-semibold uppercase tracking-[0.3em] text-milo-sky/80">
                 {socialProof.eyebrow}
               </p>
               <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-3">
