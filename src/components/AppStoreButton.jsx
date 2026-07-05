@@ -29,7 +29,7 @@ export function AppStoreButton({ location = 'unknown', label, variant = 'primary
       <Apple className={iconClassName} />
       <span className="flex flex-col items-start leading-tight">
         <span>{effectiveLabel}</span>
-        <span className="text-[10px] font-normal normal-case tracking-normal text-white/70">
+        <span className="text-[10px] font-normal normal-case tracking-normal text-white">
           {PRIMARY_CTA_SUBLABEL}
         </span>
       </span>
