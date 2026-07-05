@@ -214,10 +214,9 @@ export const socialProof = {
     { value: '$8.99', label: 'one-time purchase (US)' },
     { value: 'Built in public', label: 'one-person project' },
   ],
-  quotes: [
-    { text: 'Finally answers while I’m driving without touching the phone.', attribution: '— Early user, CarPlay' },
-    { text: 'I just say the model I want and it switches. No app. No typing.', attribution: '— Early user, lock screen' },
-  ],
+  // Anonymous "Early user" quotes removed per #18 — they read as unattributed
+  // placeholder testimonials. Re-add here (with a real name/handle and a
+  // source link) once genuine, sourced testimonials exist.
 };
 
 export const instructionFlow = {
