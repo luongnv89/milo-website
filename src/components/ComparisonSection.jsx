@@ -10,10 +10,10 @@ export function ComparisonSection() {
           The hands-free difference
         </p>
         <h2 className="mt-5 font-display text-section font-semibold text-white">
-          Ask hands-free. They make you open the app first.
+          Ask hands-free. No app to open first.
         </h2>
         <p className="mt-4 text-white/70">
-          No app to open — just ask Siri. See where MILO pulls ahead, feature by feature.
+          Feature by feature, see where MILO pulls ahead.
         </p>
       </div>
 
