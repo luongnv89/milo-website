@@ -1,14 +1,4 @@
-import { socialLinks } from "../data/content.js";
-
-const productLinks = [
-  { label: "Features", href: "#features" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Story", href: "#story" },
-  { label: "Providers", href: "#providers" },
-  { label: "Help", href: "#help" },
-  { label: "FAQ", href: "#faq" },
-  { label: "Feedback", href: "#feedback" },
-];
+import { navLinks, socialLinks } from "../data/content.js";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -36,7 +26,7 @@ export function Footer() {
                 Product
               </h4>
               <ul className="space-y-2 text-sm text-white/60">
-                {productLinks.map((link) => (
+                {navLinks.map((link) => (
                   <li key={link.href}>
                     <a href={link.href} className="transition hover:text-white">
                       {link.label}
