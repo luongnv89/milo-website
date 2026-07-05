@@ -7,13 +7,13 @@ export function ComparisonSection() {
     <section id="comparison" className="mx-auto max-w-6xl px-6 py-20">
       <div className="mx-auto mb-12 max-w-2xl text-center">
         <p className="text-xs font-semibold uppercase tracking-[0.4em] text-milo-sky">
-          MILO vs ChatGPT, Claude, and Gemini on iPhone
+          The hands-free difference
         </p>
         <h2 className="mt-5 font-display text-section font-semibold text-white">
-          Why switch from your current assistant?
+          Ask hands-free. They make you open the app first.
         </h2>
         <p className="mt-4 text-white/70">
-          Same voice-first flow, feature by feature — see where MILO pulls ahead.
+          No app to open — just ask Siri. See where MILO pulls ahead, feature by feature.
         </p>
       </div>
 
