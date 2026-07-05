@@ -22,7 +22,7 @@ export function Footer() {
           </div>
           <div className="flex flex-wrap gap-8">
             <div>
-              <h4 className="mb-3 text-xs font-semibold uppercase tracking-wider text-white/40">
+              <h4 className="mb-3 text-xs font-semibold uppercase tracking-wider text-white/50">
                 Product
               </h4>
               <ul className="space-y-2 text-sm text-white/60">
@@ -36,7 +36,7 @@ export function Footer() {
               </ul>
             </div>
             <div>
-              <h4 className="mb-3 text-xs font-semibold uppercase tracking-wider text-white/40">
+              <h4 className="mb-3 text-xs font-semibold uppercase tracking-wider text-white/50">
                 Legal
               </h4>
               <ul className="space-y-2 text-sm text-white/60">
@@ -67,7 +67,7 @@ export function Footer() {
               </ul>
             </div>
             <div>
-              <h4 className="mb-3 text-xs font-semibold uppercase tracking-wider text-white/40">
+              <h4 className="mb-3 text-xs font-semibold uppercase tracking-wider text-white/50">
                 Connect
               </h4>
               <ul className="space-y-2 text-sm text-white/60">
@@ -95,7 +95,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t border-white/10 pt-8 text-center">
-          <p className="text-xs text-white/40">
+          <p className="text-xs text-white/50">
             © {year} MILO. Built for the way you speak.
           </p>
         </div>
