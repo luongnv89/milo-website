@@ -90,7 +90,6 @@ export const feedbackOptions = [
     label: 'Report a bug',
     description: 'Something broken or behaving oddly? Tell me what happened.',
     href: `${FEEDBACK_ISSUE_URL}?template=bug_report.yml&labels=bug`,
-    gradient: 'from-rose-500 to-orange-500',
   },
   {
     id: 'feature',
@@ -98,7 +97,6 @@ export const feedbackOptions = [
     label: 'Request a feature',
     description: 'Have an idea for a model, shortcut, or workflow? Pitch it.',
     href: `${FEEDBACK_ISSUE_URL}?template=feature_request.yml&labels=enhancement`,
-    gradient: 'from-milo-blue to-cyan-400',
   },
   {
     id: 'general',
@@ -106,7 +104,6 @@ export const feedbackOptions = [
     label: 'General feedback',
     description: 'Questions, praise, or anything that doesn’t fit the others.',
     href: `${FEEDBACK_ISSUE_URL}?template=feedback.yml`,
-    gradient: 'from-violet-500 to-fuchsia-500',
   },
 ];
 
@@ -356,56 +353,48 @@ export const providers = [
   {
     id: 'openai',
     title: 'OpenAI',
-    color: 'text-green-400',
     icon: Zap,
     bullets: ['GPT-5.5, GPT-5.4 & mini', 'Strong all-round reasoning'],
   },
   {
     id: 'claude',
     title: 'Anthropic Claude',
-    color: 'text-pink-400',
     icon: Brain,
     bullets: ['Claude Opus 4.8, Sonnet 4.6, Haiku', 'Great for long, careful analysis'],
   },
   {
     id: 'gemini',
     title: 'Google Gemini',
-    color: 'text-blue-400',
     icon: Sparkles,
     bullets: ['Gemini 3.5 Flash & 3.1 Pro', 'Fast, with a generous free tier'],
   },
   {
     id: 'mistral',
     title: 'Mistral AI',
-    color: 'text-orange-400',
     icon: Wind,
     bullets: ['Large, Medium & Small', 'European, multiple sizes for cost'],
   },
   {
     id: 'groq',
     title: 'Groq',
-    color: 'text-red-400',
     icon: Zap,
     bullets: ['Llama, GPT-OSS, Qwen, Kimi', 'Extremely fast inference'],
   },
   {
     id: 'openrouter',
     title: 'OpenRouter',
-    color: 'text-purple-400',
     icon: Layers3,
     bullets: ['200+ models behind one key', 'Many free models available'],
   },
   {
     id: 'apple',
     title: 'Apple Intelligence',
-    color: 'text-slate-200',
     icon: Cpu,
     bullets: ['On-device foundation model', 'No key, nothing leaves the phone'],
   },
   {
     id: 'ollama',
     title: 'Ollama (Local)',
-    color: 'text-teal-300',
     icon: Cpu,
     bullets: ['Run Llama, Mistral & more locally', 'Fully offline, fully private'],
   },
