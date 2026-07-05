@@ -191,6 +191,14 @@ export const problemSection = {
   ],
 };
 
+// #24 requested a short founder video/voice clip narrating the "Hey Siri,
+// ask MILO" flow. No real one exists yet — recording it requires the actual
+// human founder, which is out of scope for an automated agent (fabricating
+// one would be deceptive). Once a real, human-recorded clip exists, set
+// `founderStory.videoUrl` (or `audioUrl` for a voice-only clip) to activate
+// the <FounderClip> embed in FounderStory.jsx with zero further code
+// changes. Optional companions: `videoPosterUrl`, `videoCaptionsUrl` (a
+// .vtt file), `clipTranscript`, `clipLabel`.
 export const founderStory = {
   eyebrow: 'Why I built MILO',
   name: 'Luong',
