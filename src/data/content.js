@@ -62,9 +62,11 @@ export const heroContent = {
 
 export const navLinks = [
   { label: 'Features', href: '#features' },
-  { label: 'Pricing', href: '#pricing' },
   { label: 'Screens', href: '#screens' },
   { label: 'Story', href: '#story' },
+  { label: 'Providers', href: '#providers' },
+  { label: 'Comparison', href: '#comparison' },
+  { label: 'Pricing', href: '#pricing' },
   { label: 'Help', href: '#help' },
   { label: 'FAQ', href: '#faq' },
   { label: 'Feedback', href: '#feedback' },
