@@ -1,7 +1,7 @@
 import { Mic } from 'lucide-react';
 
 import { AppStoreButton } from './AppStoreButton.jsx';
-import { heroContent, PRICING_OFFER, heroBadges, heroChecklist } from '../data/content.js';
+import { heroContent, PRICING_OFFER, heroChecklist } from '../data/content.js';
 
 export function HeroSection() {
   return (
@@ -30,7 +30,7 @@ export function HeroSection() {
             </a>
           </div>
 
-          {/* Hero badges — pricing + platform */}
+          {/* Platform badges — not pricing (#33 consolidates the pricing facts below to one mention) */}
           <div className="mt-5 flex flex-wrap items-center justify-center gap-3 lg:justify-start">
             <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">
               iOS 17.6+
@@ -38,15 +38,9 @@ export function HeroSection() {
             <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">
               On the App Store
             </span>
-            <span className="inline-flex items-center gap-1.5 rounded-full border border-milo-sky/30 bg-milo-sky/10 px-3 py-1 text-xs text-milo-sky">
-              $8.99 USD
-            </span>
           </div>
-          <p className="mt-2 text-center text-[12px] text-white/60 lg:text-left">
-            US price · Apple sets local pricing in your country
-          </p>
 
-          {/* Hero checklist — pricing + features */}
+          {/* Hero checklist — features + the one purchase-model mention (#33) */}
           <div className="mt-6 space-y-2 lg:mx-0 mx-auto">
             {heroChecklist.map((item, index) => (
               <div key={index} className="flex items-center gap-2 text-sm text-white/80">
@@ -56,7 +50,8 @@ export function HeroSection() {
             ))}
           </div>
 
-          {/* Pricing teaser near hero CTA (#71) — links down to the full section */}
+          {/* Pricing teaser (#71) — the single price + "Apple sets local pricing" mention
+              and link down to the full #pricing section (#33 consolidation) */}
           <a
             href="#pricing"
             className="mt-4 inline-block max-w-md py-2 text-sm text-white/70 transition hover:text-white lg:mx-0 mx-auto"
@@ -65,20 +60,6 @@ export function HeroSection() {
               {PRICING_OFFER}
             </span>
           </a>
-
-          {/* Pricing note — links to full pricing section */}
-          <a
-            href="#pricing"
-            className="mt-3 inline-block py-2 text-xs text-white/70 transition hover:text-white lg:mx-0 mx-auto"
-          >
-            Prices vary by country — Apple sets local pricing
-          </a>
-
-          {/* Pricing badge — one-time purchase, no subscription */}
-          <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-milo-blue/30 bg-milo-blue/10 px-4 py-1.5 text-sm font-medium text-milo-sky">
-            <span className="font-bold text-milo-sky">$8.99</span>
-            <span>one-time purchase · no subscription</span>
-          </div>
         </div>
 
         {/* iPhone mockup — ported from the CUStats Go site (custats-info MobileApp) */}
