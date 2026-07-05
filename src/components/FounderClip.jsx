@@ -14,6 +14,13 @@
 export function FounderClip({ videoUrl, audioUrl, posterUrl, captionsUrl, transcript, label }) {
   if (!videoUrl && !audioUrl) return null;
 
+  if (import.meta.env.DEV && !captionsUrl && !transcript) {
+    console.warn(
+      'FounderClip: videoUrl/audioUrl is set without a captionsUrl or transcript — ' +
+        'the founder clip has no accessible text alternative (see #24 acceptance criteria).'
+    );
+  }
+
   return (
     <div className="mt-6 overflow-hidden rounded-2xl border border-white/10 bg-black/20 p-4">
       {videoUrl ? (
@@ -21,6 +28,7 @@ export function FounderClip({ videoUrl, audioUrl, posterUrl, captionsUrl, transc
           controls
           preload="none"
           poster={posterUrl}
+          playsInline
           aria-label={label || 'Founder video clip'}
           className="w-full rounded-xl"
         >
