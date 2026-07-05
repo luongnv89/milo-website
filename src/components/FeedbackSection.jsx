@@ -38,9 +38,7 @@ export function FeedbackSection() {
               onClick={() => trackEvent(EVENTS.FEEDBACK_LINK_CLICKED, { type: option.id })}
               className="group glass flex flex-col rounded-3xl p-6 transition hover:-translate-y-1 hover:border-milo-blue/40 focus:outline-none focus:ring-2 focus:ring-milo-blue focus:ring-offset-2 focus:ring-offset-slate-950"
             >
-              <span
-                className={`inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br ${option.gradient} text-white shadow-lg`}
-              >
+              <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-milo-blue/15 text-milo-blue shadow-lg">
                 <option.icon className="h-6 w-6" />
               </span>
               <h3 className="mt-5 flex items-center gap-1.5 font-display text-lg font-semibold text-white">
