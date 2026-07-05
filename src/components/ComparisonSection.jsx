@@ -28,7 +28,7 @@ export function ComparisonSection() {
                 <caption className="sr-only">
                   Feature comparison for {row.feature}: MILO, ChatGPT, Claude, and Gemini on iPhone.
                 </caption>
-                <thead className="bg-white/[0.03] text-[10px] uppercase tracking-widest text-white/45">
+                <thead className="bg-white/[0.03] text-[10px] uppercase tracking-widest text-white/50">
                   <tr>
                     <th scope="col" className="w-[34%] px-4 py-3 font-medium">
                       Assistant
@@ -82,7 +82,7 @@ export function ComparisonSection() {
             <caption className="sr-only">
               Feature comparison of MILO, ChatGPT, Claude, and Gemini on iPhone.
             </caption>
-            <thead className="bg-white/[0.03] text-[10px] uppercase tracking-widest text-white/45">
+            <thead className="bg-white/[0.03] text-[10px] uppercase tracking-widest text-white/50">
               <tr>
                 <th scope="col" className="w-[32%] px-4 py-3 font-medium">
                   Feature

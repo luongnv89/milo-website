@@ -242,7 +242,7 @@ export function HelpSection() {
                       if (e.key === 'Enter') sendToMilo();
                     }}
                     placeholder="Type question for MILO…"
-                    className="flex-1 rounded-2xl border border-white/15 bg-white/5 px-4 py-2 text-sm placeholder:text-white/40 focus:outline-none focus:border-white/30"
+                    className="flex-1 rounded-2xl border border-white/15 bg-white/5 px-4 py-2 text-sm placeholder:text-white/50 focus:outline-none focus:border-white/30"
                   />
                   <button
                     type="button"
