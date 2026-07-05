@@ -221,13 +221,13 @@ export function HelpSection() {
 
             {stage === 'miloReady' && !isThinking && (
               <div className="space-y-2.5 pt-1">
-                <div className="flex flex-wrap gap-1.5">
+                <div className="flex flex-wrap gap-2 sm:gap-1.5">
                   {MODELS.map((m) => (
                     <button
                       key={m}
                       type="button"
                       onClick={() => setSelectedModel(m)}
-                      className={`rounded-full border px-2.5 py-0.5 text-xs transition ${selectedModel === m ? 'border-milo-blue bg-milo-blue/20 text-white' : 'border-white/15 text-white/70 hover:text-white'}`}
+                      className={`inline-flex min-h-[44px] items-center justify-center rounded-full border px-3.5 py-2 text-sm transition sm:min-h-0 sm:px-2.5 sm:py-0.5 sm:text-xs ${selectedModel === m ? 'border-milo-blue bg-milo-blue/20 text-white' : 'border-white/15 text-white/70 hover:text-white'}`}
                     >
                       {m}
                     </button>
