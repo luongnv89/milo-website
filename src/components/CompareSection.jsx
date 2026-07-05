@@ -16,9 +16,9 @@ export function CompareSection() {
         {providers.map((p) => (
           <div
             key={p.id}
-            className="rounded-2xl border border-white/10 bg-white/5 p-5 transition hover:bg-white/[0.08]"
+            className="group rounded-2xl border border-white/10 bg-white/5 p-5 transition hover:bg-white/[0.08]"
           >
-            <p.icon className={`h-6 w-6 ${p.color}`} />
+            <p.icon className="h-6 w-6 text-white/70 transition-colors group-hover:text-milo-blue" />
             <h3 className="mt-3 font-semibold text-white">{p.title}</h3>
             <ul className="mt-2 space-y-1 text-[13px] leading-relaxed text-white/60">
               {p.bullets.map((b) => (
