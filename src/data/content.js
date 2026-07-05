@@ -29,6 +29,11 @@ export const MONTHS_IN_USE = 8;
 // Names the outcome (echoes heroContent's "200+ AI brains"), not the download mechanism (#20).
 export const PRIMARY_CTA_LABEL = 'Give Siri 200+ AI Brains';
 
+// Paired with PRIMARY_CTA_LABEL inside AppStoreButton (#35) — the label alone reads as a
+// feature claim, not a purchase action, and the Apple glyph is too subtle on its own. This
+// sublabel makes the download/App Store action explicit at every render site.
+export const PRIMARY_CTA_SUBLABEL = 'Download on the App Store';
+
 // Paid path (#71): visible pricing, one-time purchase (Apple decides the price per country).
 export const PRICING_OFFER =
   'One-time purchase — $8.99 USD. Apple sets local pricing in your country — no subscriptions.';
@@ -45,7 +50,6 @@ export const pricing = {
     'GPT-4o, Claude Opus 4, Gemini 2.5 Flash, Mistral, local Ollama & more',
     'Private — your keys, your data. No logs sold.',
   ],
-  ctaLabel: 'Download on the App Store',
   finePrint: 'One-time purchase via the Apple App Store. Price varies by country — Apple sets local pricing.',
   // Savings vs. the $20/mo subscription fee itself (ChatGPT Plus / Claude Pro), confirmed July
   // 2026 (#23) — scoped to the subscription fee, not total AI usage cost (see BYOK note below).
@@ -114,12 +118,6 @@ export const heroChecklist = [
   { label: 'Short spoken answers in CarPlay', icon: CheckCircle2 },
   { label: 'Pick any of 8 providers (your keys)', icon: CheckCircle2 },
   { label: 'One-time purchase — no subscription', icon: CheckCircle2 },
-  { label: '$8.99 USD (Apple sets local pricing)', icon: CheckCircle2 },
-];
-
-export const heroBadges = [
-  { label: 'iOS 17.6+' },
-  { label: 'On the App Store' },
 ];
 
 export const featureCards = [
