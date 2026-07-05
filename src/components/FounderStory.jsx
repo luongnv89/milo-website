@@ -1,5 +1,6 @@
 import { founderStory } from '../data/content.js';
 import { AppStoreButton } from './AppStoreButton.jsx';
+import { FounderClip } from './FounderClip.jsx';
 
 export function FounderStory() {
   return (
@@ -21,6 +22,15 @@ export function FounderStory() {
               {founderStory.personalNote}
             </div>
           )}
+
+          <FounderClip
+            videoUrl={founderStory.videoUrl}
+            audioUrl={founderStory.audioUrl}
+            posterUrl={founderStory.videoPosterUrl}
+            captionsUrl={founderStory.videoCaptionsUrl}
+            transcript={founderStory.clipTranscript}
+            label={founderStory.clipLabel}
+          />
 
           <div className="mt-8 flex flex-col gap-6 border-t border-white/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
             <div className="flex items-center gap-4">
