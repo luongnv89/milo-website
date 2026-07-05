@@ -167,7 +167,7 @@ export function ScreenshotsSection() {
           </div>
 
           {/* Live position for screen readers */}
-          <p className="mt-4 text-center text-xs text-white/45" aria-live="polite">
+          <p className="mt-4 text-center text-xs text-white/50" aria-live="polite">
             {active + 1} / {count}
           </p>
 
