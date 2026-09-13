@@ -43,4 +43,5 @@ You bring your own API keys (cloud providers) and switch by voice:
 
 ## Optional
 
+- [Full text for LLMs](https://askmilo.pro/llms-full.txt): Expanded product description, comparison table, pricing and complete FAQ.
 - [Founder](https://github.com/luongnv89): MILO is built by Luong (@luongnv89).

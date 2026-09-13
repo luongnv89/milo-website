@@ -12,6 +12,8 @@ export function FounderStory() {
             <img
               src={founderStory.photo}
               alt={founderStory.name}
+              width="64"
+              height="64"
               className="mt-6 h-16 w-16 rounded-full object-cover"
               loading="lazy"
             />

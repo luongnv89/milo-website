@@ -12,6 +12,12 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
 User-agent: Google-Extended
 Allow: /
 
@@ -22,6 +28,12 @@ User-agent: Applebot-Extended
 Allow: /
 
 User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: cohere-ai
 Allow: /
 
 # AI search bots
@@ -37,6 +49,9 @@ Allow: /
 User-agent: DuckAssistBot
 Allow: /
 
+User-agent: YouBot
+Allow: /
+
 # On-demand fetchers (real-time user queries)
 User-agent: ChatGPT-User
 Allow: /
@@ -45,6 +60,16 @@ User-agent: Claude-User
 Allow: /
 
 User-agent: Perplexity-User
+Allow: /
+
+User-agent: MistralAI-User
+Allow: /
+
+# Search engines feeding AI assistants (Siri/Spotlight, Copilot)
+User-agent: Applebot
+Allow: /
+
+User-agent: Bingbot
 Allow: /
 
 # Sitemap

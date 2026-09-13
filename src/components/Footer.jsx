@@ -15,6 +15,8 @@ export function Footer() {
               <img
                 src={`${import.meta.env.BASE_URL}AppIcon-80.png`}
                 alt="MILO icon"
+                width="80"
+                height="80"
                 className="h-10 w-10 rounded-xl"
               />
               <p className="font-sans text-lg font-semibold text-ink">MILO</p>
@@ -22,7 +24,7 @@ export function Footer() {
             <p className="mt-3 text-sm text-ink-3">Your voice. Any AI.</p>
           </div>
           <div>
-            <h4 className="eyebrow">Product</h4>
+            <p className="eyebrow">Product</p>
             <ul className="mt-4 space-y-2 text-sm">
               {footerLinks.product.map((link) => (
                 <li key={link.href}>
@@ -34,7 +36,7 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="eyebrow">Company</h4>
+            <p className="eyebrow">Company</p>
             <ul className="mt-4 space-y-2 text-sm">
               {footerLinks.company.map((link) => (
                 <li key={link.href}>
@@ -46,7 +48,7 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="eyebrow">Legal</h4>
+            <p className="eyebrow">Legal</p>
             <ul className="mt-4 space-y-2 text-sm">
               {footerLinks.legal.map((link) => (
                 <li key={link.href}>
@@ -58,7 +60,7 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="eyebrow">Connect</h4>
+            <p className="eyebrow">Connect</p>
             <ul className="mt-4 space-y-2 text-sm">
               {socialLinks.map((link) => (
                 <li key={link.href}>

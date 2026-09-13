@@ -6,7 +6,7 @@
     <title>MILO — Give Siri 200+ AI brains — hands-free in the car</title>
     <meta
       name="description"
-      content="Give Siri 200+ AI brains — hands-free in the car. Ask GPT, Claude, Gemini, Apple Intelligence, or local Ollama from lock screen, headphones or CarPlay. One-time purchase ($8.99 USD in the US; Apple sets local pricing). No app. No typing."
+      content="Give Siri 200+ AI brains — hands-free in the car. Ask GPT, Claude, Gemini or local Ollama from CarPlay, the lock screen or headphones. $8.99 one-time."
     />
     <link rel="canonical" href="https://askmilo.pro/" />
     <meta property="og:type" content="website" />
@@ -18,6 +18,9 @@
       content="Give Siri 200+ AI brains — hands-free in the car. Ask GPT, Claude, Gemini, Apple Intelligence, or local Ollama from the lock screen, headphones, or CarPlay. One-time purchase ($8.99 USD in the US; Apple sets local pricing). No app. No typing."
     />
     <meta property="og:image" content="https://askmilo.pro/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_US" />
     <meta property="og:image:alt" content="Siri: here’s what I found on the web 🙁 vs MILO: real GPT, Claude, Gemini & more, spoken hands-free — Give Siri 200+ AI brains." />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:creator" content="@luongnv89" />
@@ -43,9 +46,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600&display=swap"
       rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600&display=swap"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600&display=swap"
+      />
+    </noscript>
     <link rel="preconnect" href="https://plausible.io" />
     <link rel="preconnect" href="https://www.googletagmanager.com" />
 
@@ -86,6 +97,20 @@
               "https://github.com/luongnv89",
               "https://linkedin.com/in/luongnv89",
               "https://medium.com/@luongnv89"
+            ],
+            "founder": { "@id": "https://askmilo.pro/#founder" }
+          },
+          {
+            "@type": "Person",
+            "@id": "https://askmilo.pro/#founder",
+            "name": "Luong",
+            "url": "https://github.com/luongnv89",
+            "image": "https://github.com/luongnv89.png",
+            "sameAs": [
+              "https://x.com/luongnv89",
+              "https://github.com/luongnv89",
+              "https://linkedin.com/in/luongnv89",
+              "https://medium.com/@luongnv89"
             ]
           },
           {
@@ -101,9 +126,27 @@
             "name": "MILO",
             "operatingSystem": "iOS 17.6+",
             "applicationCategory": "ProductivityApplication",
+            "applicationSubCategory": "Voice assistant",
             "description": "MILO connects Siri's system-wide, hands-free voice access to GPT, Claude, Gemini, and 200+ models. One-time purchase ($8.99 USD in the US; Apple sets local pricing by country — no subscriptions). Bring your own keys; conversations stay on-device. Works in CarPlay.",
             "url": "https://askmilo.pro/",
             "image": "https://askmilo.pro/og-image.png",
+            "screenshot": [
+              "https://askmilo.pro/1.0.0/car-play-mode.PNG",
+              "https://askmilo.pro/1.0.0/model-selection.PNG",
+              "https://askmilo.pro/1.0.0/help-guide.PNG",
+              "https://askmilo.pro/1.0.0/sidebar-menu.PNG",
+              "https://askmilo.pro/1.0.0/history.PNG",
+              "https://askmilo.pro/1.0.0/detail-history-conversation.PNG",
+              "https://askmilo.pro/1.0.0/setting-first.PNG",
+              "https://askmilo.pro/1.0.0/provider-setting-first.PNG",
+              "https://askmilo.pro/1.0.0/api-keys-management.PNG"
+            ],
+            "featureList": [
+              "Unlimited conversations with any model",
+              "Siri, CarPlay, lock screen and headphones",
+              "GPT-5.5, Claude Opus 4.8, Gemini 3.5 Flash, Mistral, Groq, OpenRouter, Apple Intelligence, Ollama",
+              "Your keys, your data — nothing logged or sold"
+            ],
             "downloadUrl": "https://apps.apple.com/app/ask-milo-ai-chat-assistant/id6780062368",
             "installUrl": "https://apps.apple.com/app/ask-milo-ai-chat-assistant/id6780062368",
             "author": { "@id": "https://askmilo.pro/#org" },
