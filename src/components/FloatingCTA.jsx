@@ -19,20 +19,23 @@ export function FloatingCTA() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  if (!isVisible) return null;
-
   return (
-    // `w-max` (#35 fix-up): without an explicit width, a fixed-position element with only
-    // `left` set (no `right`) is shrink-to-fit against the space from `left` to the viewport's
-    // right edge — half the viewport here — clipping/wrapping the button's text on narrow
-    // screens well before it runs out of room. `w-max` sizes to content instead, so the
-    // longer label + sublabel pairing (added for #35) renders on one line as intended.
-    <div className="fixed bottom-6 left-1/2 z-40 w-max -translate-x-1/2 transition-all duration-300">
-      <AppStoreButton
-        location="floating_bar"
-        className="inline-flex items-center gap-3 rounded-full border border-white/20 bg-slate-900/95 px-8 py-4 font-semibold text-white shadow-2xl backdrop-blur transition hover:scale-105 hover:border-milo-blue/50"
-        iconClassName="h-5 w-5 text-milo-sky"
-      />
+    <div
+      className={`fixed inset-x-4 bottom-4 z-40 transition-[opacity,transform] duration-200 ease-out md:hidden ${
+        isVisible ? 'translate-y-0 opacity-100' : 'pointer-events-none translate-y-2 opacity-0'
+      }`}
+      aria-hidden={!isVisible}
+      inert={!isVisible}
+    >
+      <div className="card flex items-center justify-between gap-3 rounded-full px-2 py-2 shadow-[0_16px_40px_-12px_rgba(17,17,16,.25)]">
+        <span className="pl-4 text-sm text-ink-2">$8.99 · one-time</span>
+        <AppStoreButton
+          location="floating_bar"
+          label="Download"
+          className="btn-primary h-10 px-4 text-sm"
+          iconClassName="h-4 w-4"
+        />
+      </div>
     </div>
   );
 }

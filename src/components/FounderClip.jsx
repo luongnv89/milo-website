@@ -22,7 +22,7 @@ export function FounderClip({ videoUrl, audioUrl, posterUrl, captionsUrl, transc
   }
 
   return (
-    <div className="mt-6 overflow-hidden rounded-2xl border border-white/10 bg-black/20 p-4">
+    <div className="mt-6 overflow-hidden rounded-2xl border border-line bg-paper-2 p-4">
       {videoUrl ? (
         <video
           controls
@@ -43,7 +43,7 @@ export function FounderClip({ videoUrl, audioUrl, posterUrl, captionsUrl, transc
         </audio>
       )}
 
-      {transcript && <p className="mt-3 text-xs text-white/50">{transcript}</p>}
+      {transcript && <p className="mt-3 text-xs text-ink-3">{transcript}</p>}
     </div>
   );
 }

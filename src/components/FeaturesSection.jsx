@@ -1,27 +1,23 @@
-import { featureCards } from '../data/content.js';
+import { featureCards, featuresSection } from '../data/content.js';
 
 export function FeaturesSection() {
   return (
-    <section id="features" className="mx-auto max-w-6xl px-6 py-20">
-      <div className="mx-auto mb-12 max-w-2xl text-center">
-        <h2 className="font-display text-section font-semibold text-white">
-          Ask real AI through Siri. That’s the job.
-        </h2>
-        <p className="mt-4 text-white/70">
-          The core flow: voice via Siri → short spoken answer → your model → private.
-        </p>
-      </div>
+    <section id="features" className="bg-paper py-24 sm:py-32">
+      <div className="mx-auto max-w-6xl px-6">
+        <p className="eyebrow">{featuresSection.eyebrow}</p>
+        <h2 className="display-section mt-4 max-w-3xl text-ink">{featuresSection.title}</h2>
 
-      <div className="grid gap-6 sm:grid-cols-2">
-        {featureCards.map((card) => (
-          <div key={card.title} className="glass rounded-3xl p-8">
-            <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-milo-blue/15 text-milo-sky">
-              <card.icon className="h-5 w-5" aria-hidden="true" />
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {featureCards.map((card) => (
+            <div key={card.title} className="card p-6">
+              <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-line bg-paper-2">
+                <card.icon className="h-5 w-5 text-ink" aria-hidden="true" />
+              </div>
+              <h3 className="mt-5 font-medium text-ink">{card.title}</h3>
+              <p className="mt-2 text-[15px] text-ink-2">{card.description}</p>
             </div>
-            <h3 className="font-display text-xl font-semibold text-white">{card.title}</h3>
-            <p className="mt-3 text-sm leading-relaxed text-white/70">{card.description}</p>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

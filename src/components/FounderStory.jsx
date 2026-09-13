@@ -4,23 +4,43 @@ import { FounderClip } from './FounderClip.jsx';
 
 export function FounderStory() {
   return (
-    <section id="story" className="bg-slate-950 py-24">
-      <div className="mx-auto max-w-3xl px-6">
-        <div className="glass rounded-3xl p-8 sm:p-12">
-          <p className="text-xs font-semibold uppercase tracking-[0.4em] text-milo-sky">
-            {founderStory.eyebrow}
-          </p>
+    <section id="story" className="bg-paper py-24 sm:py-32">
+      <div className="mx-auto grid max-w-5xl gap-10 px-6 lg:grid-cols-[280px_1fr] lg:gap-16">
+        <div className="lg:sticky lg:top-24 lg:self-start">
+          <p className="eyebrow">{founderStory.eyebrow}</p>
+          {founderStory.photo ? (
+            <img
+              src={founderStory.photo}
+              alt={founderStory.name}
+              className="mt-6 h-16 w-16 rounded-full object-cover"
+              loading="lazy"
+            />
+          ) : (
+            <span className="mt-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-accent text-lg font-bold text-white">
+              {founderStory.name.charAt(0)}
+            </span>
+          )}
+          <p className="mt-4 font-medium text-ink">{founderStory.signoff}</p>
+          <p className="text-sm text-ink-3">Builds and uses MILO daily</p>
+        </div>
 
-          <div className="mt-6 space-y-5 text-lg leading-relaxed text-white/85">
-            {founderStory.paragraphs.map((p, i) => (
-              <p key={i}>{p}</p>
-            ))}
+        <div>
+          <div className="space-y-6 text-lg leading-relaxed text-ink sm:text-xl">
+            {founderStory.paragraphs.map((p, i) =>
+              i === 0 ? (
+                <p key={i} className="font-serif text-2xl leading-snug text-ink sm:text-3xl">
+                  {p}
+                </p>
+              ) : (
+                <p key={i}>{p}</p>
+              )
+            )}
           </div>
 
           {founderStory.personalNote && (
-            <div className="mt-6 border-l-2 border-milo-blue pl-4 text-sm italic text-white/70">
+            <blockquote className="mt-8 border-l-2 border-ink pl-5 font-serif text-xl italic text-ink-2">
               {founderStory.personalNote}
-            </div>
+            </blockquote>
           )}
 
           <FounderClip
@@ -32,25 +52,7 @@ export function FounderStory() {
             label={founderStory.clipLabel}
           />
 
-          <div className="mt-8 flex flex-col gap-6 border-t border-white/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
-            <div className="flex items-center gap-4">
-              {founderStory.photo ? (
-                <img
-                  src={founderStory.photo}
-                  alt={founderStory.name}
-                  className="h-12 w-12 rounded-full border-2 border-white/20 object-cover"
-                  loading="lazy"
-                />
-              ) : (
-                <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-milo-blue text-lg font-bold text-white">
-                  {founderStory.name.charAt(0)}
-                </span>
-              )}
-              <div>
-                <p className="font-display font-semibold text-white">{founderStory.signoff}</p>
-                <p className="text-xs text-white/50">One-person build • used daily</p>
-              </div>
-            </div>
+          <div className="mt-10">
             <AppStoreButton location="founder_story" />
           </div>
         </div>

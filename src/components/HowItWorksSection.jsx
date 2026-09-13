@@ -1,21 +1,21 @@
 import { useState } from 'react';
 import { Lightbulb, Mic, Sparkles, UserRound } from 'lucide-react';
 
-import { instructionFlow, siriExamples } from '../data/content.js';
+import { howItWorks, instructionFlow, siriExamples } from '../data/content.js';
 
 const speakerMeta = {
   user: {
     title: 'You',
     reverse: true,
-    bubble: 'bg-milo-blue/25 text-white',
-    avatar: 'bg-milo-blue/20 border-milo-blue/50 text-white',
+    bubble: 'bg-accent text-white',
+    avatar: 'border-line bg-white text-ink-2',
     Icon: UserRound,
   },
   siri: {
     title: 'Siri',
     reverse: false,
-    bubble: 'bg-white/10 text-white/80',
-    avatar: 'bg-white/10 border-white/30 text-white/80',
+    bubble: 'bg-paper-2 text-ink',
+    avatar: 'border-line bg-white text-ink-2',
     Icon: Mic,
   },
 };
@@ -26,19 +26,19 @@ function ChatBubble({ line }) {
   return (
     <div className={`flex items-end gap-3 ${meta.reverse ? 'flex-row-reverse' : ''}`}>
       <span
-        className={`inline-flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full border ${meta.avatar}`}
+        className={`inline-flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border ${meta.avatar}`}
       >
         {line.handoff ? <Sparkles className="h-4 w-4" /> : <Icon className="h-4 w-4" />}
       </span>
       <div className={`max-w-[80%] rounded-2xl px-4 py-2.5 text-sm ${meta.bubble}`}>
         <p>{line.text}</p>
-        {line.subtitle && <p className="mt-1 text-xs text-milo-sky">{line.subtitle}</p>}
+        {line.subtitle && <p className="mt-1 text-xs text-accent-ink">{line.subtitle}</p>}
       </div>
     </div>
   );
 }
 
-export function HelpSection() {
+export function HowItWorksSection() {
   const [activeTab, setActiveTab] = useState(siriExamples[0].id);
   const active = siriExamples.find((t) => t.id === activeTab) ?? siriExamples[0];
 
@@ -162,23 +162,32 @@ export function HelpSection() {
   const conversationLines = showPreview ? instructionFlow.steps : demoLines;
 
   return (
-    <section id="help" className="bg-slate-950 py-20">
-      <div className="mx-auto max-w-5xl px-6">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="font-display text-section font-semibold text-white">{instructionFlow.title}</h2>
-          <p className="mt-4 text-white/70">{instructionFlow.description}</p>
+    <section id="how" className="bg-paper py-24 sm:py-32">
+      <div className="mx-auto max-w-6xl px-6">
+        <p className="eyebrow">{howItWorks.eyebrow}</p>
+        <h2 className="display-section mt-4 max-w-3xl text-ink">{howItWorks.title}</h2>
+        <p className="mt-4 max-w-2xl text-lg text-ink-2">{howItWorks.lead}</p>
+
+        <div className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-3">
+          {howItWorks.steps.map((step) => (
+            <div key={step.n} className="bg-white p-6 sm:p-8">
+              <span className="font-serif text-4xl text-ink-3">{step.n}</span>
+              <h3 className="mt-4 text-lg font-medium text-ink">{step.title}</h3>
+              <p className="mt-1 text-[15px] text-ink-2">{step.text}</p>
+            </div>
+          ))}
         </div>
 
-        <div className="mt-12 grid gap-8 lg:grid-cols-2 lg:items-start">
+        <div className="mt-16 grid gap-8 lg:grid-cols-[1fr_0.9fr] lg:items-start">
           {/* The (interactive) conversation */}
-          <div className="glass space-y-4 rounded-3xl p-6 sm:p-8">
+          <div className="card space-y-4 p-6 sm:p-8">
             <div className="mb-1 flex items-center justify-between">
-              <span className="text-[10px] font-medium uppercase tracking-[1px] text-white/50">Interactive Siri Flow Demo</span>
+              <span className="eyebrow">Interactive demo</span>
               {(demoLines.length > 0 || stage !== 'idle') && (
                 <button
                   type="button"
                   onClick={resetDemo}
-                  className="text-[10px] text-white/50 hover:text-white underline decoration-white/30"
+                  className="text-xs text-ink-3 underline"
                 >
                   Reset demo
                 </button>
@@ -191,10 +200,10 @@ export function HelpSection() {
 
             {isThinking && (
               <div className="flex items-end gap-3 opacity-70">
-                <span className="inline-flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full border bg-white/10 border-white/30 text-white/80">
+                <span className="inline-flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border border-line bg-white text-ink-2">
                   <Mic className="h-4 w-4" />
                 </span>
-                <div className="max-w-[80%] rounded-2xl bg-white/10 px-4 py-2.5 text-sm text-white/70">Thinking…</div>
+                <div className="max-w-[80%] rounded-2xl bg-paper-2 px-4 py-2.5 text-sm text-ink-2">Thinking…</div>
               </div>
             )}
 
@@ -203,7 +212,7 @@ export function HelpSection() {
               <button
                 type="button"
                 onClick={activateSiri}
-                className="mt-1 w-full rounded-2xl border border-white/15 bg-white/5 py-2 text-sm font-medium text-white/90 transition hover:bg-white/10 active:bg-white/15"
+                className="btn-secondary mt-1 w-full"
               >
                 Activate Siri (“Hey Siri”)
               </button>
@@ -213,7 +222,7 @@ export function HelpSection() {
               <button
                 type="button"
                 onClick={sayAskMilo}
-                className="mt-1 w-full rounded-2xl border border-milo-blue/30 bg-milo-blue/10 py-2 text-sm font-medium text-white/95 transition hover:bg-milo-blue/20"
+                className="btn-secondary mt-1 w-full"
               >
                 Say “Ask MILO”
               </button>
@@ -221,13 +230,17 @@ export function HelpSection() {
 
             {stage === 'miloReady' && !isThinking && (
               <div className="space-y-2.5 pt-1">
-                <div className="flex flex-wrap gap-2 sm:gap-1.5">
+                <div className="flex flex-wrap gap-2">
                   {MODELS.map((m) => (
                     <button
                       key={m}
                       type="button"
                       onClick={() => setSelectedModel(m)}
-                      className={`inline-flex min-h-[44px] items-center justify-center rounded-full border px-3.5 py-2 text-sm transition sm:min-h-0 sm:px-2.5 sm:py-0.5 sm:text-xs ${selectedModel === m ? 'border-milo-blue bg-milo-blue/20 text-white' : 'border-white/15 text-white/70 hover:text-white'}`}
+                      className={`inline-flex min-h-[44px] items-center justify-center rounded-full border px-3 py-1.5 text-sm transition-colors sm:min-h-0 ${
+                        selectedModel === m
+                          ? 'border-accent bg-accent-soft text-accent-ink'
+                          : 'border-line text-ink-2 hover:text-ink'
+                      }`}
                     >
                       {m}
                     </button>
@@ -242,13 +255,13 @@ export function HelpSection() {
                       if (e.key === 'Enter') sendToMilo();
                     }}
                     placeholder="Type question for MILO…"
-                    className="flex-1 rounded-2xl border border-white/15 bg-white/5 px-4 py-2 text-sm placeholder:text-white/50 focus:outline-none focus:border-white/30"
+                    className="min-w-0 flex-1 rounded-full border border-line-strong bg-white px-4 py-2.5 text-sm text-ink placeholder:text-ink-3 focus:border-accent"
                   />
                   <button
                     type="button"
                     onClick={sendToMilo}
                     disabled={!queryInput.trim()}
-                    className="btn-primary py-2 px-4 text-sm disabled:cursor-not-allowed disabled:opacity-60"
+                    className="btn-primary h-10 px-4 text-sm disabled:cursor-not-allowed disabled:opacity-60"
                   >
                     Send
                   </button>
@@ -257,44 +270,46 @@ export function HelpSection() {
             )}
 
             {stage === 'done' && (
-              <p className="pt-1 text-center text-[11px] text-white/50">Follow-ups remember context in the app. Try another question or reset.</p>
+              <p className="pt-1 text-center text-xs text-ink-3">Follow-ups remember context in the app. Try another question or reset.</p>
             )}
 
-            <div className="flex items-start gap-3 rounded-2xl border border-milo-blue/20 bg-milo-blue/10 p-4">
-              <Lightbulb className="mt-0.5 h-4 w-4 flex-shrink-0 text-milo-sky" />
-              <p className="text-sm text-white/75">{instructionFlow.followUp}</p>
-            </div>
+            <p className="mt-4 flex items-start gap-2 border-t border-line pt-4 text-sm text-ink-3">
+              <Lightbulb className="mt-0.5 h-4 w-4 flex-shrink-0" />
+              <span>{instructionFlow.followUp}</span>
+            </p>
           </div>
 
-          {/* Example prompts — now launchable in the interactive demo */}
+          {/* Example prompts — launchable in the interactive demo */}
           <div>
-            <div className="flex flex-wrap gap-2">
+            <div className="inline-flex rounded-full border border-line bg-white p-1">
               {siriExamples.map((tab) => (
                 <button
                   key={tab.id}
                   type="button"
-                  className="tab-button"
                   aria-selected={tab.id === activeTab}
                   onClick={() => setActiveTab(tab.id)}
+                  className={`rounded-full px-4 py-1.5 text-sm ${
+                    tab.id === activeTab ? 'bg-ink text-white' : 'text-ink-2'
+                  }`}
                 >
                   {tab.label}
                 </button>
               ))}
             </div>
-            <div className="mt-4 space-y-3">
+            <div className="mt-4 divide-y divide-line rounded-2xl border border-line bg-white">
               {active.items.map((item) => (
-                <div key={item.prompt} className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                  <p className="text-sm font-medium text-white">{item.prompt}</p>
-                  <div className="mt-1 flex items-center justify-between gap-2">
-                    <p className="text-xs text-white/55">{item.helper}</p>
-                    <button
-                      type="button"
-                      onClick={() => loadExampleIntoDemo(item.prompt)}
-                      className="rounded-full bg-white/10 px-2 py-px text-[10px] text-white/70 transition hover:bg-white/20 hover:text-white"
-                    >
-                      Try in demo
-                    </button>
+                <div key={item.prompt} className="flex items-center justify-between gap-4 p-4">
+                  <div>
+                    <p className="text-[15px] font-medium text-ink">{item.prompt}</p>
+                    <p className="text-sm text-ink-3">{item.helper}</p>
                   </div>
+                  <button
+                    type="button"
+                    onClick={() => loadExampleIntoDemo(item.prompt)}
+                    className="btn-link inline-flex min-h-[44px] shrink-0 items-center text-sm"
+                  >
+                    Try it
+                  </button>
                 </div>
               ))}
             </div>

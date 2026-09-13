@@ -1,7 +1,7 @@
 import { useCallback, useMemo, useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-import { screenshotGroups, socialProof } from '../data/content.js';
+import { screenshotGroups, screensSection } from '../data/content.js';
 import { usePrefersReducedMotion } from '../hooks/usePrefersReducedMotion.js';
 
 // Flatten the themed groups into one slide per screenshot, carrying the group's
@@ -19,14 +19,10 @@ function buildSlides(groups) {
 
 function PhoneShot({ shot }) {
   return (
-    // Scale the mockup up with the viewport so the in-app content stays legible.
-    // This is the reading-focused carousel, so it runs a touch larger than the
-    // hero mockup (w-64 sm:w-72). The 9:19.5 ratio is very tall, so we cap the
-    // growth at lg to avoid the phone dominating the card vertically.
-    <div className="w-64 sm:w-72 lg:w-80">
-      {/* iPhone frame — same mockup as the hero, scales so every shot matches */}
-      <div className="w-full rounded-[2.5rem] bg-slate-900 p-[6px] shadow-2xl ring-1 ring-white/10">
-        <div className="relative overflow-hidden rounded-[2.2rem] bg-black">
+    <div className="w-[240px] sm:w-[280px]">
+      {/* iPhone frame — same mockup as the hero, so every shot matches */}
+      <div className="w-full rounded-[3rem] bg-ink p-[8px] shadow-phone">
+        <div className="relative overflow-hidden rounded-[2.5rem] bg-black">
           {/* Dynamic Island — sized to match the hero mockup at this width */}
           <div className="absolute left-1/2 top-3 z-20 h-[28px] w-[90px] -translate-x-1/2 rounded-full bg-black" />
           <div className="relative aspect-[9/19.5]">
@@ -76,35 +72,24 @@ export function ScreenshotsSection() {
   const current = slides[active];
 
   return (
-    <section id="screens" className="bg-slate-950 py-20">
+    <section id="screens" className="bg-paper py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-6">
-        <div className="mx-auto mb-12 max-w-2xl text-center">
-          <h2 className="font-display text-section font-semibold text-white">Siri hands off to real AI</h2>
-          <p className="mt-4 text-white/70">
-            The core job: voice trigger → spoken answer. Power-user screens (history, keys) support it.
-          </p>
-        </div>
+        <p className="eyebrow">{screensSection.eyebrow}</p>
+        <h2 className="display-section mt-4 max-w-3xl text-ink">{screensSection.title}</h2>
+        <p className="mt-4 max-w-2xl text-lg text-ink-2">{screensSection.lead}</p>
 
         <div
-          className="glass relative mx-auto max-w-3xl rounded-3xl p-6 sm:p-10"
+          className="mt-12 grid items-center gap-10 lg:grid-cols-[minmax(0,320px)_1fr] lg:gap-16"
           role="group"
           aria-roledescription="carousel"
           aria-label="MILO app screenshots"
           tabIndex={0}
           onKeyDown={onKeyDown}
         >
-          {/* Group context for the active slide */}
-          <div className="mx-auto max-w-2xl text-center">
-            <h3 className="font-display text-xl font-semibold text-white sm:text-2xl">
-              {current.groupTitle}
-            </h3>
-            <p className="mt-3 text-sm leading-relaxed text-white/70">{current.groupDescription}</p>
-          </div>
-
           {/* Slides — only the active one is shown (the rest are display:none, so
               they're out of the a11y tree and not focusable). Keeping every slide
               mounted keeps the markup simple and the keys stable across navigation. */}
-          <div className="mt-10 flex items-start justify-center">
+          <div className="flex items-start justify-center lg:justify-start">
             {slides.map((shot, index) => {
               const isActive = index === active;
               return (
@@ -119,74 +104,61 @@ export function ScreenshotsSection() {
                   aria-hidden={!isActive}
                 >
                   <PhoneShot shot={shot} />
-                  <figcaption className="mt-4 text-center text-sm text-white/70">
-                    {shot.caption}
-                  </figcaption>
                 </figure>
               );
             })}
           </div>
 
-          {/* Controls */}
-          <div className="mt-8 flex items-center justify-center gap-4">
-            <button
-              type="button"
-              onClick={prev}
-              aria-label="Previous screenshot"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white/80 transition hover:bg-white/10 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-milo-blue"
-            >
-              <ChevronLeft className="h-5 w-5" />
-            </button>
+          <div>
+            {/* Group context for the active slide */}
+            <h3 className="font-serif text-3xl text-ink">{current.groupTitle}</h3>
+            <p className="mt-3 text-ink-2">{current.groupDescription}</p>
+            <p className="mt-6 text-sm text-ink-3">{current.caption}</p>
 
-            <div className="flex items-center gap-2">
-              {slides.map((shot, index) => {
-                const isActive = index === active;
-                return (
-                  <button
-                    key={shot.src}
-                    type="button"
-                    aria-current={isActive ? 'true' : undefined}
-                    aria-label={`Go to screenshot ${index + 1}: ${shot.caption}`}
-                    onClick={() => goTo(index)}
-                    className={`h-2.5 rounded-full transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-milo-blue ${
-                      isActive ? 'w-6 bg-milo-blue' : 'w-2.5 bg-white/25 hover:bg-white/40'
-                    }`}
-                  />
-                );
-              })}
-            </div>
+            {/* Controls */}
+            <div className="mt-8 flex items-center gap-3">
+              <button
+                type="button"
+                onClick={prev}
+                aria-label="Previous screenshot"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-line-strong bg-white text-ink transition-colors hover:bg-paper-2"
+              >
+                <ChevronLeft className="h-5 w-5" />
+              </button>
 
-            <button
-              type="button"
-              onClick={next}
-              aria-label="Next screenshot"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white/80 transition hover:bg-white/10 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-milo-blue"
-            >
-              <ChevronRight className="h-5 w-5" />
-            </button>
-          </div>
-
-          {/* Live position for screen readers */}
-          <p className="mt-4 text-center text-xs text-white/50" aria-live="polite">
-            {active + 1} / {count}
-          </p>
-
-          {/* Social proof strip — immediately after the demo carousel per #73 */}
-          {socialProof && (
-            <div className="mt-10 border-t border-white/10 pt-8">
-              <p className="text-center text-[10px] font-semibold uppercase tracking-[0.3em] text-milo-sky/80">
-                {socialProof.eyebrow}
-              </p>
-              <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-3">
-                {socialProof.stats.map((s, i) => (
-                  <div key={i} className="glass rounded-2xl px-4 py-3 text-center">
-                    <div className="text-lg font-semibold text-white">{s.value}</div>
-                    <div className="text-xs text-white/60">{s.label}</div>
-                  </div>
-                ))}
+              <div className="flex items-center gap-2">
+                {slides.map((shot, index) => {
+                  const isActive = index === active;
+                  return (
+                    <button
+                      key={shot.src}
+                      type="button"
+                      aria-current={isActive ? 'true' : undefined}
+                      aria-label={`Go to screenshot ${index + 1}: ${shot.caption}`}
+                      onClick={() => goTo(index)}
+                      className={`h-1.5 rounded-full transition-[width,background-color] duration-200 ${
+                        isActive ? 'w-6 bg-ink' : 'w-1.5 bg-line-strong'
+                      }`}
+                    />
+                  );
+                })}
               </div>
+
+              <button
+                type="button"
+                onClick={next}
+                aria-label="Next screenshot"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-line-strong bg-white text-ink transition-colors hover:bg-paper-2"
+              >
+                <ChevronRight className="h-5 w-5" />
+              </button>
+
+              {/* Live position for screen readers */}
+              <p className="text-xs text-ink-3" aria-live="polite">
+                {active + 1} / {count}
+              </p>
             </div>
-          )}
+          </div>
         </div>
       </div>
     </section>
