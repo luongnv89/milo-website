@@ -1,78 +1,51 @@
-import { Mic } from 'lucide-react';
-
 import { AppStoreButton } from './AppStoreButton.jsx';
-import { heroContent, PRICING_OFFER, heroChecklist } from '../data/content.js';
+import { heroContent, PRICE_LINE } from '../data/content.js';
 
 export function HeroSection() {
+  const [before, after] = heroContent.headline.split(heroContent.emphasis);
   return (
-    <header className="hero-glow relative overflow-hidden bg-slate-950">
-      <div className="relative z-10 mx-auto flex max-w-6xl flex-col gap-16 px-6 pb-24 pt-16 lg:flex-row lg:items-center lg:pt-24">
-        <div className="flex-1 text-center lg:text-left">
-          <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-5 py-2 text-sm font-medium text-white/90">
-            <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-milo-blue text-white">
-              <Mic className="h-4 w-4" />
-            </span>
-            Siri-first · CarPlay-ready · multi-model
-          </div>
+    <header className="relative overflow-hidden bg-paper">
+      <div className="mx-auto grid max-w-6xl gap-12 px-6 pb-20 pt-16 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-16 lg:pb-32 lg:pt-28">
+        <div>
+          <p className="eyebrow reveal reveal-1">{heroContent.eyebrow}</p>
 
-          <h1 className="font-display text-hero font-bold text-white">
-            {heroContent.headline}
+          <h1 className="display-hero reveal reveal-2 mt-5 text-ink">
+            {before}
+            <em>{heroContent.emphasis}</em>
+            {after}
           </h1>
 
-          <p className="mt-6 max-w-md text-lg text-slate-100/80 sm:text-xl lg:mx-0 mx-auto">
+          <p className="reveal reveal-3 mt-6 max-w-xl text-lg leading-relaxed text-ink-2 sm:text-xl">
             {heroContent.subhead}
           </p>
 
-          <div className="mt-9 flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start">
+          <div className="reveal reveal-4 mt-10 flex flex-wrap items-center gap-4">
             <AppStoreButton location="hero" />
-            <a href="#story" className="btn-ghost">
-              Why I built it
+            <a href="#how" className="btn-link text-[15px]">
+              See how it works
             </a>
           </div>
 
-          {/* Platform badges — not pricing (#33 consolidates the pricing facts below to one mention) */}
-          <div className="mt-5 flex flex-wrap items-center justify-center gap-3 lg:justify-start">
-            <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">
-              iOS 17.6+
-            </span>
-            <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">
-              On the App Store
-            </span>
-          </div>
-
-          {/* Hero checklist — features + the one purchase-model mention (#33) */}
-          <div className="mt-6 space-y-2 lg:mx-0 mx-auto">
-            {heroChecklist.map((item, index) => (
-              <div key={index} className="flex items-center gap-2 text-sm text-white/80">
-                <item.icon className="h-4 w-4 flex-shrink-0 text-milo-blue" />
-                <span>{item.label}</span>
-              </div>
-            ))}
-          </div>
-
-          {/* Pricing teaser (#71) — the single price + "Apple sets local pricing" mention
-              and link down to the full #pricing section (#33 consolidation) */}
-          <a
-            href="#pricing"
-            className="mt-4 inline-block max-w-md py-2 text-sm text-white/70 transition hover:text-white lg:mx-0 mx-auto"
-          >
-            <span className="font-medium text-milo-sky underline decoration-dotted underline-offset-2">
-              {PRICING_OFFER}
-            </span>
-          </a>
+          <p className="reveal reveal-5 mt-5 text-sm text-ink-3">
+            {PRICE_LINE} · Bring your own keys
+          </p>
         </div>
 
-        {/* iPhone mockup — ported from the CUStats Go site (custats-info MobileApp) */}
-        <div className="relative flex justify-center">
-          {/* Glow effect */}
-          <div className="absolute inset-0 scale-110 rounded-3xl bg-gradient-to-t from-milo-blue/30 via-milo-blue/10 to-transparent blur-3xl" />
-
-          {/* Phone frame */}
-          <div className="relative w-64 sm:w-72">
+        {/* iPhone mockup */}
+        <div className="relative mt-4 flex justify-center lg:mt-0">
+          <div
+            className="absolute -inset-8"
+            style={{
+              background:
+                'radial-gradient(60% 60% at 50% 45%, rgba(59,130,246,0.14), transparent 70%)',
+            }}
+            aria-hidden="true"
+          />
+          <div className="relative w-[260px] sm:w-[300px]">
             {/* Phone bezel — iPhone style */}
-            <div className="relative rounded-[2.5rem] bg-slate-900 p-[6px] shadow-2xl ring-1 ring-white/10">
+            <div className="relative rounded-[3rem] bg-ink p-[8px] shadow-phone">
               {/* Screen container */}
-              <div className="relative overflow-hidden rounded-[2.2rem] bg-black">
+              <div className="relative overflow-hidden rounded-[2.5rem] bg-black">
                 {/* Dynamic Island */}
                 <div className="absolute left-1/2 top-3 z-20 h-[28px] w-[90px] -translate-x-1/2 rounded-full bg-black" />
 
@@ -80,6 +53,7 @@ export function HeroSection() {
                 <div className="relative aspect-[9/19.5]">
                   <video
                     src="/milo-promo-portrait-final.mp4"
+                    poster="/screenshot.png"
                     alt="MILO running in CarPlay mode, answering a hands-free voice question through Siri"
                     className="h-full w-full object-cover object-top"
                     autoPlay

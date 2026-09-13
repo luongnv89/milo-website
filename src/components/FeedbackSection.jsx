@@ -1,34 +1,17 @@
-import { ArrowUpRight, Github, Info } from 'lucide-react';
+import { ArrowUpRight, Github } from 'lucide-react';
 
 import { feedbackIntro, feedbackOptions } from '../data/content.js';
 import { trackEvent, EVENTS } from '../utils/analytics.js';
 
 export function FeedbackSection() {
   return (
-    <section id="feedback" className="bg-slate-950 py-20">
-      <div className="mx-auto max-w-5xl px-6">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="font-display text-section font-semibold text-white">{feedbackIntro.title}</h2>
-          <p className="mt-4 text-white/70">{feedbackIntro.description}</p>
-        </div>
+    <section id="feedback" className="bg-paper py-24 sm:py-32">
+      <div className="mx-auto max-w-6xl px-6">
+        <p className="eyebrow">{feedbackIntro.eyebrow}</p>
+        <h2 className="display-section mt-4 max-w-3xl text-ink">{feedbackIntro.title}</h2>
+        <p className="mt-4 max-w-2xl text-lg text-ink-2">{feedbackIntro.description}</p>
 
-        <div className="mx-auto mt-8 flex max-w-2xl items-start gap-3 rounded-2xl border border-milo-blue/20 bg-milo-blue/10 p-4">
-          <Info className="mt-0.5 h-4 w-4 flex-shrink-0 text-milo-sky" />
-          <p className="text-sm text-white/75">
-            Every link opens a guided issue form on{' '}
-            <a
-              href={feedbackIntro.repoUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-medium text-milo-sky underline underline-offset-2 transition hover:no-underline"
-            >
-              GitHub
-            </a>
-            . No email, no account on this site, no tracking on what you submit.
-          </p>
-        </div>
-
-        <div className="mt-10 grid gap-5 sm:grid-cols-3">
+        <div className="mt-10 grid gap-4 sm:grid-cols-3">
           {feedbackOptions.map((option) => (
             <a
               key={option.id}
@@ -36,32 +19,32 @@ export function FeedbackSection() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => trackEvent(EVENTS.FEEDBACK_LINK_CLICKED, { type: option.id })}
-              className="group glass flex flex-col rounded-3xl p-6 transition hover:-translate-y-1 hover:border-milo-blue/40 focus:outline-none focus:ring-2 focus:ring-milo-blue focus:ring-offset-2 focus:ring-offset-slate-950"
+              className="card flex items-start gap-4 p-5 transition-colors hover:border-line-strong"
             >
-              <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-milo-blue/15 text-milo-blue shadow-lg">
-                <option.icon className="h-6 w-6" />
+              <span className="inline-flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl border border-line bg-paper-2">
+                <option.icon className="h-5 w-5 text-ink" aria-hidden="true" />
               </span>
-              <h3 className="mt-5 flex items-center gap-1.5 font-display text-lg font-semibold text-white">
-                {option.label}
-                <ArrowUpRight className="h-4 w-4 text-white/40 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-milo-sky" />
-              </h3>
-              <p className="mt-2 text-sm text-white/60">{option.description}</p>
+              <span>
+                <span className="flex items-center gap-1.5 font-medium text-ink">
+                  {option.label}
+                  <ArrowUpRight className="h-4 w-4 text-ink-3" aria-hidden="true" />
+                </span>
+                <span className="mt-1 block text-sm text-ink-2">{option.description}</span>
+              </span>
             </a>
           ))}
         </div>
 
-        <div className="mt-8 text-center">
-          <a
-            href={`${feedbackIntro.repoUrl}/issues`}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => trackEvent(EVENTS.FEEDBACK_LINK_CLICKED, { type: 'browse_issues' })}
-            className="inline-flex items-center gap-2 text-sm text-white/60 transition hover:text-white"
-          >
-            <Github className="h-4 w-4" />
-            Browse existing issues
-          </a>
-        </div>
+        <a
+          href={`${feedbackIntro.repoUrl}/issues`}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => trackEvent(EVENTS.FEEDBACK_LINK_CLICKED, { type: 'browse_issues' })}
+          className="btn-link mt-8 inline-flex items-center gap-2 text-sm"
+        >
+          <Github className="h-4 w-4" />
+          Browse existing issues
+        </a>
       </div>
     </section>
   );
