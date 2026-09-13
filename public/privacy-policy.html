@@ -11,31 +11,32 @@
   <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#3b82f6">
-  <meta name="theme-color" content="#3b82f6">
+  <meta name="theme-color" content="#FAFAF7">
   <meta name="apple-mobile-web-app-title" content="MILO">
   <meta name="application-name" content="MILO">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }, colors: { milo: { purple: '#6B5BFF', indigo: '#5C4BFF', pink: '#F093FB', blue: '#4FACFE', slate: '#0F172A' } } } } };
-  </script>
-  <style>body{background-color:#030712;color:#f8fafc}.card{background:rgba(15,23,42,.7);border:1px solid rgba(255,255,255,.08);border-radius:1rem;padding:1.5rem}</style>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./legal.css">
 </head>
-<body class="min-h-screen bg-slate-950 text-slate-100">
-  <div class="max-w-4xl mx-auto px-6 py-16">
-    <div class="mb-12">
-      <a href="/" class="inline-flex items-center gap-2 text-milo-blue hover:text-milo-pink transition-colors">← Back to Home</a>
-    </div>
+<body>
+  <div class="container container-md page">
+    <nav class="back-nav" aria-label="Back">
+      <a href="./" class="back-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m15 18-6-6 6-6"/>
+        </svg>
+        Back to Home
+      </a>
+    </nav>
 
-    <main class="prose prose-invert max-w-none">
-      <h1 class="text-3xl font-bold mb-2">Privacy Policy</h1>
-      <p class="text-slate-400 mb-8">Last updated: June 25, 2026</p>
+    <main class="prose">
+      <h1 class="display-page">Privacy Policy</h1>
+      <p class="meta updated">Last updated: June 25, 2026</p>
 
-      <section class="card mb-8">
-        <h2 class="text-2xl font-semibold mb-4">Quick Summary</h2>
-        <ul class="list-disc pl-6 space-y-2">
+      <section class="card section">
+        <h2>Quick Summary</h2>
+        <ul>
           <li>MILO does not operate a cloud account system and does not store your conversations on our servers.</li>
           <li>Your API keys are stored locally on your device in iOS Keychain.</li>
           <li>When you use a cloud AI provider, MILO sends your prompt and relevant conversation context directly from your device to the provider you selected.</li>
@@ -44,10 +45,10 @@
         </ul>
       </section>
 
-      <section class="mb-10">
-        <h2 class="text-2xl font-semibold mb-4">1. Information MILO Collects or Stores</h2>
-        <h3 class="text-xl font-medium mb-2">1.1 Information you provide in the app</h3>
-        <ul class="list-disc pl-6 mb-4 space-y-2">
+      <section class="section">
+        <h2>1. Information MILO Collects or Stores</h2>
+        <h3>1.1 Information you provide in the app</h3>
+        <ul>
           <li><strong>Prompts and messages:</strong> the text you type or dictate to MILO.</li>
           <li><strong>Conversation history:</strong> prior messages saved locally so you can continue and review conversations.</li>
           <li><strong>Provider settings:</strong> selected provider, selected model, temperature, token limits, and similar app settings.</li>
@@ -55,8 +56,8 @@
           <li><strong>AI data sharing permission:</strong> whether you agreed to send prompts and conversation context to third-party AI providers.</li>
         </ul>
 
-        <h3 class="text-xl font-medium mb-2">1.2 Information collected automatically</h3>
-        <ul class="list-disc pl-6 mb-4 space-y-2">
+        <h3>1.2 Information collected automatically</h3>
+        <ul>
           <li><strong>App diagnostics:</strong> Apple may provide crash logs and diagnostics if you choose to share them with developers through iOS settings.</li>
           <li><strong>Website analytics:</strong> askmilo.pro uses Plausible Analytics for aggregate, cookie-free website statistics such as page views, referrers, device type, and approximate country. Plausible does not store IP addresses or use cross-site tracking cookies.</li>
         </ul>
@@ -64,9 +65,9 @@
         <p>MILO does not collect contacts, photos, health data, precise location, advertising identifiers, or payment information.</p>
       </section>
 
-      <section class="mb-10">
-        <h2 class="text-2xl font-semibold mb-4">2. How Information Is Collected</h2>
-        <ul class="list-disc pl-6 space-y-2">
+      <section class="section">
+        <h2>2. How Information Is Collected</h2>
+        <ul>
           <li><strong>Directly from you:</strong> when you type, dictate, configure settings, add API keys, or contact support.</li>
           <li><strong>Locally on your device:</strong> conversations and settings are saved using iOS local storage technologies such as SwiftData and UserDefaults.</li>
           <li><strong>Through iOS Keychain:</strong> API keys are stored using Apple's secure Keychain.</li>
@@ -74,9 +75,9 @@
         </ul>
       </section>
 
-      <section class="mb-10">
-        <h2 class="text-2xl font-semibold mb-4">3. How MILO Uses Information</h2>
-        <ul class="list-disc pl-6 space-y-2">
+      <section class="section">
+        <h2>3. How MILO Uses Information</h2>
+        <ul>
           <li>To generate AI responses in chat, Siri, and CarPlay workflows.</li>
           <li>To continue conversations with relevant context.</li>
           <li>To save and display conversation history on your device.</li>
@@ -87,26 +88,26 @@
         </ul>
       </section>
 
-      <section class="card mb-10">
-        <h2 class="text-2xl font-semibold mb-4">4. Third-Party AI Sharing</h2>
-        <p class="mb-4"><strong>What is sent:</strong> when you use a cloud AI provider, MILO sends the message or prompt you enter, relevant conversation context/history for follow-up replies, selected provider/model information needed to route the request, and for Siri or CarPlay the dictated/transcribed prompt.</p>
-        <p class="mb-4"><strong>Who receives it:</strong> depending on the provider/model you choose, data may be sent directly from your device to Google Gemini, Mistral AI, OpenRouter, Anthropic Claude, OpenAI, or Groq. OpenRouter may route your request to the model provider selected inside OpenRouter.</p>
-        <p class="mb-4"><strong>Why it is sent:</strong> only to generate AI responses and provide MILO's assistant features.</p>
-        <p class="mb-4"><strong>Permission:</strong> MILO asks for explicit in-app permission before sending prompts or conversation context to third-party AI providers. If you decline or revoke permission, cloud AI requests are blocked until you agree again.</p>
-        <p class="mb-4"><strong>Provider protections:</strong> MILO supports established third-party AI providers with published privacy and security practices. These providers are expected to provide the same or equal protection for the data they process under their own privacy policies and terms. You should review the policy of the provider you choose because their retention and training settings may vary.</p>
-        <ul class="list-disc pl-6 space-y-2">
-          <li>Google Privacy Policy: <a class="text-milo-blue hover:underline" href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a></li>
-          <li>Mistral Privacy Policy: <a class="text-milo-blue hover:underline" href="https://mistral.ai/terms/" target="_blank" rel="noopener noreferrer">mistral.ai/terms</a></li>
-          <li>OpenRouter Privacy Policy: <a class="text-milo-blue hover:underline" href="https://openrouter.ai/privacy" target="_blank" rel="noopener noreferrer">openrouter.ai/privacy</a></li>
-          <li>Anthropic Privacy Policy: <a class="text-milo-blue hover:underline" href="https://www.anthropic.com/privacy" target="_blank" rel="noopener noreferrer">anthropic.com/privacy</a></li>
-          <li>OpenAI Privacy Policy: <a class="text-milo-blue hover:underline" href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener noreferrer">openai.com/policies/privacy-policy</a></li>
-          <li>Groq Privacy Policy: <a class="text-milo-blue hover:underline" href="https://groq.com/privacy-policy/" target="_blank" rel="noopener noreferrer">groq.com/privacy-policy</a></li>
+      <section class="card section">
+        <h2>4. Third-Party AI Sharing</h2>
+        <p><strong>What is sent:</strong> when you use a cloud AI provider, MILO sends the message or prompt you enter, relevant conversation context/history for follow-up replies, selected provider/model information needed to route the request, and for Siri or CarPlay the dictated/transcribed prompt.</p>
+        <p><strong>Who receives it:</strong> depending on the provider/model you choose, data may be sent directly from your device to Google Gemini, Mistral AI, OpenRouter, Anthropic Claude, OpenAI, or Groq. OpenRouter may route your request to the model provider selected inside OpenRouter.</p>
+        <p><strong>Why it is sent:</strong> only to generate AI responses and provide MILO's assistant features.</p>
+        <p><strong>Permission:</strong> MILO asks for explicit in-app permission before sending prompts or conversation context to third-party AI providers. If you decline or revoke permission, cloud AI requests are blocked until you agree again.</p>
+        <p><strong>Provider protections:</strong> MILO supports established third-party AI providers with published privacy and security practices. These providers are expected to provide the same or equal protection for the data they process under their own privacy policies and terms. You should review the policy of the provider you choose because their retention and training settings may vary.</p>
+        <ul>
+          <li>Google Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a></li>
+          <li>Mistral Privacy Policy: <a href="https://mistral.ai/terms/" target="_blank" rel="noopener noreferrer">mistral.ai/terms</a></li>
+          <li>OpenRouter Privacy Policy: <a href="https://openrouter.ai/privacy" target="_blank" rel="noopener noreferrer">openrouter.ai/privacy</a></li>
+          <li>Anthropic Privacy Policy: <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener noreferrer">anthropic.com/privacy</a></li>
+          <li>OpenAI Privacy Policy: <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener noreferrer">openai.com/policies/privacy-policy</a></li>
+          <li>Groq Privacy Policy: <a href="https://groq.com/privacy-policy/" target="_blank" rel="noopener noreferrer">groq.com/privacy-policy</a></li>
         </ul>
       </section>
 
-      <section class="mb-10">
-        <h2 class="text-2xl font-semibold mb-4">5. Local Storage, Retention, and Deletion</h2>
-        <ul class="list-disc pl-6 space-y-2">
+      <section class="section">
+        <h2>5. Local Storage, Retention, and Deletion</h2>
+        <ul>
           <li><strong>Conversation history:</strong> stored locally on your device until you delete conversations or uninstall the app.</li>
           <li><strong>API keys:</strong> stored in iOS Keychain until you delete them in MILO settings or remove app data from your device.</li>
           <li><strong>Settings and consent:</strong> stored locally until changed or reset.</li>
@@ -114,9 +115,9 @@
         </ul>
       </section>
 
-      <section class="mb-10">
-        <h2 class="text-2xl font-semibold mb-4">6. Your Choices</h2>
-        <ul class="list-disc pl-6 space-y-2">
+      <section class="section">
+        <h2>6. Your Choices</h2>
+        <ul>
           <li>Review or revoke AI Data Sharing permission in MILO Settings → AI Data Sharing.</li>
           <li>Use on-device Apple Intelligence when available to avoid sending prompts to third-party AI services.</li>
           <li>Delete API keys in MILO Settings → API Keys.</li>
@@ -126,33 +127,80 @@
         </ul>
       </section>
 
-      <section class="mb-10">
-        <h2 class="text-2xl font-semibold mb-4">7. Children's Privacy</h2>
+      <section class="section">
+        <h2>7. Children's Privacy</h2>
         <p>MILO is not directed to children under 13. We do not knowingly collect personal information from children under 13.</p>
       </section>
 
-      <section class="mb-10">
-        <h2 class="text-2xl font-semibold mb-4">8. International Users and Legal Bases</h2>
-        <p class="mb-4">Where GDPR or similar laws apply, our legal bases include your consent for AI data sharing, performance of the service you request, legitimate interests in app support and security, and legal compliance.</p>
+      <section class="section">
+        <h2>8. International Users and Legal Bases</h2>
+        <p>Where GDPR or similar laws apply, our legal bases include your consent for AI data sharing, performance of the service you request, legitimate interests in app support and security, and legal compliance.</p>
         <p>You may request access, correction, deletion, restriction, portability, or withdrawal of consent by contacting us.</p>
       </section>
 
-      <section class="mb-10">
-        <h2 class="text-2xl font-semibold mb-4">9. Changes to This Policy</h2>
+      <section class="section">
+        <h2>9. Changes to This Policy</h2>
         <p>We may update this Privacy Policy from time to time. Changes are posted on this page with a new "Last updated" date.</p>
       </section>
 
-      <section>
-        <h2 class="text-2xl font-semibold mb-4">10. Contact Us</h2>
-        <p>If you have questions about this Privacy Policy or MILO's data practices, contact <a href="mailto:luongnv89@gmail.com" class="text-milo-blue hover:underline">luongnv89@gmail.com</a>.</p>
+      <section class="section">
+        <h2>10. Contact Us</h2>
+        <p>If you have questions about this Privacy Policy or MILO's data practices, contact <a href="mailto:luongnv89@gmail.com">luongnv89@gmail.com</a>.</p>
       </section>
     </main>
   </div>
 
-  <footer class="border-t border-white/10 bg-slate-950/80 py-10">
-    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
-      <div class="flex items-center gap-3"><img src="AppIcon-80.png" alt="MILO icon" class="h-10 w-10 rounded-xl shadow" loading="lazy"><div><p class="font-semibold text-white">MILO</p><p class="text-xs text-white/50">Your voice. Any AI.</p></div></div>
-      <p class="text-xs text-white/50">© <span id="year"></span> MILO. All rights reserved.</p>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <img src="./AppIcon-80.png" alt="MILO icon" width="40" height="40" loading="lazy" />
+            <p class="footer-brand-name">MILO</p>
+          </div>
+          <p class="footer-tagline">Your voice. Any AI.</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="eyebrow">Product</h4>
+          <ul>
+            <li><a href="./#how">How it works</a></li>
+            <li><a href="./#screens">Screens</a></li>
+            <li><a href="./#models">Models</a></li>
+            <li><a href="./#comparison">Comparison</a></li>
+            <li><a href="./#pricing">Pricing</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="eyebrow">Company</h4>
+          <ul>
+            <li><a href="./#story">Story</a></li>
+            <li><a href="./#faq">FAQ</a></li>
+            <li><a href="./#feedback">Feedback</a></li>
+            <li><a href="./changelog.html">Changelog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="eyebrow">Legal</h4>
+          <ul>
+            <li><a href="./privacy-policy.html" aria-current="page">Privacy Policy</a></li>
+            <li><a href="./terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="eyebrow">Connect</h4>
+          <ul>
+            <li><a href="https://x.com/luongnv89" target="_blank" rel="noopener noreferrer">X</a></li>
+            <li><a href="https://github.com/luongnv89" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://linkedin.com/in/luongnv89" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://medium.com/@luongnv89" target="_blank" rel="noopener noreferrer">Blog</a></li>
+            <li><a href="mailto:luongnv89@gmail.com">Email</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> MILO. All rights reserved.</p>
+        <p>Made for iPhone &amp; CarPlay</p>
+      </div>
     </div>
   </footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>

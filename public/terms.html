@@ -10,40 +10,42 @@
   <link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32">
   <link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16">
   <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+  <meta name="theme-color" content="#FAFAF7">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }, colors: { milo: { purple: '#6B5BFF', indigo: '#5C4BFF', pink: '#F093FB', blue: '#4FACFE', slate: '#0F172A' } } } } };
-  </script>
-  <style>body{background-color:#030712;color:#f8fafc}.card{background:rgba(15,23,42,.7);border:1px solid rgba(255,255,255,.08);border-radius:1rem;padding:1.5rem}</style>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./legal.css">
 </head>
-<body class="min-h-screen bg-slate-950 text-slate-100">
-  <div class="max-w-4xl mx-auto px-6 py-16">
-    <div class="mb-12">
-      <a href="./" class="inline-flex items-center gap-2 text-milo-blue hover:text-milo-pink transition-colors">← Back to Home</a>
-    </div>
+<body>
+  <div class="container container-md page">
+    <nav class="back-nav" aria-label="Back">
+      <a href="./" class="back-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m15 18-6-6 6-6"/>
+        </svg>
+        Back to Home
+      </a>
+    </nav>
 
-    <main class="prose prose-invert max-w-none">
-      <h1 class="text-3xl font-bold mb-2">Terms of Service</h1>
-      <p class="text-slate-400 mb-12">Last updated: June 25, 2026</p>
+    <main class="prose">
+      <h1 class="display-page">Terms of Service</h1>
+      <p class="meta updated">Last updated: June 25, 2026</p>
 
-      <section class="mb-10">
-        <h2 class="text-2xl font-semibold mb-4">1. Agreement to Terms</h2>
+      <section class="section">
+        <h2>1. Agreement to Terms</h2>
         <p>By accessing or using MILO ("the App"), you agree to these Terms of Service. If you do not agree, do not use the App.</p>
       </section>
 
-      <section class="mb-10">
-        <h2 class="text-2xl font-semibold mb-4">2. Service Description</h2>
-        <p class="mb-4">MILO is an iOS AI assistant that lets you use supported AI providers through chat, Siri, and CarPlay workflows. MILO may support cloud providers such as Google Gemini, Mistral AI, OpenRouter, Anthropic Claude, OpenAI, and Groq, plus on-device or local options where available.</p>
+      <section class="section">
+        <h2>2. Service Description</h2>
+        <p>MILO is an iOS AI assistant that lets you use supported AI providers through chat, Siri, and CarPlay workflows. MILO may support cloud providers such as Google Gemini, Mistral AI, OpenRouter, Anthropic Claude, OpenAI, and Groq, plus on-device or local options where available.</p>
         <p>MILO is primarily a client application. You choose the provider, configure your own API key when required, and control whether cloud AI data sharing is allowed.</p>
       </section>
 
-      <section class="card mb-10">
-        <h2 class="text-2xl font-semibold mb-4">3. Third-Party AI Providers and Data Sharing</h2>
-        <p class="mb-4">Cloud AI features require sending your prompt, relevant conversation context, and selected provider/model information directly from your device to the third-party AI provider you choose. MILO asks for in-app permission before sending that data.</p>
-        <ul class="list-disc pl-6 space-y-2">
+      <section class="card section">
+        <h2>3. Third-Party AI Providers and Data Sharing</h2>
+        <p>Cloud AI features require sending your prompt, relevant conversation context, and selected provider/model information directly from your device to the third-party AI provider you choose. MILO asks for in-app permission before sending that data.</p>
+        <ul>
           <li>You are responsible for reviewing and complying with each AI provider's terms and policies.</li>
           <li>You are responsible for charges, quotas, and rate limits associated with your provider accounts and API keys.</li>
           <li>Provider availability, model behavior, data retention, and output quality are controlled by the third-party provider, not MILO.</li>
@@ -51,9 +53,9 @@
         </ul>
       </section>
 
-      <section class="mb-10">
-        <h2 class="text-2xl font-semibold mb-4">4. Your Responsibilities</h2>
-        <ul class="list-disc pl-6 space-y-2">
+      <section class="section">
+        <h2>4. Your Responsibilities</h2>
+        <ul>
           <li>Keep your device and API keys secure.</li>
           <li>Do not submit sensitive personal information, confidential information, health information, financial account numbers, government IDs, passwords, or secrets unless you understand and accept the provider's processing terms.</li>
           <li>Use the App only in compliance with applicable laws and third-party provider rules.</li>
@@ -61,26 +63,26 @@
         </ul>
       </section>
 
-      <section class="mb-10">
-        <h2 class="text-2xl font-semibold mb-4">5. AI Output Disclaimer</h2>
-        <p class="mb-4">AI-generated responses may be inaccurate, incomplete, offensive, outdated, or unsuitable for your situation. MILO does not provide professional legal, medical, financial, safety, or engineering advice. Verify important information before relying on it.</p>
+      <section class="section">
+        <h2>5. AI Output Disclaimer</h2>
+        <p>AI-generated responses may be inaccurate, incomplete, offensive, outdated, or unsuitable for your situation. MILO does not provide professional legal, medical, financial, safety, or engineering advice. Verify important information before relying on it.</p>
         <p>You are responsible for your prompts, your use of AI outputs, and any decisions you make based on those outputs.</p>
       </section>
 
-      <section class="mb-10">
-        <h2 class="text-2xl font-semibold mb-4">6. Privacy</h2>
-        <ul class="list-disc pl-6 space-y-2">
+      <section class="section">
+        <h2>6. Privacy</h2>
+        <ul>
           <li>Conversation history is stored locally on your device unless sent to your selected provider as part of a prompt/context request.</li>
           <li>API keys are stored locally in iOS Keychain and used only to authenticate requests to the provider you configure.</li>
           <li>MILO does not operate a cloud conversation server or sell your personal data.</li>
-          <li>Details about collection, use, retention, and third-party AI sharing are available in the <a href="./privacy-policy.html" class="text-milo-blue hover:underline">Privacy Policy</a>.</li>
+          <li>Details about collection, use, retention, and third-party AI sharing are available in the <a href="./privacy-policy.html">Privacy Policy</a>.</li>
         </ul>
       </section>
 
-      <section class="mb-10">
-        <h2 class="text-2xl font-semibold mb-4">7. Prohibited Use</h2>
-        <p class="mb-2">You may not use MILO to:</p>
-        <ul class="list-disc pl-6 space-y-2">
+      <section class="section">
+        <h2>7. Prohibited Use</h2>
+        <p>You may not use MILO to:</p>
+        <ul>
           <li>Violate laws or third-party rights.</li>
           <li>Create, request, or distribute harmful, illegal, abusive, deceptive, or exploitative content.</li>
           <li>Attempt to bypass provider security, rate limits, usage policies, or safety systems.</li>
@@ -89,42 +91,89 @@
         </ul>
       </section>
 
-      <section class="mb-10">
-        <h2 class="text-2xl font-semibold mb-4">8. Intellectual Property</h2>
+      <section class="section">
+        <h2>8. Intellectual Property</h2>
         <p>MILO's name, design, branding, and app code are owned by its developer or licensors. You may not use MILO branding without permission.</p>
       </section>
 
-      <section class="mb-10">
-        <h2 class="text-2xl font-semibold mb-4">9. Service Availability</h2>
+      <section class="section">
+        <h2>9. Service Availability</h2>
         <p>MILO depends on iOS, device capabilities, network access, and third-party AI providers. We do not guarantee uninterrupted, secure, or error-free operation.</p>
       </section>
 
-      <section class="mb-10">
-        <h2 class="text-2xl font-semibold mb-4">10. Limitation of Liability</h2>
+      <section class="section">
+        <h2>10. Limitation of Liability</h2>
         <p>To the fullest extent permitted by law, MILO and its developer will not be liable for indirect, incidental, special, consequential, exemplary, or punitive damages; loss of data, revenue, profits, or goodwill; provider outages; API charges; or harm resulting from AI-generated content.</p>
       </section>
 
-      <section class="mb-10">
-        <h2 class="text-2xl font-semibold mb-4">11. Changes to These Terms</h2>
+      <section class="section">
+        <h2>11. Changes to These Terms</h2>
         <p>We may update these Terms from time to time. Changes are effective when posted on this page with an updated date. Continued use of MILO after changes means you accept the updated Terms.</p>
       </section>
 
-      <section class="mb-10">
-        <h2 class="text-2xl font-semibold mb-4">12. Governing Law</h2>
+      <section class="section">
+        <h2>12. Governing Law</h2>
         <p>These Terms are governed by the laws of France, without regard to conflict-of-law principles, except where local consumer law requires otherwise.</p>
       </section>
 
-      <section>
-        <h2 class="text-2xl font-semibold mb-4">13. Contact Us</h2>
-        <p>Questions about these Terms? Contact <a href="mailto:luongnv89@gmail.com" class="text-milo-blue hover:underline">luongnv89@gmail.com</a>.</p>
+      <section class="section">
+        <h2>13. Contact Us</h2>
+        <p>Questions about these Terms? Contact <a href="mailto:luongnv89@gmail.com">luongnv89@gmail.com</a>.</p>
       </section>
     </main>
   </div>
 
-  <footer class="border-t border-white/10 bg-slate-950/80 py-10">
-    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
-      <div class="flex items-center gap-3"><img src="AppIcon-80.png" alt="MILO icon" class="h-10 w-10 rounded-xl shadow" loading="lazy"><div><p class="font-semibold text-white">MILO</p><p class="text-xs text-white/50">Your voice. Any AI.</p></div></div>
-      <p class="text-xs text-white/50">© <span id="year"></span> MILO. All rights reserved.</p>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <img src="./AppIcon-80.png" alt="MILO icon" width="40" height="40" loading="lazy" />
+            <p class="footer-brand-name">MILO</p>
+          </div>
+          <p class="footer-tagline">Your voice. Any AI.</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="eyebrow">Product</h4>
+          <ul>
+            <li><a href="./#how">How it works</a></li>
+            <li><a href="./#screens">Screens</a></li>
+            <li><a href="./#models">Models</a></li>
+            <li><a href="./#comparison">Comparison</a></li>
+            <li><a href="./#pricing">Pricing</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="eyebrow">Company</h4>
+          <ul>
+            <li><a href="./#story">Story</a></li>
+            <li><a href="./#faq">FAQ</a></li>
+            <li><a href="./#feedback">Feedback</a></li>
+            <li><a href="./changelog.html">Changelog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="eyebrow">Legal</h4>
+          <ul>
+            <li><a href="./privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="./terms.html" aria-current="page">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="eyebrow">Connect</h4>
+          <ul>
+            <li><a href="https://x.com/luongnv89" target="_blank" rel="noopener noreferrer">X</a></li>
+            <li><a href="https://github.com/luongnv89" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://linkedin.com/in/luongnv89" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://medium.com/@luongnv89" target="_blank" rel="noopener noreferrer">Blog</a></li>
+            <li><a href="mailto:luongnv89@gmail.com">Email</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> MILO. All rights reserved.</p>
+        <p>Made for iPhone &amp; CarPlay</p>
+      </div>
     </div>
   </footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
