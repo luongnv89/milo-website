@@ -34,11 +34,11 @@ export const pricing = {
   features: [
     'Unlimited conversations with any model',
     'Siri, CarPlay, lock screen and headphones',
-    'GPT-5.5, Claude Opus 4.8, Gemini 3.5 Flash, Mistral, Groq, OpenRouter, Apple Intelligence, Ollama',
+    'GPT-5.5, Claude Opus 4.8, Gemini 3.5 Flash, Mistral, Groq, OpenRouter, Apple Intelligence',
     'Your keys, your data — nothing logged or sold',
   ],
   finePrint:
-    'Cloud providers are billed by the provider on your own key — many have free tiers. Apple Intelligence and Ollama need no key.',
+    'Cloud providers are billed by the provider on your own key — many have free tiers. On-device Apple Intelligence needs no key.',
 };
 
 export const heroContent = {
@@ -127,7 +127,7 @@ export const featureCards = [
   },
   {
     title: 'Any model, switched by voice',
-    description: '8 providers and 200+ models, including on-device Apple Intelligence and local Ollama.',
+    description: '7 providers and 200+ models, including on-device Apple Intelligence.',
     icon: Layers3,
   },
   {
@@ -160,7 +160,7 @@ export const comparisonRows = [
   },
   {
     feature: 'Choice of AI provider & model',
-    milo: '8 providers, 200+ models',
+    milo: '7 providers, 200+ models',
     chatgpt: 'OpenAI only',
     claude: 'Anthropic only',
     gemini: 'Google only',
@@ -347,7 +347,7 @@ export const screenshotGroups = [
 export const modelsSection = {
   eyebrow: 'Models',
   title: 'Your keys. Any model. One voice.',
-  lead: 'Pick from 8 providers or stay fully on-device. Switch by voice mid-conversation. Only the provider you choose ever sees a prompt.',
+  lead: 'Pick from 7 providers, including on-device Apple Intelligence. Switch by voice mid-conversation. Only the provider you choose ever sees a prompt.',
 };
 
 export const providers = [
@@ -397,7 +397,8 @@ export const providers = [
     id: 'ollama',
     title: 'Ollama (Local)',
     icon: Cpu,
-    bullets: ['Run Llama, Mistral & more locally', 'Fully offline, fully private'],
+    comingSoon: true,
+    bullets: ['Coming soon — not in this release', 'Local models when it ships'],
   },
 ];
 
@@ -416,22 +417,22 @@ export const faqItems = [
   {
     question: 'Which AI models can I use?',
     answer:
-      'Eight providers: OpenAI (GPT-5.5), Anthropic (Claude Opus 4.8), Google (Gemini 3.5 Flash), Mistral, Groq, OpenRouter (200+ models), Apple’s on-device Intelligence, and local Ollama. Switch between them by voice.',
+      'Seven providers you can use today: OpenAI (GPT-5.5), Anthropic (Claude Opus 4.8), Google (Gemini 3.5 Flash), Mistral, Groq, OpenRouter (200+ models), and Apple’s on-device Intelligence. Local Ollama is coming soon and is not available in this release. Switch between the shipped providers by voice.',
   },
   {
     question: 'How private is it?',
     answer:
-      'Your API keys live in the iOS Keychain and your conversation history stays on your device with SwiftData. There are no accounts and no analytics on your prompts — only the provider you enable ever sees them. Apple Intelligence and Ollama never leave the phone at all.',
+      'Your API keys live in the iOS Keychain and your conversation history stays on your device with SwiftData. There are no accounts and no analytics on your prompts — only the provider you enable ever sees them. On-device Apple Intelligence does not send prompts to a third-party AI service.',
   },
   {
     question: 'Do I need my own API keys?',
     answer:
-      'For the cloud providers, yes — that keeps costs transparent and under your control, and many offer generous free tiers. Apple Intelligence (on-device) and Ollama (local) need no key.',
+      'For the cloud providers, yes — that keeps costs transparent and under your control, and many offer generous free tiers. Apple Intelligence (on-device) needs no key.',
   },
   {
     question: 'Is it free?',
     answer:
-      'MILO is a one-time purchase ($8.99 USD in the US; Apple sets the local price in your country — no subscriptions). Download the app and use Apple Intelligence or Ollama (local) for free — no API key needed. For cloud providers (OpenAI, Anthropic, Google, etc.), you bring your own keys and pay the providers directly — many offer generous free tiers.',
+      'MILO is a one-time purchase ($8.99 USD in the US; Apple sets the local price in your country — no subscriptions). Download the app and use Apple Intelligence where it is available — no API key needed. For cloud providers (OpenAI, Anthropic, Google, etc.), you bring your own keys and pay the providers directly — many offer generous free tiers.',
   },
   {
     question: 'How do I install MILO?',

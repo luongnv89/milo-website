@@ -13,7 +13,7 @@
 - Siri hands the request off to the AI provider and model you picked.
 - The answer is spoken back, hands-free.
 
-## Providers (8)
+## Providers (7)
 
 You bring your own API keys (cloud providers) and switch by voice:
 
@@ -24,14 +24,15 @@ You bring your own API keys (cloud providers) and switch by voice:
 - Groq — Llama, GPT-OSS, Qwen, Kimi; extremely fast inference.
 - OpenRouter — 200+ models behind one key; many free.
 - Apple Intelligence — on-device foundation model; no key, nothing leaves the phone.
-- Ollama (Local) — run Llama, Mistral and more fully offline.
+
+Local Ollama is coming soon and is not available in this release.
 
 ## Privacy
 
 - API keys are stored in the iOS Keychain.
 - Conversation history stays on-device via SwiftData.
 - No accounts; no analytics on your prompts. Only the provider you enable sees them.
-- Apple Intelligence and Ollama never leave the phone.
+- On-device Apple Intelligence does not send prompts to a third-party AI service.
 
 ## Pages
 
