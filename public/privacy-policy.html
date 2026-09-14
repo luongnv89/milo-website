@@ -49,7 +49,7 @@
         "isPartOf": { "@id": "https://askmilo.pro/#website" },
         "about": { "@id": "https://askmilo.pro/#org" },
         "inLanguage": "en",
-        "dateModified": "2026-06-25"
+        "dateModified": "2026-09-15"
       },
       {
         "@type": "BreadcrumbList",
@@ -75,7 +75,7 @@
 
     <main class="prose">
       <h1 class="display-page">Privacy Policy</h1>
-      <p class="meta updated">Last updated: June 25, 2026</p>
+      <p class="meta updated">Last updated: September 15, 2026</p>
 
       <section class="card section">
         <h2>Quick Summary</h2>
@@ -85,6 +85,8 @@
           <li>When you use a cloud AI provider, MILO sends your prompt and relevant conversation context directly from your device to the provider you selected.</li>
           <li>MILO asks for in-app permission before sending prompts or conversation context to third-party AI providers.</li>
           <li>Apple Intelligence runs on device and does not send your prompt to a third-party AI service.</li>
+          <li>Optional web search sends the model-generated query to Brave Search, then returns results to your chosen AI provider.</li>
+          <li>Optional Calendar and Location/ETA context packs add event or location details to the prompt sent to your chosen AI provider.</li>
         </ul>
       </section>
 
@@ -97,6 +99,8 @@
           <li><strong>Provider settings:</strong> selected provider, selected model, temperature, token limits, and similar app settings.</li>
           <li><strong>API keys:</strong> keys you enter for providers such as Google Gemini, Mistral AI, OpenRouter, Anthropic Claude, OpenAI, or Groq.</li>
           <li><strong>AI data sharing permission:</strong> whether you agreed to send prompts and conversation context to third-party AI providers.</li>
+          <li><strong>Context pack preferences (optional):</strong> Calendar and Location/ETA packs you enable in Settings. These packs are off by default.</li>
+          <li><strong>Brave Search API key (optional):</strong> stored locally in iOS Keychain when you enable web search.</li>
         </ul>
 
         <h3>1.2 Information collected automatically</h3>
@@ -105,7 +109,7 @@
           <li><strong>Website analytics:</strong> askmilo.pro uses Plausible Analytics for aggregate, cookie-free website statistics such as page views, referrers, device type, and approximate country. Plausible does not store IP addresses or use cross-site tracking cookies.</li>
         </ul>
 
-        <p>MILO does not collect contacts, photos, health data, precise location, advertising identifiers, or payment information.</p>
+        <p>MILO does not collect contacts, photos, health data, advertising identifiers, or payment information. MILO does not track your location in the background. Optional Location/ETA context (approximate coordinates) and the next calendar event (title, time, location) are sent to your chosen AI provider only when you enable those context packs.</p>
       </section>
 
       <section class="section">
@@ -133,8 +137,9 @@
 
       <section class="card section">
         <h2>4. Third-Party AI Sharing</h2>
-        <p><strong>What is sent:</strong> when you use a cloud AI provider, MILO sends the message or prompt you enter, relevant conversation context/history for follow-up replies, selected provider/model information needed to route the request, and for Siri or CarPlay the dictated/transcribed prompt.</p>
+        <p><strong>What is sent:</strong> when you use a cloud AI provider, MILO sends the message or prompt you enter, relevant conversation context/history for follow-up replies, selected provider/model information needed to route the request, and for Siri or CarPlay the dictated/transcribed prompt. If you enable Calendar or Location/ETA context packs, MILO also includes the next calendar event (title, time, location) and/or approximate location/ETA coordinates in that prompt.</p>
         <p><strong>Who receives it:</strong> depending on the provider/model you choose, data may be sent directly from your device to Google Gemini, Mistral AI, OpenRouter, Anthropic Claude, OpenAI, or Groq. OpenRouter may route your request to the model provider selected inside OpenRouter.</p>
+        <p><strong>Web search (optional):</strong> when you enable Settings → Tools → Web search and store a Brave Search API key, your AI provider may ask MILO to run a search mid-answer. MILO then sends <em>only the search query the model generates</em> to Brave Search — not your conversation, identity, or other provider keys. Brave returns web results that are sent to your AI provider so it can finish the answer. Search queries are subject to <a href="https://brave.com/privacy/browser/" target="_blank" rel="noopener noreferrer">Brave's privacy policy</a>.</p>
         <p><strong>Why it is sent:</strong> only to generate AI responses and provide MILO's assistant features.</p>
         <p><strong>Permission:</strong> MILO asks for explicit in-app permission before sending prompts or conversation context to third-party AI providers. If you decline or revoke permission, cloud AI requests are blocked until you agree again.</p>
         <p><strong>Provider protections:</strong> MILO supports established third-party AI providers with published privacy and security practices. These providers are expected to provide the same or equal protection for the data they process under their own privacy policies and terms. You should review the policy of the provider you choose because their retention and training settings may vary.</p>
@@ -145,6 +150,7 @@
           <li>Anthropic Privacy Policy: <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener noreferrer">anthropic.com/privacy</a></li>
           <li>OpenAI Privacy Policy: <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener noreferrer">openai.com/policies/privacy-policy</a></li>
           <li>Groq Privacy Policy: <a href="https://groq.com/privacy-policy/" target="_blank" rel="noopener noreferrer">groq.com/privacy-policy</a></li>
+          <li>Brave Search Privacy Policy: <a href="https://brave.com/privacy/browser/" target="_blank" rel="noopener noreferrer">brave.com/privacy/browser</a></li>
         </ul>
       </section>
 
@@ -163,7 +169,9 @@
         <ul>
           <li>Review or revoke AI Data Sharing permission in MILO Settings → AI Data Sharing.</li>
           <li>Use on-device Apple Intelligence when available to avoid sending prompts to third-party AI services.</li>
-          <li>Delete API keys in MILO Settings → API Keys.</li>
+          <li>Delete API keys in MILO Settings → Providers.</li>
+          <li>Turn off Calendar or Location/ETA context packs in MILO Settings (CarPlay / context packs) so event and location details are not added to prompts.</li>
+          <li>Remove the Brave Search API key or turn off Settings → Tools → Web search so search queries are not sent to Brave.</li>
           <li>Delete conversation history in the app's History screens.</li>
           <li>Disable speech recognition permissions in iOS Settings if you do not want to dictate prompts.</li>
           <li>Contact us to request support records be deleted if you emailed us directly.</li>
