@@ -13,6 +13,11 @@ export function ModelsSection() {
             <div key={p.id} className="bg-white p-5 sm:p-6">
               <p.icon className="h-5 w-5 text-ink-2" aria-hidden="true" />
               <h3 className="mt-4 text-[15px] font-medium text-ink">{p.title}</h3>
+              {p.comingSoon ? (
+                <p className="mt-1 text-xs font-medium uppercase tracking-wide text-ink-3">
+                  Coming soon
+                </p>
+              ) : null}
               <ul className="mt-1.5 space-y-0.5 text-sm text-ink-3">
                 {p.bullets.map((b) => (
                   <li key={b}>{b}</li>
