@@ -114,7 +114,8 @@ The wait for a smarter built-in Siri kept slipping. I’d rather give you the br
 
 - [Home](https://askmilo.pro/): Product overview, providers, founder story, FAQ.
 - [Download on the App Store](https://apps.apple.com/app/ask-milo-ai-chat-assistant/id6780062368): Install MILO from Apple's App Store.
-- [Privacy Policy](https://askmilo.pro/privacy-policy.html): How MILO handles data.
+- [Privacy Policy](https://askmilo.pro/privacy-policy.html): How MILO handles data, including optional web search and CarPlay context packs.
+- [Support](https://askmilo.pro/support.html): Email, in-app help, and GitHub issue forms.
 - [Terms](https://askmilo.pro/terms.html): Terms of use.
 - [Changelog](https://askmilo.pro/changelog.html): MILO app and site release notes.
 - [X](https://x.com/luongnv89)
