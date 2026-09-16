@@ -57,8 +57,8 @@ cat > site.webmanifest << EOL
       "type": "image/png"
     }
   ],
-  "theme_color": "#FFFFFF",
-  "background_color": "#FFFFFF",
+  "theme_color": "#0073E6",
+  "background_color": "#000000",
   "display": "standalone"
 }
 EOL
