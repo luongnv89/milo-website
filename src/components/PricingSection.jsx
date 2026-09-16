@@ -13,7 +13,7 @@ export function PricingSection() {
         </div>
 
         <div className="card mx-auto mt-12 max-w-md p-8 text-center sm:p-10">
-          <div className="font-serif text-6xl leading-none text-ink">{pricing.price}</div>
+          <div className="text-6xl font-semibold leading-none tracking-tight text-ink">{pricing.price}</div>
           <p className="mt-3 text-sm text-ink-3">{pricing.priceLine}</p>
 
           <ul className="mt-8 space-y-3 text-left text-[15px] text-ink-2">

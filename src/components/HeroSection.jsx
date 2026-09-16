@@ -43,7 +43,7 @@ export function HeroSection() {
           />
           <div className="relative w-[260px] sm:w-[300px]">
             {/* Phone bezel — iPhone style */}
-            <div className="relative rounded-[3rem] bg-ink p-[8px] shadow-phone">
+            <div className="relative rounded-[3rem] bg-neutral-900 p-[8px] shadow-phone">
               {/* Screen container */}
               <div className="relative overflow-hidden rounded-[2.5rem] bg-black">
                 {/* Dynamic Island */}
