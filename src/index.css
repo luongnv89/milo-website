@@ -160,10 +160,11 @@ body {
 }
 /* The Google Fonts URL the design system ships for Inter carries only a `wght`
    axis — no italic file — so `font-style: italic` would be a browser-synthesized
-   oblique. Emphasis is carried by the primary tint instead. */
+   oblique. Emphasis uses primary tint plus heavier weight (WCAG 1.4.1). */
 .display-hero em,
 .display-section em {
   font-style: normal;
+  font-weight: 700;
   color: var(--color-primary);
 }
 

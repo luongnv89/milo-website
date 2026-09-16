@@ -167,11 +167,12 @@ img {
   margin-bottom: 1rem;
 }
 /* The Inter URL these pages load carries only a `wght` axis — no italic file —
-   so `font-style: italic` would be a browser-synthesized oblique. Emphasis is
-   carried by the primary tint instead. Mirrors the rule in src/index.css. */
+   so `font-style: italic` would be a browser-synthesized oblique. Emphasis uses
+   primary tint plus heavier weight (WCAG 1.4.1). Mirrors src/index.css. */
 .prose em,
 .entry em {
   font-style: normal;
+  font-weight: 700;
   color: var(--color-primary);
 }
 
