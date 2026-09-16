@@ -7,15 +7,15 @@ const speakerMeta = {
   user: {
     title: 'You',
     reverse: true,
-    bubble: 'bg-accent text-white',
-    avatar: 'border-line bg-white text-ink-2',
+    bubble: 'bg-accent text-primary-foreground',
+    avatar: 'border-line bg-card text-ink-2',
     Icon: UserRound,
   },
   siri: {
     title: 'Siri',
     reverse: false,
     bubble: 'bg-paper-2 text-ink',
-    avatar: 'border-line bg-white text-ink-2',
+    avatar: 'border-line bg-card text-ink-2',
     Icon: Mic,
   },
 };
@@ -170,8 +170,8 @@ export function HowItWorksSection() {
 
         <div className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-3">
           {howItWorks.steps.map((step) => (
-            <div key={step.n} className="bg-white p-6 sm:p-8">
-              <span className="font-serif text-4xl text-ink-3">{step.n}</span>
+            <div key={step.n} className="bg-card p-6 sm:p-8">
+              <span className="text-4xl font-semibold tracking-tight text-ink-3">{step.n}</span>
               <h3 className="mt-4 text-lg font-medium text-ink">{step.title}</h3>
               <p className="mt-1 text-[15px] text-ink-2">{step.text}</p>
             </div>
@@ -200,7 +200,7 @@ export function HowItWorksSection() {
 
             {isThinking && (
               <div className="flex items-end gap-3 opacity-70">
-                <span className="inline-flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border border-line bg-white text-ink-2">
+                <span className="inline-flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border border-line bg-card text-ink-2">
                   <Mic className="h-4 w-4" />
                 </span>
                 <div className="max-w-[80%] rounded-2xl bg-paper-2 px-4 py-2.5 text-sm text-ink-2">Thinking…</div>
@@ -255,7 +255,7 @@ export function HowItWorksSection() {
                       if (e.key === 'Enter') sendToMilo();
                     }}
                     placeholder="Type question for MILO…"
-                    className="min-w-0 flex-1 rounded-full border border-line-strong bg-white px-4 py-2.5 text-sm text-ink placeholder:text-ink-3 focus:border-accent"
+                    className="input min-w-0 flex-1 text-sm"
                   />
                   <button
                     type="button"
@@ -281,7 +281,7 @@ export function HowItWorksSection() {
 
           {/* Example prompts — launchable in the interactive demo */}
           <div>
-            <div className="inline-flex rounded-full border border-line bg-white p-1">
+            <div className="inline-flex rounded-full border border-line bg-card p-1">
               {siriExamples.map((tab) => (
                 <button
                   key={tab.id}
@@ -289,14 +289,14 @@ export function HowItWorksSection() {
                   aria-selected={tab.id === activeTab}
                   onClick={() => setActiveTab(tab.id)}
                   className={`rounded-full px-4 py-1.5 text-sm ${
-                    tab.id === activeTab ? 'bg-ink text-white' : 'text-ink-2'
+                    tab.id === activeTab ? 'bg-ink text-paper' : 'text-ink-2'
                   }`}
                 >
                   {tab.label}
                 </button>
               ))}
             </div>
-            <div className="mt-4 divide-y divide-line rounded-2xl border border-line bg-white">
+            <div className="mt-4 divide-y divide-line rounded-2xl border border-line bg-card">
               {active.items.map((item) => (
                 <div key={item.prompt} className="flex items-center justify-between gap-4 p-4">
                   <div>
