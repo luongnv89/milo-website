@@ -12,7 +12,7 @@ export function ComparisonSection() {
 
         <div className="mt-12 space-y-4 lg:hidden">
           {comparisonRows.map((row) => (
-            <div key={row.feature} className="overflow-hidden rounded-2xl border border-line bg-white">
+            <div key={row.feature} className="overflow-hidden rounded-2xl border border-line bg-card">
               <table
                 className="w-full border-collapse text-left"
                 aria-label={`iPhone comparison for ${row.feature}`}
@@ -69,7 +69,7 @@ export function ComparisonSection() {
           ))}
         </div>
 
-        <div className="mt-12 hidden overflow-x-auto rounded-2xl border border-line bg-white lg:block">
+        <div className="mt-12 hidden overflow-x-auto rounded-2xl border border-line bg-card lg:block">
           <table className="min-w-[760px] table-fixed border-collapse text-left">
             <caption className="sr-only">
               Feature comparison of MILO, ChatGPT, Claude, and Gemini on iPhone.

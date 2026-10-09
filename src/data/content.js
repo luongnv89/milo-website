@@ -68,6 +68,7 @@ export const footerLinks = {
     { label: 'Story', href: '#story' },
     { label: 'FAQ', href: '#faq' },
     { label: 'Feedback', href: '#feedback' },
+    { label: 'Support', href: 'support.html' },
     { label: 'Changelog', href: 'changelog.html' },
   ],
   legal: [

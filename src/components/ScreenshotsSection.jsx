@@ -21,7 +21,7 @@ function PhoneShot({ shot }) {
   return (
     <div className="w-[240px] sm:w-[280px]">
       {/* iPhone frame — same mockup as the hero, so every shot matches */}
-      <div className="w-full rounded-[3rem] bg-ink p-[8px] shadow-phone">
+      <div className="w-full rounded-[3rem] bg-neutral-900 p-[8px] shadow-phone">
         <div className="relative overflow-hidden rounded-[2.5rem] bg-black">
           {/* Dynamic Island — sized to match the hero mockup at this width */}
           <div className="absolute left-1/2 top-3 z-20 h-[28px] w-[90px] -translate-x-1/2 rounded-full bg-black" />
@@ -111,7 +111,7 @@ export function ScreenshotsSection() {
 
           <div>
             {/* Group context for the active slide */}
-            <h3 className="font-serif text-3xl text-ink">{current.groupTitle}</h3>
+            <h3 className="text-3xl font-semibold tracking-tight text-ink">{current.groupTitle}</h3>
             <p className="mt-3 text-ink-2">{current.groupDescription}</p>
             <p className="mt-6 text-sm text-ink-3">{current.caption}</p>
 
@@ -121,7 +121,7 @@ export function ScreenshotsSection() {
                 type="button"
                 onClick={prev}
                 aria-label="Previous screenshot"
-                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-line-strong bg-white text-ink transition-colors hover:bg-paper-2"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-line-strong bg-card text-ink transition-colors hover:bg-paper-2"
               >
                 <ChevronLeft className="h-5 w-5" />
               </button>
@@ -148,7 +148,7 @@ export function ScreenshotsSection() {
                 type="button"
                 onClick={next}
                 aria-label="Next screenshot"
-                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-line-strong bg-white text-ink transition-colors hover:bg-paper-2"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-line-strong bg-card text-ink transition-colors hover:bg-paper-2"
               >
                 <ChevronRight className="h-5 w-5" />
               </button>

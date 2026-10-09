@@ -3,6 +3,8 @@
 User-agent: *
 Allow: /
 Disallow: /thanks.html
+# Content Signals (https://contentsignals.org/) — AI usage preferences
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
 
 # --- AI crawlers: allow all for maximum AI visibility ---
 # Training crawlers
@@ -71,6 +73,9 @@ Allow: /
 
 User-agent: Bingbot
 Allow: /
+
+# Agentic Resource Discovery manifest (https://agenticresourcediscovery.org/)
+Agentmap: https://askmilo.pro/.well-known/ai-catalog.json
 
 # Sitemap
 Sitemap: https://askmilo.pro/sitemap.xml

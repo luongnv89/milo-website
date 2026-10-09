@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "run_id": "20260913T104443Z-29235",
+  "started_at": "2026-09-13T10:44:43Z",
+  "updated_at": "2026-09-13T11:13:45Z",
+  "invocation": "/auto-pilot --issues 45,46",
+  "mode": "balanced",
+  "limit": 10,
+  "queue": [
+    45,
+    46
+  ],
+  "phase": "cleanup",
+  "lanes": [],
+  "current": null,
+  "processed": [
+    {
+      "issue": 45,
+      "outcome": "merged",
+      "pr": 47
+    },
+    {
+      "issue": 46,
+      "outcome": "merged",
+      "pr": 48
+    }
+  ],
+  "skip_list": [],
+  "report_path": null,
+  "borrowed_skills": []
+}
