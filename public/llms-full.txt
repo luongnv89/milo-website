@@ -25,10 +25,10 @@ Say “Hey Siri, ask MILO” from the lock screen, your headphones, or the car �
 
 - **Ask by voice through Siri** — The only system-wide, hands-free trigger on iOS, routed to the model you choose.
 - **Short spoken answers in the car** — CarPlay mode keeps replies brief and reads them aloud, so your eyes stay on the road.
-- **Any model, switched by voice** — 8 providers and 200+ models, including on-device Apple Intelligence and local Ollama.
+- **Any model, switched by voice** — 7 providers and 200+ models, including on-device Apple Intelligence.
 - **Private by design** — Keys live in the iOS Keychain, history stays on-device, no accounts, no prompt analytics.
 
-## Providers (8)
+## Providers (7)
 
 You bring your own API keys (cloud providers) and switch by voice:
 
@@ -39,7 +39,8 @@ You bring your own API keys (cloud providers) and switch by voice:
 - Groq — Llama, GPT-OSS, Qwen, Kimi; extremely fast inference.
 - OpenRouter — 200+ models behind one key; many free.
 - Apple Intelligence — on-device foundation model; no key, nothing leaves the phone.
-- Ollama (Local) — run Llama, Mistral and more fully offline.
+
+Local Ollama is coming soon and is not available in this release.
 
 ## MILO vs ChatGPT, Claude, Gemini apps on iPhone
 
@@ -47,7 +48,7 @@ You bring your own API keys (cloud providers) and switch by voice:
 |---|---|---|---|---|
 | Invoke by voice, system-wide (no app to open) | Yes — through Siri | No — open app first | No — open app first | No — open app first |
 | Short, spoken answers tuned for CarPlay | Yes — automatic | Yes (iOS 26.4+) | No | Limited |
-| Choice of AI provider & model | 8 providers, 200+ models | OpenAI only | Anthropic only | Google only |
+| Choice of AI provider & model | 7 providers, 200+ models | OpenAI only | Anthropic only | Google only |
 | Bring your own API keys | Yes — Keychain | Subscription | Account / sub | Account / sub |
 
 ## Pricing
@@ -58,17 +59,17 @@ $8.99 — One-time purchase · US price, Apple sets local pricing
 
 - Unlimited conversations with any model
 - Siri, CarPlay, lock screen and headphones
-- GPT-5.5, Claude Opus 4.8, Gemini 3.5 Flash, Mistral, Groq, OpenRouter, Apple Intelligence, Ollama
+- GPT-5.5, Claude Opus 4.8, Gemini 3.5 Flash, Mistral, Groq, OpenRouter, Apple Intelligence
 - Your keys, your data — nothing logged or sold
 
-Cloud providers are billed by the provider on your own key — many have free tiers. Apple Intelligence and Ollama need no key.
+Cloud providers are billed by the provider on your own key — many have free tiers. On-device Apple Intelligence needs no key.
 
 ## Privacy
 
 - API keys are stored in the iOS Keychain.
 - Conversation history stays on-device via SwiftData.
 - No accounts; no analytics on your prompts. Only the provider you enable sees them.
-- Apple Intelligence and Ollama never leave the phone.
+- On-device Apple Intelligence does not send prompts to a third-party AI service.
 
 ## FAQ
 
@@ -78,19 +79,19 @@ On iOS, only Siri can be triggered hands-free, system-wide. ChatGPT, Claude, and
 
 ### Which AI models can I use?
 
-Eight providers: OpenAI (GPT-5.5), Anthropic (Claude Opus 4.8), Google (Gemini 3.5 Flash), Mistral, Groq, OpenRouter (200+ models), Apple’s on-device Intelligence, and local Ollama. Switch between them by voice.
+Seven providers you can use today: OpenAI (GPT-5.5), Anthropic (Claude Opus 4.8), Google (Gemini 3.5 Flash), Mistral, Groq, OpenRouter (200+ models), and Apple’s on-device Intelligence. Local Ollama is coming soon and is not available in this release. Switch between the shipped providers by voice.
 
 ### How private is it?
 
-Your API keys live in the iOS Keychain and your conversation history stays on your device with SwiftData. There are no accounts and no analytics on your prompts — only the provider you enable ever sees them. Apple Intelligence and Ollama never leave the phone at all.
+Your API keys live in the iOS Keychain and your conversation history stays on your device with SwiftData. There are no accounts and no analytics on your prompts — only the provider you enable ever sees them. On-device Apple Intelligence does not send prompts to a third-party AI service.
 
 ### Do I need my own API keys?
 
-For the cloud providers, yes — that keeps costs transparent and under your control, and many offer generous free tiers. Apple Intelligence (on-device) and Ollama (local) need no key.
+For the cloud providers, yes — that keeps costs transparent and under your control, and many offer generous free tiers. Apple Intelligence (on-device) needs no key.
 
 ### Is it free?
 
-MILO is a one-time purchase ($8.99 USD in the US; Apple sets the local price in your country — no subscriptions). Download the app and use Apple Intelligence or Ollama (local) for free — no API key needed. For cloud providers (OpenAI, Anthropic, Google, etc.), you bring your own keys and pay the providers directly — many offer generous free tiers.
+MILO is a one-time purchase ($8.99 USD in the US; Apple sets the local price in your country — no subscriptions). Download the app and use Apple Intelligence where it is available — no API key needed. For cloud providers (OpenAI, Anthropic, Google, etc.), you bring your own keys and pay the providers directly — many offer generous free tiers.
 
 ### How do I install MILO?
 

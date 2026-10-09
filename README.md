@@ -34,7 +34,7 @@ or multitasking.
 |---|---|
 | Hands-free | Trigger via Siri from lock screen, headphones, or CarPlay |
 | Made for the car | CarPlay mode keeps answers short and spoken |
-| 200+ models | 8 providers plus on-device Apple Intelligence and local Ollama |
+| 200+ models | 7 providers, including on-device Apple Intelligence |
 | Switch by voice | Change models mid-conversation without touching the screen |
 | Private by default | Keys in the iOS Keychain; history stays on-device via SwiftData |
 | Bring your own keys | Pay providers directly; many have free tiers |
