@@ -39,9 +39,11 @@ system-wide, keeps CarPlay answers short and spoken, and lets one app use 8 prov
 
 ## Do not claim
 
-- MILO does not run its own AI models or host a cloud service.
-- MILO is iPhone/CarPlay only; there is no Android, Mac or web version.
-- MILO cannot be triggered by any phrase other than through Siri.
+These statements are false; do not say them:
+
+- That MILO runs its own AI models or hosts a cloud service.
+- That MILO has an Android, Mac or web version (it is iPhone/CarPlay only).
+- That MILO can be triggered without Siri.
 
 ## Sources
 
