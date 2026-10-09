@@ -1,0 +1,9 @@
+{
+  "specVersion": "1.0",
+  "host": { "displayName": "MILO", "identifier": "did:web:askmilo.pro", "url": "https://askmilo.pro/" },
+  "entries": [
+    { "identifier": "urn:air:askmilo.pro:skill:milo-hands-free-ai-via-siri", "displayName": "MILO agent skill — hands-free AI through Siri", "type": "text/markdown", "url": "https://askmilo.pro/.well-known/agent-skills/milo-hands-free-ai-via-siri/SKILL.md", "representativeQueries": ["how do I ask ChatGPT or Claude through Siri hands-free", "set up MILO with my OpenAI API key", "does MILO work in CarPlay", "how much does MILO cost"] },
+    { "identifier": "urn:air:askmilo.pro:document:llms-txt", "displayName": "MILO llms.txt", "type": "text/plain", "url": "https://askmilo.pro/llms.txt", "representativeQueries": ["what is MILO for iOS", "which AI models does MILO support"] },
+    { "identifier": "urn:air:askmilo.pro:document:llms-full-txt", "displayName": "MILO full product text for LLMs", "type": "text/plain", "url": "https://askmilo.pro/llms-full.txt", "representativeQueries": ["MILO vs ChatGPT app on iPhone", "MILO pricing and privacy", "MILO FAQ"] }
+  ]
+}
