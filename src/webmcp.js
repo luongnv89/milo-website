@@ -1,6 +1,7 @@
 /**
  * WebMCP — exposes a few read-only site actions to AI agents in the browser
- * through `navigator.modelContext.registerTool()`.
+ * through `document.modelContext.registerTool()` (falling back to
+ * `navigator.modelContext` on older Chrome builds).
  *
  * Spec: https://webmachinelearning.github.io/webmcp/
  *
@@ -189,13 +190,20 @@ export function buildTools({ doc = typeof document !== 'undefined' ? document : 
   ];
 }
 
-/** The browser's WebMCP context, or undefined when the API is unavailable. */
+/**
+ * The browser's WebMCP context, or undefined when the API is unavailable.
+ * Feature-detects `document.modelContext` first, then falls back to
+ * `navigator.modelContext` (older Chrome builds), using the first one that
+ * actually exposes `registerTool`.
+ */
 export function getModelContext(
   nav = typeof navigator !== 'undefined' ? navigator : undefined,
   doc = typeof document !== 'undefined' ? document : undefined,
 ) {
-  const ctx = nav?.modelContext ?? doc?.modelContext;
-  return typeof ctx?.registerTool === 'function' ? ctx : undefined;
+  for (const ctx of [doc?.modelContext, nav?.modelContext]) {
+    if (typeof ctx?.registerTool === 'function') return ctx;
+  }
+  return undefined;
 }
 
 /**

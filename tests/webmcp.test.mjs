@@ -124,11 +124,12 @@ test('does nothing when WebMCP is unavailable', () => {
   assert.equal(registerWebMcpTools({ modelContext: undefined }), null);
 });
 
-test('prefers navigator.modelContext and falls back to document.modelContext', () => {
+test('prefers document.modelContext and falls back to navigator.modelContext', () => {
   const nav = fakeModelContext();
   const doc = fakeModelContext();
-  assert.equal(getModelContext({ modelContext: nav }, { modelContext: doc }), nav);
-  assert.equal(getModelContext({}, { modelContext: doc }), doc);
+  assert.equal(getModelContext({ modelContext: nav }, { modelContext: doc }), doc);
+  assert.equal(getModelContext({ modelContext: nav }, {}), nav);
+  assert.equal(getModelContext({ modelContext: nav }, { modelContext: {} }), nav);
 });
 
 test('a throwing or rejecting registerTool never escapes', async () => {

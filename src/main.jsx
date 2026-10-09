@@ -19,7 +19,7 @@ if (root.hasChildNodes()) {
 }
 
 // Expose read-only site tools to in-browser AI agents (WebMCP). No-op when the
-// browser has no navigator.modelContext; a failure must never break the page.
+// browser has no document/navigator.modelContext; a failure must never break the page.
 try {
   registerWebMcpTools();
 } catch (err) {
