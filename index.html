@@ -6,55 +6,76 @@
     <title>MILO — Give Siri 200+ AI brains — hands-free in the car</title>
     <meta
       name="description"
-      content="Give Siri 200+ AI brains — hands-free in the car. Ask GPT, Claude, Gemini or local Ollama from CarPlay, the lock screen or headphones. $8.99 one-time."
+      content="Give Siri 200+ AI brains — hands-free in the car. Ask GPT, Claude, Gemini, or Apple Intelligence from CarPlay, the lock screen or headphones. $8.99 one-time."
     />
     <link rel="canonical" href="https://askmilo.pro/" />
+    <link rel="ai-catalog" href="/.well-known/ai-catalog.json" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="MILO" />
     <meta property="og:url" content="https://askmilo.pro/" />
     <meta property="og:title" content="MILO — Give Siri 200+ AI brains — hands-free in the car" />
     <meta
       property="og:description"
-      content="Give Siri 200+ AI brains — hands-free in the car. Ask GPT, Claude, Gemini, Apple Intelligence, or local Ollama from the lock screen, headphones, or CarPlay. One-time purchase ($8.99 USD in the US; Apple sets local pricing). No app. No typing."
+      content="Give Siri 200+ AI brains — hands-free in the car. Ask GPT, Claude, Gemini, or Apple Intelligence from the lock screen, headphones, or CarPlay. One-time purchase ($8.99 USD in the US; Apple sets local pricing). No app. No typing."
     />
-    <meta property="og:image" content="https://askmilo.pro/og-image.png" />
+    <meta property="og:image" content="https://askmilo.pro/og-image-v2.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:locale" content="en_US" />
-    <meta property="og:image:alt" content="Siri: here’s what I found on the web 🙁 vs MILO: real GPT, Claude, Gemini & more, spoken hands-free — Give Siri 200+ AI brains." />
+    <meta property="og:image:alt" content="MILO — Ask real AI through Siri. Hands-free. GPT, Claude, Gemini or 200+ models, spoken answers on iPhone & CarPlay." />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:creator" content="@luongnv89" />
     <meta name="twitter:url" content="https://askmilo.pro/" />
     <meta name="twitter:title" content="MILO — Give Siri 200+ AI brains — hands-free in the car" />
     <meta
       name="twitter:description"
-      content="Give Siri 200+ AI brains — hands-free in the car. Ask GPT, Claude, Gemini, Apple Intelligence, or local Ollama from the lock screen, headphones, or CarPlay. One-time purchase ($8.99 USD in the US; Apple sets local pricing). No app. No typing."
+      content="Give Siri 200+ AI brains — hands-free in the car. Ask GPT, Claude, Gemini, or Apple Intelligence from the lock screen, headphones, or CarPlay. One-time purchase ($8.99 USD in the US; Apple sets local pricing). No app. No typing."
     />
-    <meta name="twitter:image" content="https://askmilo.pro/og-image.png" />
-    <meta name="twitter:image:alt" content="Siri: here’s what I found on the web 🙁 vs MILO: real GPT, Claude, Gemini & more, spoken hands-free — Give Siri 200+ AI brains." />
+    <meta name="twitter:image" content="https://askmilo.pro/og-image-v2.png" />
+    <meta name="twitter:image:alt" content="MILO — Ask real AI through Siri. Hands-free. GPT, Claude, Gemini or 200+ models, spoken answers on iPhone & CarPlay." />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#3b82f6" />
-    <meta name="theme-color" content="#FAFAF7" />
+    <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
     <meta name="apple-mobile-web-app-title" content="MILO" />
     <meta name="application-name" content="MILO" />
-    <meta name="msapplication-TileColor" content="#FAFAF7" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+
+    <!--
+      Dark mode bootstrap. Runs before first paint so the theme is settled by
+      the time anything renders (no flash of the wrong palette). Reads an
+      explicit choice from localStorage, otherwise follows the OS.
+    -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('theme');
+          var dark =
+            saved === 'dark' ||
+            (saved !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+          document.documentElement.classList.toggle('dark', dark);
+        } catch (e) {
+          /* private mode / blocked storage — fall back to the light default */
+        }
+      })();
+    </script>
     <!-- Preconnect to external domains for faster loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       media="print"
       onload="this.media='all'"
     />
     <noscript>
       <link
         rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       />
     </noscript>
     <link rel="preconnect" href="https://plausible.io" />
@@ -118,7 +139,7 @@
             "@id": "https://askmilo.pro/#website",
             "url": "https://askmilo.pro/",
             "name": "MILO",
-            "description": "Give Siri 200+ AI brains — hands-free in the car. Ask GPT, Claude, Gemini, Apple Intelligence or Ollama hands-free.",
+            "description": "Give Siri 200+ AI brains — hands-free in the car. Ask GPT, Claude, Gemini, or Apple Intelligence hands-free.",
             "publisher": { "@id": "https://askmilo.pro/#org" }
           },
           {
@@ -129,7 +150,7 @@
             "applicationSubCategory": "Voice assistant",
             "description": "MILO connects Siri's system-wide, hands-free voice access to GPT, Claude, Gemini, and 200+ models. One-time purchase ($8.99 USD in the US; Apple sets local pricing by country — no subscriptions). Bring your own keys; conversations stay on-device. Works in CarPlay.",
             "url": "https://askmilo.pro/",
-            "image": "https://askmilo.pro/og-image.png",
+            "image": "https://askmilo.pro/og-image-v2.png",
             "screenshot": [
               "https://askmilo.pro/1.0.0/car-play-mode.PNG",
               "https://askmilo.pro/1.0.0/model-selection.PNG",
@@ -144,7 +165,7 @@
             "featureList": [
               "Unlimited conversations with any model",
               "Siri, CarPlay, lock screen and headphones",
-              "GPT-5.5, Claude Opus 4.8, Gemini 3.5 Flash, Mistral, Groq, OpenRouter, Apple Intelligence, Ollama",
+              "GPT-5.5, Claude Opus 4.8, Gemini 3.5 Flash, Mistral, Groq, OpenRouter, Apple Intelligence",
               "Your keys, your data — nothing logged or sold"
             ],
             "downloadUrl": "https://apps.apple.com/app/ask-milo-ai-chat-assistant/id6780062368",
@@ -173,7 +194,7 @@
                 "name": "Which AI models can I use?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Eight providers: OpenAI (GPT-5.5), Anthropic (Claude Opus 4.8), Google (Gemini 3.5 Flash), Mistral, Groq, OpenRouter (200+ models), Apple's on-device Intelligence, and local Ollama. Switch between them by voice."
+                  "text": "Seven providers you can use today: OpenAI (GPT-5.5), Anthropic (Claude Opus 4.8), Google (Gemini 3.5 Flash), Mistral, Groq, OpenRouter (200+ models), and Apple's on-device Intelligence. Local Ollama is coming soon and is not available in this release. Switch between the shipped providers by voice."
                 }
               },
               {
@@ -181,7 +202,7 @@
                 "name": "How private is it?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Your API keys live in the iOS Keychain and your conversation history stays on your device with SwiftData. There are no accounts and no analytics on your prompts — only the provider you enable ever sees them. Apple Intelligence and Ollama never leave the phone at all."
+                  "text": "Your API keys live in the iOS Keychain and your conversation history stays on your device with SwiftData. There are no accounts and no analytics on your prompts — only the provider you enable ever sees them. On-device Apple Intelligence does not send prompts to a third-party AI service."
                 }
               },
               {
@@ -189,7 +210,7 @@
                 "name": "Do I need my own API keys?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "For the cloud providers, yes — that keeps costs transparent and under your control, and many offer generous free tiers. Apple Intelligence (on-device) and Ollama (local) need no key."
+                  "text": "For the cloud providers, yes — that keeps costs transparent and under your control, and many offer generous free tiers. Apple Intelligence (on-device) needs no key."
                 }
               },
               {
@@ -197,7 +218,7 @@
                 "name": "Is it free?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "MILO is a one-time purchase ($8.99 USD in the US; Apple sets the local price in your country — no subscriptions). Download the app and use Apple Intelligence or Ollama (local) for free — no API key needed. For cloud providers (OpenAI, Anthropic, Google, etc.), you bring your own keys and pay the providers directly — many offer generous free tiers."
+                  "text": "MILO is a one-time purchase ($8.99 USD in the US; Apple sets the local price in your country — no subscriptions). Download the app and use Apple Intelligence where it is available — no API key needed. For cloud providers (OpenAI, Anthropic, Google, etc.), you bring your own keys and pay the providers directly — many offer generous free tiers."
                 }
               },
               {

@@ -13,27 +13,31 @@
   <meta property="og:url" content="https://askmilo.pro/changelog.html" />
   <meta property="og:title" content="Changelog - MILO" />
   <meta property="og:description" content="Release notes for MILO — hands-free Siri routing to GPT, Claude, Gemini, and 200+ AI models on iOS and CarPlay." />
-  <meta property="og:image" content="https://askmilo.pro/og-image.png" />
+  <meta property="og:image" content="https://askmilo.pro/og-image-v2.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="MILO — Ask real AI through Siri. Hands-free. GPT, Claude, Gemini or 200+ models, spoken answers on iPhone & CarPlay." />
   <meta property="og:locale" content="en_US" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator" content="@luongnv89" />
   <meta name="twitter:title" content="Changelog - MILO" />
   <meta name="twitter:description" content="Release notes for MILO — hands-free Siri routing to GPT, Claude, Gemini, and 200+ AI models on iOS and CarPlay." />
-  <meta name="twitter:image" content="https://askmilo.pro/og-image.png" />
+  <meta name="twitter:image" content="https://askmilo.pro/og-image-v2.png" />
+  <meta name="twitter:image:alt" content="MILO — Ask real AI through Siri. Hands-free. GPT, Claude, Gemini or 200+ models, spoken answers on iPhone & CarPlay." />
 
   <link rel="icon" type="image/svg+xml" href="./favicon.svg">
   <link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32">
   <link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16">
   <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
   <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#3b82f6">
-  <meta name="theme-color" content="#FAFAF7">
+  <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+  <script>(function(){try{var s=localStorage.getItem("theme");document.documentElement.classList.toggle("dark",s==="dark"||(s!=="light"&&window.matchMedia("(prefers-color-scheme: dark)").matches));}catch(e){}})();</script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600&display=swap" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600&display=swap"></noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
   <link rel="stylesheet" href="./legal.css">
 
   <script type="application/ld+json">
@@ -100,7 +104,7 @@
         <h3 class="eyebrow entry-label">Added</h3>
         <ul>
           <li><strong>Siri bridge</strong> — “Hey Siri, ask MILO…” from lock screen, headphones, or CarPlay.</li>
-          <li><strong>Eight providers</strong> — OpenAI, Anthropic, Google Gemini, Mistral, Groq, OpenRouter (200+ models), Apple Intelligence, and local Ollama.</li>
+          <li><strong>Seven providers</strong> — OpenAI, Anthropic, Google Gemini, Mistral, Groq, OpenRouter (200+ models), and Apple Intelligence. Local Ollama is coming soon and was not included in 1.0.</li>
           <li><strong>Voice model switching</strong> — change provider or model mid-conversation without opening the app.</li>
           <li><strong>CarPlay mode</strong> — shorter, spoken answers tuned for driving.</li>
           <li><strong>On-device history</strong> — searchable threads with tokens, latency, and estimated cost per conversation (SwiftData).</li>
@@ -168,6 +172,7 @@
             <li><a href="./#story">Story</a></li>
             <li><a href="./#faq">FAQ</a></li>
             <li><a href="./#feedback">Feedback</a></li>
+            <li><a href="./support.html">Support</a></li>
             <li><a href="./changelog.html" aria-current="page">Changelog</a></li>
           </ul>
         </div>

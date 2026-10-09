@@ -18,7 +18,7 @@ export function FounderStory() {
               loading="lazy"
             />
           ) : (
-            <span className="mt-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-accent text-lg font-bold text-white">
+            <span className="mt-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-accent text-lg font-bold text-primary-foreground">
               {founderStory.name.charAt(0)}
             </span>
           )}
@@ -30,7 +30,7 @@ export function FounderStory() {
           <div className="space-y-6 text-lg leading-relaxed text-ink sm:text-xl">
             {founderStory.paragraphs.map((p, i) =>
               i === 0 ? (
-                <p key={i} className="font-serif text-2xl leading-snug text-ink sm:text-3xl">
+                <p key={i} className="text-2xl font-medium leading-snug tracking-tight text-ink sm:text-3xl">
                   {p}
                 </p>
               ) : (
@@ -40,7 +40,7 @@ export function FounderStory() {
           </div>
 
           {founderStory.personalNote && (
-            <blockquote className="mt-8 border-l-2 border-ink pl-5 font-serif text-xl italic text-ink-2">
+            <blockquote className="mt-8 border-l-2 border-line-strong pl-5 text-xl text-ink-2">
               {founderStory.personalNote}
             </blockquote>
           )}

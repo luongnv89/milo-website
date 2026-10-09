@@ -12,28 +12,32 @@
   <meta property="og:url" content="https://askmilo.pro/privacy-policy.html" />
   <meta property="og:title" content="Privacy Policy - MILO" />
   <meta property="og:description" content="Privacy Policy for MILO, including AI data sharing disclosures." />
-  <meta property="og:image" content="https://askmilo.pro/og-image.png" />
+  <meta property="og:image" content="https://askmilo.pro/og-image-v2.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="MILO — Ask real AI through Siri. Hands-free. GPT, Claude, Gemini or 200+ models, spoken answers on iPhone & CarPlay." />
   <meta property="og:locale" content="en_US" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator" content="@luongnv89" />
   <meta name="twitter:title" content="Privacy Policy - MILO" />
   <meta name="twitter:description" content="Privacy Policy for MILO, including AI data sharing disclosures." />
-  <meta name="twitter:image" content="https://askmilo.pro/og-image.png" />
+  <meta name="twitter:image" content="https://askmilo.pro/og-image-v2.png" />
+  <meta name="twitter:image:alt" content="MILO — Ask real AI through Siri. Hands-free. GPT, Claude, Gemini or 200+ models, spoken answers on iPhone & CarPlay." />
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
   <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#3b82f6">
-  <meta name="theme-color" content="#FAFAF7">
+  <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+  <script>(function(){try{var s=localStorage.getItem("theme");document.documentElement.classList.toggle("dark",s==="dark"||(s!=="light"&&window.matchMedia("(prefers-color-scheme: dark)").matches));}catch(e){}})();</script>
   <meta name="apple-mobile-web-app-title" content="MILO">
   <meta name="application-name" content="MILO">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600&display=swap" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600&display=swap"></noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
   <link rel="stylesheet" href="./legal.css">
 
   <script type="application/ld+json">
@@ -84,8 +88,9 @@
           <li>Your API keys are stored locally on your device in iOS Keychain.</li>
           <li>When you use a cloud AI provider, MILO sends your prompt and relevant conversation context directly from your device to the provider you selected.</li>
           <li>MILO asks for in-app permission before sending prompts or conversation context to third-party AI providers.</li>
+          <li>Optional web search is off by default. If you turn it on, MILO sends only the search query to Brave, Tavily, or TinyFish.</li>
           <li>Apple Intelligence runs on device and does not send your prompt to a third-party AI service.</li>
-          <li>Optional web search sends the model-generated query to Brave Search, then returns results to your chosen AI provider.</li>
+          <li>Optional web search sends the model-generated query to the selected search engine (Brave, Tavily, or TinyFish), then returns results to your chosen AI provider.</li>
           <li>Optional Calendar and Location/ETA context packs add event or location details to the prompt sent to your chosen AI provider.</li>
         </ul>
       </section>
@@ -97,10 +102,10 @@
           <li><strong>Prompts and messages:</strong> the text you type or dictate to MILO.</li>
           <li><strong>Conversation history:</strong> prior messages saved locally so you can continue and review conversations.</li>
           <li><strong>Provider settings:</strong> selected provider, selected model, temperature, token limits, and similar app settings.</li>
-          <li><strong>API keys:</strong> keys you enter for providers such as Google Gemini, Mistral AI, OpenRouter, Anthropic Claude, OpenAI, or Groq.</li>
+          <li><strong>API keys:</strong> keys you enter for providers such as Google Gemini, Mistral AI, OpenRouter, Anthropic Claude, OpenAI, or Groq, and optional search-engine keys for Brave, Tavily, or TinyFish.</li>
           <li><strong>AI data sharing permission:</strong> whether you agreed to send prompts and conversation context to third-party AI providers.</li>
-          <li><strong>Context pack preferences (optional):</strong> Calendar and Location/ETA packs you enable in Settings. These packs are off by default.</li>
-          <li><strong>Brave Search API key (optional):</strong> stored locally in iOS Keychain when you enable web search.</li>
+          <li><strong>Context pack preferences (optional):</strong> Calendar and Location/ETA packs you enable in Settings → CarPlay Settings. These packs are off by default.</li>
+          <li><strong>Search engine API keys (optional):</strong> keys for Brave, Tavily, or TinyFish, stored locally in iOS Keychain when you enable web search.</li>
         </ul>
 
         <h3>1.2 Information collected automatically</h3>
@@ -109,7 +114,7 @@
           <li><strong>Website analytics:</strong> askmilo.pro uses Plausible Analytics for aggregate, cookie-free website statistics such as page views, referrers, device type, and approximate country. Plausible does not store IP addresses or use cross-site tracking cookies.</li>
         </ul>
 
-        <p>MILO does not collect contacts, photos, health data, advertising identifiers, or payment information. MILO does not track your location in the background. Optional Location/ETA context (approximate coordinates) and the next calendar event (title, time, location) are sent to your chosen AI provider only when you enable those context packs.</p>
+        <p>MILO does not collect contacts, photos, health data, advertising identifiers, or payment information. MILO does not track your location in the background. Optional Location/ETA context (approximate coordinates) and the next calendar event (title, time, location) are sent to your chosen AI provider only when you enable those context packs (see section 4.2).</p>
       </section>
 
       <section class="section">
@@ -119,6 +124,7 @@
           <li><strong>Locally on your device:</strong> conversations and settings are saved using iOS local storage technologies such as SwiftData and UserDefaults.</li>
           <li><strong>Through iOS Keychain:</strong> API keys are stored using Apple's secure Keychain.</li>
           <li><strong>Through provider API calls:</strong> when you allow AI data sharing and use a cloud provider, MILO sends your prompt and necessary context directly to that provider's API.</li>
+          <li><strong>Through optional search-engine API calls:</strong> when web search is enabled, MILO sends the model-generated query to Brave, Tavily, or TinyFish.</li>
         </ul>
       </section>
 
@@ -130,6 +136,8 @@
           <li>To save and display conversation history on your device.</li>
           <li>To connect to the AI provider and model you select.</li>
           <li>To securely authenticate provider API requests using your API key.</li>
+          <li>To run an optional web search when you enable Settings → Tools → Web search and the model requests it.</li>
+          <li>To enrich a CarPlay question with calendar or approximate location context when you enable those packs.</li>
           <li>To troubleshoot issues if you voluntarily contact support or share diagnostics.</li>
           <li>To understand aggregate website usage and improve public documentation.</li>
         </ul>
@@ -139,7 +147,7 @@
         <h2>4. Third-Party AI Sharing</h2>
         <p><strong>What is sent:</strong> when you use a cloud AI provider, MILO sends the message or prompt you enter, relevant conversation context/history for follow-up replies, selected provider/model information needed to route the request, and for Siri or CarPlay the dictated/transcribed prompt. If you enable Calendar or Location/ETA context packs, MILO also includes the next calendar event (title, time, location) and/or approximate location/ETA coordinates in that prompt.</p>
         <p><strong>Who receives it:</strong> depending on the provider/model you choose, data may be sent directly from your device to Google Gemini, Mistral AI, OpenRouter, Anthropic Claude, OpenAI, or Groq. OpenRouter may route your request to the model provider selected inside OpenRouter.</p>
-        <p><strong>Web search (optional):</strong> when you enable Settings → Tools → Web search and store a Brave Search API key, your AI provider may ask MILO to run a search mid-answer. MILO then sends <em>only the search query the model generates</em> to Brave Search — not your conversation, identity, or other provider keys. Brave returns web results that are sent to your AI provider so it can finish the answer. Search queries are subject to <a href="https://brave.com/privacy/browser/" target="_blank" rel="noopener noreferrer">Brave's privacy policy</a>.</p>
+        <p><strong>Web search (optional):</strong> when you enable Settings → Tools → Web search and store a search-engine API key, your AI provider may ask MILO to run a search mid-answer. MILO then sends <em>only the search query the model generates</em> to the selected search engine — not your conversation, identity, or other provider keys. The engine returns web results that are sent to your AI provider so it can finish the answer. Search queries are subject to the selected vendor's privacy policy (see section 4.1).</p>
         <p><strong>Why it is sent:</strong> only to generate AI responses and provide MILO's assistant features.</p>
         <p><strong>Permission:</strong> MILO asks for explicit in-app permission before sending prompts or conversation context to third-party AI providers. If you decline or revoke permission, cloud AI requests are blocked until you agree again.</p>
         <p><strong>Provider protections:</strong> MILO supports established third-party AI providers with published privacy and security practices. These providers are expected to provide the same or equal protection for the data they process under their own privacy policies and terms. You should review the policy of the provider you choose because their retention and training settings may vary.</p>
@@ -152,6 +160,28 @@
           <li>Groq Privacy Policy: <a href="https://groq.com/privacy-policy/" target="_blank" rel="noopener noreferrer">groq.com/privacy-policy</a></li>
           <li>Brave Search Privacy Policy: <a href="https://brave.com/privacy/browser/" target="_blank" rel="noopener noreferrer">brave.com/privacy/browser</a></li>
         </ul>
+
+        <h3>4.1 Optional web search</h3>
+        <p>When you enable Settings → Tools → Web search and store an API key for Brave, Tavily, or TinyFish:</p>
+        <ul>
+          <li>Your AI provider may ask MILO to run a web search mid-answer (tool use).</li>
+          <li>MILO sends <strong>only the search query the model generates</strong> to the selected search engine — not your conversation, your identity, or your other provider API keys.</li>
+          <li>The search engine returns titles, URLs, and snippets that are sent to your AI provider so it can finish the answer. Answers that used a search cite their sources as tappable links.</li>
+        </ul>
+        <p>Web search is off by default and stays off until you store a key for the selected engine and turn the toggle on. Removing the key disables the tool. Search queries are subject to the selected vendor's privacy policy:</p>
+        <ul>
+          <li>Brave Search: <a href="https://brave.com/privacy/browser/" target="_blank" rel="noopener noreferrer">brave.com/privacy/browser</a></li>
+          <li>Tavily: <a href="https://www.tavily.com/privacy" target="_blank" rel="noopener noreferrer">tavily.com/privacy</a></li>
+          <li>TinyFish: <a href="https://www.tinyfish.ai/privacy-policy" target="_blank" rel="noopener noreferrer">tinyfish.ai/privacy-policy</a></li>
+        </ul>
+
+        <h3>4.2 Optional CarPlay context packs</h3>
+        <p>If you enable context packs in Settings → CarPlay Settings:</p>
+        <ul>
+          <li><strong>Calendar:</strong> MILO may read your next event (title, time, location) and add it to the current question sent to your chosen AI provider.</li>
+          <li><strong>Location/ETA:</strong> MILO may use your approximate coordinates for the current question only. This is not stored as a location history.</li>
+        </ul>
+        <p>Each pack is opt-in, disabled by default, and requires the matching iOS permission. Denying permission leaves the rest of the app working.</p>
       </section>
 
       <section class="section">
@@ -169,9 +199,9 @@
         <ul>
           <li>Review or revoke AI Data Sharing permission in MILO Settings → AI Data Sharing.</li>
           <li>Use on-device Apple Intelligence when available to avoid sending prompts to third-party AI services.</li>
+          <li>Keep web search off, or remove the search-engine API key (Brave, Tavily, or TinyFish) and turn off Settings → Tools → Web search so search queries are not sent.</li>
+          <li>Turn off Calendar or Location/ETA context packs in Settings → CarPlay Settings so event and location details are not added to prompts.</li>
           <li>Delete API keys in MILO Settings → Providers.</li>
-          <li>Turn off Calendar or Location/ETA context packs in MILO Settings (CarPlay / context packs) so event and location details are not added to prompts.</li>
-          <li>Remove the Brave Search API key or turn off Settings → Tools → Web search so search queries are not sent to Brave.</li>
           <li>Delete conversation history in the app's History screens.</li>
           <li>Disable speech recognition permissions in iOS Settings if you do not want to dictate prompts.</li>
           <li>Contact us to request support records be deleted if you emailed us directly.</li>
@@ -180,7 +210,7 @@
 
       <section class="section">
         <h2>7. Children's Privacy</h2>
-        <p>MILO is not directed to children under 13. We do not knowingly collect personal information from children under 13.</p>
+        <p>MILO is not directed to children under 13. We do not knowingly collect personal information from children under 13. The App Store age rating for this version is 12+ because cloud AI replies are not filtered for children and may include mature themes.</p>
       </section>
 
       <section class="section">
@@ -196,7 +226,7 @@
 
       <section class="section">
         <h2>10. Contact Us</h2>
-        <p>If you have questions about this Privacy Policy or MILO's data practices, contact <a href="mailto:luongnv89@gmail.com">luongnv89@gmail.com</a>.</p>
+        <p>If you have questions about this Privacy Policy or MILO's data practices, contact <a href="mailto:luongnv89@gmail.com">luongnv89@gmail.com</a> or see <a href="./support.html">Support</a>.</p>
       </section>
     </main>
   </div>
@@ -227,6 +257,7 @@
             <li><a href="./#story">Story</a></li>
             <li><a href="./#faq">FAQ</a></li>
             <li><a href="./#feedback">Feedback</a></li>
+            <li><a href="./support.html">Support</a></li>
             <li><a href="./changelog.html">Changelog</a></li>
           </ul>
         </div>
