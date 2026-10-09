@@ -1,0 +1,7 @@
+; -------------------------------------------------------------------
+; DNS-AID records for askmilo.pro.
+; draft-mozleywilliams-dnsop-dnsaid-02 — DNS for AI Discovery
+; Apply at the DNS provider (Cloudflare). Do not load as a full zone.
+; -------------------------------------------------------------------
+; Organization agent index -> https://askmilo.pro/.well-known/ai-catalog.json (well-known path carried as key65409, interim private-use key for the unregistered "well-known" SvcParamKey)
+_index._agents.askmilo.pro. 3600 IN SVCB 1 askmilo.pro. alpn="h2,h3" port=443 mandatory=alpn,port key65409="ai-catalog.json"
