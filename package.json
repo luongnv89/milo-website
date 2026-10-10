@@ -12,7 +12,9 @@
     "dns-aid:publish": "node scripts/publish-dns-aid.mjs",
     "dns-aid:verify": "node scripts/verify-dns-aid.mjs",
     "link-headers:publish": "node scripts/publish-link-headers.mjs",
-    "link-headers:verify": "node scripts/verify-link-headers.mjs"
+    "link-headers:verify": "node scripts/verify-link-headers.mjs",
+    "markdown-negotiation:publish": "node scripts/publish-markdown-negotiation.mjs",
+    "markdown-negotiation:verify": "node scripts/verify-markdown-negotiation.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.553.0",
