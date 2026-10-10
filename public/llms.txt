@@ -25,6 +25,11 @@ You bring your own API keys (cloud providers) and switch by voice:
 - OpenRouter — 200+ models behind one key; many free.
 - Apple Intelligence — on-device foundation model; no key, nothing leaves the phone.
 
+You can also type any model ID your provider offers, or connect your own
+OpenAI-compatible server over HTTPS with its address and exact model ID (the
+API key is optional). MILO asks your permission before it sends that server
+your prompts.
+
 Local Ollama is coming soon and is not available in this release.
 
 Free models and API tokens: compare free LLM models and providers at
@@ -38,14 +43,14 @@ eligibility first — not every listed offer works with MILO or stays free.
 
 - API keys are stored in the iOS Keychain.
 - Conversation history stays on-device via SwiftData.
-- No accounts; no analytics on your prompts. Only the provider you enable sees them.
+- No accounts; no analytics on your prompts. Only the provider or server you enable sees them.
 - On-device Apple Intelligence does not send prompts to a third-party AI service.
 
 ## Pages
 
 - [Home](https://askmilo.pro/): Product overview, providers, founder story, FAQ.
 - [Download on the App Store](https://apps.apple.com/app/id6780062368): Install MILO from Apple's App Store.
-- [Privacy Policy](https://askmilo.pro/privacy-policy.html): How MILO handles data, including optional web search and CarPlay context packs.
+- [Privacy Policy](https://askmilo.pro/privacy-policy.html): How MILO handles data, including optional web search, CarPlay context packs and your own OpenAI-compatible server.
 - [Support](https://askmilo.pro/support.html): Email, in-app help, and GitHub issue forms.
 - [Terms](https://askmilo.pro/terms.html): Terms of use.
 - [Changelog](https://askmilo.pro/changelog.html): MILO app and site release notes.
