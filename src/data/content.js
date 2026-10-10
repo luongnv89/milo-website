@@ -18,8 +18,10 @@ import {
   Zap,
 } from 'lucide-react';
 
-// Primary download destination — the public App Store listing.
-export const APP_STORE_URL = 'https://apps.apple.com/app/ask-milo-ai-chat-assistant/id6780062368';
+// Primary download destination — the public App Store listing (canonical
+// id-only form, matching index.html's JSON-LD; the slugged form trips the
+// sk-* secret-scan false positive).
+export const APP_STORE_URL = 'https://apps.apple.com/app/id6780062368';
 
 // Centralized primary CTA for consistency (used by AppStoreButton default + CTAs).
 export const PRIMARY_CTA_LABEL = 'Download on the App Store';
@@ -185,11 +187,14 @@ export const problemSection = {
 // #24 requested a short founder video/voice clip narrating the "Hey Siri,
 // ask MILO" flow. No real one exists yet — recording it requires the actual
 // human founder, which is out of scope for an automated agent (fabricating
-// one would be deceptive). Once a real, human-recorded clip exists, set
-// `founderStory.videoUrl` (or `audioUrl` for a voice-only clip) to activate
-// the <FounderClip> embed in FounderStory.jsx with zero further code
-// changes. Optional companions: `videoPosterUrl`, `videoCaptionsUrl` (a
-// .vtt file), `clipTranscript`, `clipLabel`.
+// one would be deceptive). Once a real, human-recorded clip exists:
+//   1. Drop the file(s) in public/media/ — see docs/founder-clip.md.
+//   2. Set `videoUrl` (or `audioUrl` for a voice-only clip) below.
+// The <FounderClip> embed in FounderStory.jsx then activates with zero
+// further code changes. Accessibility is not optional: video must ship
+// with `videoCaptionsUrl` (a .vtt file) or `clipTranscript`, and the guard
+// tests in tests/founder-clip.test.mjs fail if a configured local URL has
+// no matching asset under public/.
 export const founderStory = {
   eyebrow: 'Why I built MILO',
   name: 'Luong',
@@ -201,6 +206,15 @@ export const founderStory = {
     'The wait for a smarter built-in Siri kept slipping. I’d rather give you the bridge today: Siri voice to real AI. That’s MILO.',
   ],
   signoff: 'Luong, maker of MILO',
+  // Founder clip fields — keep null until a REAL human-recorded clip exists
+  // in public/media/ (see docs/founder-clip.md). Setting a URL without the
+  // asset on disk fails the sync guard in tests/founder-clip.test.mjs.
+  videoUrl: null, // e.g. '/media/founder-clip.mp4' — activates the video embed
+  audioUrl: null, // e.g. '/media/founder-clip.m4a' — voice-only alternative
+  videoPosterUrl: null, // e.g. '/media/founder-clip-poster.jpg'
+  videoCaptionsUrl: null, // e.g. '/media/founder-clip.vtt' — WebVTT captions
+  clipTranscript: null, // short text alternative shown under the player
+  clipLabel: null, // optional accessible-label override for the player
 };
 
 export const howItWorks = {
