@@ -42,6 +42,8 @@ You bring your own API keys (cloud providers) and switch by voice:
 
 Local Ollama is coming soon and is not available in this release.
 
+**Free models and API tokens:** Compare free LLM models and providers at [free-llm-models.custats.info](https://free-llm-models.custats.info/), and find free API tokens, trial credits, and provider offers at [freetokens.custats.info](https://freetokens.custats.info/). Choose an offer with API access for a provider MILO supports, sign up on the provider's site, create an API key in its dashboard, then add it in MILO under Settings → API Keys and choose the model. Check the provider's current limits and eligibility before claiming an offer — listings change, not every offer works with MILO, and free tiers may not stay free.
+
 ## MILO vs ChatGPT, Claude, Gemini apps on iPhone
 
 | | MILO | ChatGPT | Claude | Gemini |
@@ -114,7 +116,7 @@ The wait for a smarter built-in Siri kept slipping. I’d rather give you the br
 ## Links
 
 - [Home](https://askmilo.pro/): Product overview, providers, founder story, FAQ.
-- [Download on the App Store](https://apps.apple.com/app/ask-milo-ai-chat-assistant/id6780062368): Install MILO from Apple's App Store.
+- [Download on the App Store](https://apps.apple.com/app/id6780062368): Install MILO from Apple's App Store.
 - [Privacy Policy](https://askmilo.pro/privacy-policy.html): How MILO handles data, including optional web search and CarPlay context packs.
 - [Support](https://askmilo.pro/support.html): Email, in-app help, and GitHub issue forms.
 - [Terms](https://askmilo.pro/terms.html): Terms of use.

@@ -27,6 +27,13 @@ You bring your own API keys (cloud providers) and switch by voice:
 
 Local Ollama is coming soon and is not available in this release.
 
+Free models and API tokens: compare free LLM models and providers at
+https://free-llm-models.custats.info/ and find free API tokens, trial credits,
+and provider offers at https://freetokens.custats.info/. Pick an offer with API
+access for a MILO-supported provider, create the key on the provider's site,
+then add it in Settings → API Keys. Check the provider's current limits and
+eligibility first — not every listed offer works with MILO or stays free.
+
 ## Privacy
 
 - API keys are stored in the iOS Keychain.
@@ -37,7 +44,7 @@ Local Ollama is coming soon and is not available in this release.
 ## Pages
 
 - [Home](https://askmilo.pro/): Product overview, providers, founder story, FAQ.
-- [Download on the App Store](https://apps.apple.com/app/ask-milo-ai-chat-assistant/id6780062368): Install MILO from Apple's App Store.
+- [Download on the App Store](https://apps.apple.com/app/id6780062368): Install MILO from Apple's App Store.
 - [Privacy Policy](https://askmilo.pro/privacy-policy.html): How MILO handles data, including optional web search and CarPlay context packs.
 - [Support](https://askmilo.pro/support.html): Email, in-app help, and GitHub issue forms.
 - [Terms](https://askmilo.pro/terms.html): Terms of use.
