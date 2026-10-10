@@ -1,10 +1,11 @@
-import { readFileSync, writeFileSync } from 'node:fs';
+import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
 import { AGENT_CARD } from './agent-card.mjs';
 import { API_CATALOG } from './api-catalog.mjs';
+import { MCP_SERVER_CARD } from './mcp-server-card.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const skillDir = 'dist/.well-known/agent-skills/milo-hands-free-ai-via-siri';
@@ -12,6 +13,7 @@ const skillPath = join(root, skillDir, 'SKILL.md');
 const indexPath = join(root, 'dist/.well-known/agent-skills/index.json');
 const agentCardPath = join(root, 'dist/.well-known/agent-card.json');
 const apiCatalogPath = join(root, 'dist/.well-known/api-catalog');
+const mcpServerCardPath = join(root, 'dist/.well-known/mcp/server-card.json');
 
 const skill = readFileSync(skillPath);
 const digest = `sha256:${createHash('sha256').update(skill).digest('hex')}`;
@@ -53,3 +55,10 @@ console.log(`well-known: wrote ${agentCardPath.split('/').slice(-2).join('/')}`)
 // in scripts/api-catalog.mjs corrects the Content-Type at the edge.
 writeFileSync(apiCatalogPath, `${JSON.stringify(API_CATALOG, null, 2)}\n`);
 console.log(`well-known: wrote ${apiCatalogPath.split('/').slice(-2).join('/')}`);
+
+// MCP Server Card (SEP-1649) — canonical shape lives in
+// scripts/mcp-server-card.mjs (generated rather than committed so tools stay
+// in sync with the WebMCP tool set and version with package.json).
+mkdirSync(dirname(mcpServerCardPath), { recursive: true });
+writeFileSync(mcpServerCardPath, `${JSON.stringify(MCP_SERVER_CARD, null, 2)}\n`);
+console.log(`well-known: wrote ${mcpServerCardPath.split('/').slice(-3).join('/')}`);

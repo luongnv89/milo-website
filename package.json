@@ -18,7 +18,8 @@
     "link-headers:publish": "node scripts/publish-link-headers.mjs",
     "link-headers:verify": "node scripts/verify-link-headers.mjs",
     "markdown-negotiation:publish": "node scripts/publish-markdown-negotiation.mjs",
-    "markdown-negotiation:verify": "node scripts/verify-markdown-negotiation.mjs"
+    "markdown-negotiation:verify": "node scripts/verify-markdown-negotiation.mjs",
+    "mcp-server-card:verify": "node scripts/verify-mcp-server-card.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.553.0",
