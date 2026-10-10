@@ -10,6 +10,20 @@
     />
     <link rel="canonical" href="https://askmilo.pro/" />
     <link rel="ai-catalog" href="/.well-known/ai-catalog.json" />
+    <!--
+      Agent-discovery link hints (RFC 8288). These are the HTML serialization
+      of the Link response header the Cloudflare transform rule sets on the
+      homepage — keep both in sync (tests/link-headers.test.mjs guards it and
+      scripts/link-headers.mjs is the source of truth).
+    -->
+    <link rel="api-catalog" href="/.well-known/ai-catalog.json" />
+    <link
+      rel="service-desc"
+      type="text/markdown"
+      href="/.well-known/agent-skills/milo-hands-free-ai-via-siri/SKILL.md"
+    />
+    <link rel="service-doc" type="text/plain" href="/llms-full.txt" />
+    <link rel="describedby" type="text/plain" href="/llms.txt" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="MILO" />
     <meta property="og:url" content="https://askmilo.pro/" />
@@ -168,8 +182,8 @@
               "GPT-5.5, Claude Opus 4.8, Gemini 3.5 Flash, Mistral, Groq, OpenRouter, Apple Intelligence",
               "Your keys, your data — nothing logged or sold"
             ],
-            "downloadUrl": "https://apps.apple.com/app/ask-milo-ai-chat-assistant/id6780062368",
-            "installUrl": "https://apps.apple.com/app/ask-milo-ai-chat-assistant/id6780062368",
+            "downloadUrl": "https://apps.apple.com/app/id6780062368",
+            "installUrl": "https://apps.apple.com/app/id6780062368",
             "author": { "@id": "https://askmilo.pro/#org" },
             "offers": {
               "@type": "Offer",
