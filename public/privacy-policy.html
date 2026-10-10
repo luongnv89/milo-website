@@ -53,7 +53,7 @@
         "isPartOf": { "@id": "https://askmilo.pro/#website" },
         "about": { "@id": "https://askmilo.pro/#org" },
         "inLanguage": "en",
-        "dateModified": "2026-09-15"
+        "dateModified": "2026-10-10"
       },
       {
         "@type": "BreadcrumbList",
@@ -79,7 +79,7 @@
 
     <main class="prose">
       <h1 class="display-page">Privacy Policy</h1>
-      <p class="meta updated">Last updated: September 15, 2026</p>
+      <p class="meta updated">Last updated: October 10, 2026</p>
 
       <section class="card section">
         <h2>Quick Summary</h2>
@@ -88,6 +88,7 @@
           <li>Your API keys are stored locally on your device in iOS Keychain.</li>
           <li>When you use a cloud AI provider, MILO sends your prompt and relevant conversation context directly from your device to the provider you selected.</li>
           <li>MILO asks for in-app permission before sending prompts or conversation context to third-party AI providers.</li>
+          <li>If you connect your own OpenAI-compatible server, MILO sends your prompt and relevant conversation context only to the HTTPS address you enter, after you give permission for that address.</li>
           <li>Optional web search is off by default. If you turn it on, MILO sends only the search query to Brave, Tavily, or TinyFish.</li>
           <li>Apple Intelligence runs on device and does not send your prompt to a third-party AI service.</li>
           <li>Optional web search sends the model-generated query to the selected search engine (Brave, Tavily, or TinyFish), then returns results to your chosen AI provider.</li>
@@ -102,8 +103,9 @@
           <li><strong>Prompts and messages:</strong> the text you type or dictate to MILO.</li>
           <li><strong>Conversation history:</strong> prior messages saved locally so you can continue and review conversations.</li>
           <li><strong>Provider settings:</strong> selected provider, selected model, temperature, token limits, and similar app settings.</li>
-          <li><strong>API keys:</strong> keys you enter for providers such as Google Gemini, Mistral AI, OpenRouter, Anthropic Claude, OpenAI, or Groq, and optional search-engine keys for Brave, Tavily, or TinyFish.</li>
-          <li><strong>AI data sharing permission:</strong> whether you agreed to send prompts and conversation context to third-party AI providers.</li>
+          <li><strong>API keys:</strong> keys you enter for providers such as Google Gemini, Mistral AI, OpenRouter, Anthropic Claude, OpenAI, or Groq, optional search-engine keys for Brave, Tavily, or TinyFish, and an optional key for your own OpenAI-compatible server.</li>
+          <li><strong>Custom server settings (optional):</strong> the HTTPS API base URL and exact model ID you enter for your own OpenAI-compatible server, stored locally on your device.</li>
+          <li><strong>AI data sharing permission:</strong> whether you agreed to send prompts and conversation context to third-party AI providers and, for your own server, which API base you agreed to.</li>
           <li><strong>Context pack preferences (optional):</strong> Calendar and Location/ETA packs you enable in Settings → CarPlay Settings. These packs are off by default.</li>
           <li><strong>Search engine API keys (optional):</strong> keys for Brave, Tavily, or TinyFish, stored locally in iOS Keychain when you enable web search.</li>
         </ul>
@@ -123,7 +125,7 @@
           <li><strong>Directly from you:</strong> when you type, dictate, configure settings, add API keys, or contact support.</li>
           <li><strong>Locally on your device:</strong> conversations and settings are saved using iOS local storage technologies such as SwiftData and UserDefaults.</li>
           <li><strong>Through iOS Keychain:</strong> API keys are stored using Apple's secure Keychain.</li>
-          <li><strong>Through provider API calls:</strong> when you allow AI data sharing and use a cloud provider, MILO sends your prompt and necessary context directly to that provider's API.</li>
+          <li><strong>Through provider API calls:</strong> when you allow AI data sharing and use a cloud provider, MILO sends your prompt and necessary context directly to that provider's API. If you use your own OpenAI-compatible server, the request goes directly to the HTTPS API base you entered.</li>
           <li><strong>Through optional search-engine API calls:</strong> when web search is enabled, MILO sends the model-generated query to Brave, Tavily, or TinyFish.</li>
         </ul>
       </section>
@@ -146,10 +148,10 @@
       <section class="card section">
         <h2>4. Third-Party AI Sharing</h2>
         <p><strong>What is sent:</strong> when you use a cloud AI provider, MILO sends the message or prompt you enter, relevant conversation context/history for follow-up replies, selected provider/model information needed to route the request, and for Siri or CarPlay the dictated/transcribed prompt. If you enable Calendar or Location/ETA context packs, MILO also includes the next calendar event (title, time, location) and/or approximate location/ETA coordinates in that prompt.</p>
-        <p><strong>Who receives it:</strong> depending on the provider/model you choose, data may be sent directly from your device to Google Gemini, Mistral AI, OpenRouter, Anthropic Claude, OpenAI, or Groq. OpenRouter may route your request to the model provider selected inside OpenRouter.</p>
+        <p><strong>Who receives it:</strong> depending on the provider/model you choose, data may be sent directly from your device to Google Gemini, Mistral AI, OpenRouter, Anthropic Claude, OpenAI, or Groq. OpenRouter may route your request to the model provider selected inside OpenRouter. If you choose Custom OpenAI-compatible, the data goes to the server at the HTTPS API base URL you enter (see section 4.3).</p>
         <p><strong>Web search (optional):</strong> when you enable Settings → Tools → Web search and store a search-engine API key, your AI provider may ask MILO to run a search mid-answer. MILO then sends <em>only the search query the model generates</em> to the selected search engine — not your conversation, identity, or other provider keys. The engine returns web results that are sent to your AI provider so it can finish the answer. Search queries are subject to the selected vendor's privacy policy (see section 4.1).</p>
         <p><strong>Why it is sent:</strong> only to generate AI responses and provide MILO's assistant features.</p>
-        <p><strong>Permission:</strong> MILO asks for explicit in-app permission before sending prompts or conversation context to third-party AI providers. If you decline or revoke permission, cloud AI requests are blocked until you agree again.</p>
+        <p><strong>Permission:</strong> MILO asks for explicit in-app permission before sending prompts or conversation context to third-party AI providers. If you decline or revoke permission, cloud AI requests are blocked until you agree again. When MILO changes what this disclosure covers, it asks again before the next cloud request. If you connect your own OpenAI-compatible server, permission is given separately for the API base you enter.</p>
         <p><strong>Provider protections:</strong> MILO supports established third-party AI providers with published privacy and security practices. These providers are expected to provide the same or equal protection for the data they process under their own privacy policies and terms. You should review the policy of the provider you choose because their retention and training settings may vary.</p>
         <ul>
           <li>Google Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a></li>
@@ -182,6 +184,17 @@
           <li><strong>Location/ETA:</strong> MILO may use your approximate coordinates for the current question only. This is not stored as a location history.</li>
         </ul>
         <p>Each pack is opt-in, disabled by default, and requires the matching iOS permission. Denying permission leaves the rest of the app working.</p>
+
+        <h3>4.3 Your own OpenAI-compatible server (optional)</h3>
+        <p>If you choose Custom OpenAI-compatible and enter your own server:</p>
+        <ul>
+          <li>You enter an HTTPS API base URL and an exact model ID. MILO accepts only HTTPS addresses without embedded credentials.</li>
+          <li>An API key is optional. If you add one, it is stored in iOS Keychain on this device and sent only to that server.</li>
+          <li>MILO asks for permission for that specific API base before sending anything. Allowing AI Data Sharing for the built-in providers does not cover your server, and a different address needs its own permission.</li>
+          <li>MILO sends the same data it would send a cloud AI provider: your prompt, relevant conversation context, the model ID, any Calendar or Location/ETA context you enabled, and web search results when a search runs.</li>
+          <li>MILO refuses redirects from that server, so your prompts, context, key, and search results are not forwarded to another address.</li>
+          <li>MILO does not operate or control that server. Whoever runs it decides how it stores and uses what it receives.</li>
+        </ul>
       </section>
 
       <section class="section">
@@ -190,7 +203,7 @@
           <li><strong>Conversation history:</strong> stored locally on your device until you delete conversations or uninstall the app.</li>
           <li><strong>API keys:</strong> stored in iOS Keychain until you delete them in MILO settings or remove app data from your device.</li>
           <li><strong>Settings and consent:</strong> stored locally until changed or reset.</li>
-          <li><strong>Provider retention:</strong> third-party AI providers may retain API request data according to their own policies and your provider account settings.</li>
+          <li><strong>Provider retention:</strong> third-party AI providers, and any OpenAI-compatible server you connect, may retain API request data according to their own policies and your account settings.</li>
         </ul>
       </section>
 
@@ -202,6 +215,7 @@
           <li>Keep web search off, or remove the search-engine API key (Brave, Tavily, or TinyFish) and turn off Settings → Tools → Web search so search queries are not sent.</li>
           <li>Turn off Calendar or Location/ETA context packs in Settings → CarPlay Settings so event and location details are not added to prompts.</li>
           <li>Delete API keys in MILO Settings → Providers.</li>
+          <li>If you connect your own server, stop using it by switching to another provider, or revoke AI Data Sharing to clear permission for its API base.</li>
           <li>Delete conversation history in the app's History screens.</li>
           <li>Disable speech recognition permissions in iOS Settings if you do not want to dictate prompts.</li>
           <li>Contact us to request support records be deleted if you emailed us directly.</li>
@@ -210,7 +224,7 @@
 
       <section class="section">
         <h2>7. Children's Privacy</h2>
-        <p>MILO is not directed to children under 13. We do not knowingly collect personal information from children under 13. The App Store age rating for this version is 12+ because cloud AI replies are not filtered for children and may include mature themes.</p>
+        <p>MILO is not directed to children under 13. We do not knowingly collect personal information from children under 13. MILO is rated 13+ on the App Store (shown as 12+ on devices running OS versions earlier than 26) because cloud AI replies and optional web search snippets are not filtered for children and may include mature themes.</p>
       </section>
 
       <section class="section">
