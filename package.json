@@ -10,6 +10,7 @@
     "verify": "npm test && npm run build",
     "test": "node --test tests/*.test.mjs",
     "agent-card:verify": "node scripts/verify-agent-card.mjs",
+    "auth-md:verify": "node scripts/verify-auth-md.mjs",
     "api-catalog:publish": "node scripts/publish-api-catalog.mjs",
     "api-catalog:verify": "node scripts/verify-api-catalog.mjs",
     "dns-aid:publish": "node scripts/publish-dns-aid.mjs",
