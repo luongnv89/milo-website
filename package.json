@@ -9,6 +9,7 @@
     "preview": "vite preview",
     "verify": "npm test && npm run build",
     "test": "node --test tests/*.test.mjs",
+    "agent-card:verify": "node scripts/verify-agent-card.mjs",
     "dns-aid:publish": "node scripts/publish-dns-aid.mjs",
     "dns-aid:verify": "node scripts/verify-dns-aid.mjs",
     "link-headers:publish": "node scripts/publish-link-headers.mjs",

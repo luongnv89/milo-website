@@ -3,10 +3,13 @@ import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
+import { AGENT_CARD } from './agent-card.mjs';
+
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const skillDir = 'dist/.well-known/agent-skills/milo-hands-free-ai-via-siri';
 const skillPath = join(root, skillDir, 'SKILL.md');
 const indexPath = join(root, 'dist/.well-known/agent-skills/index.json');
+const agentCardPath = join(root, 'dist/.well-known/agent-card.json');
 
 const skill = readFileSync(skillPath);
 const digest = `sha256:${createHash('sha256').update(skill).digest('hex')}`;
@@ -34,3 +37,9 @@ const index = {
 
 writeFileSync(indexPath, `${JSON.stringify(index, null, 2)}\n`);
 console.log(`well-known: wrote ${indexPath.split('/').slice(-3).join('/')} (digest ${digest})`);
+
+// A2A Agent Card — canonical shape lives in scripts/agent-card.mjs (the card
+// is generated rather than committed so skills stay in sync with the WebMCP
+// tool set and version with package.json).
+writeFileSync(agentCardPath, `${JSON.stringify(AGENT_CARD, null, 2)}\n`);
+console.log(`well-known: wrote ${agentCardPath.split('/').slice(-2).join('/')}`);
