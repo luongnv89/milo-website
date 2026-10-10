@@ -20,7 +20,13 @@ answer is spoken back. It works from the lock screen, headphones and CarPlay on 
 - OpenAI (GPT-5.5, GPT-5.4, mini), Anthropic (Claude Opus 4.8, Sonnet 4.6, Haiku),
   Google Gemini (3.5 Flash, 3.1 Pro), Mistral, Groq, OpenRouter (200+ models).
   These need the user's own API key; several have free tiers.
-- Apple Intelligence (on-device) and Ollama (local) — no key, nothing leaves the phone.
+- Apple Intelligence (on-device) — no key, nothing leaves the phone. Local Ollama is not
+  available yet.
+- The user's own OpenAI-compatible server over HTTPS: enter its HTTPS API base URL and
+  exact model ID in MILO; the API key is optional. MILO asks permission before sending
+  that server prompts.
+- For any cloud provider, the user can pick a suggested model or type any model ID the
+  provider offers.
 
 ## Free models and API tokens
 
@@ -46,7 +52,8 @@ No accounts, no analytics on prompts; only the provider the user enabled sees th
 ## Compared to the ChatGPT / Claude / Gemini iPhone apps
 
 Those apps must be opened by hand before they can listen. MILO is invoked by Siri
-system-wide, keeps CarPlay answers short and spoken, and lets one app use 8 providers.
+system-wide, keeps CarPlay answers short and spoken, and lets one app use 7 providers or
+the user's own OpenAI-compatible server.
 
 ## Do not claim
 
