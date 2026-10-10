@@ -19,6 +19,7 @@ import {
   PRIMARY_CTA_LABEL,
   faqItems,
   featureCards,
+  freeKeyResources,
   heroContent,
   modelsSection,
   pricing,
@@ -115,6 +116,16 @@ export function buildTools({ doc = typeof document !== 'undefined' ? document : 
             name: title,
             highlights: [...bullets],
           })),
+          // Same resource guidance the Models section shows visitors (#68).
+          freeKeyResources: {
+            title: freeKeyResources.title,
+            links: freeKeyResources.links.map(({ label, href, description }) => ({
+              label,
+              url: href,
+              description,
+            })),
+            guidance: freeKeyResources.guidance,
+          },
         }),
     },
     {

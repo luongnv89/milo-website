@@ -1,4 +1,6 @@
-import { modelsSection, providers } from '../data/content.js';
+import { ArrowUpRight } from 'lucide-react';
+
+import { freeKeyResources, modelsSection, providers } from '../data/content.js';
 
 export function ModelsSection() {
   return (
@@ -25,6 +27,29 @@ export function ModelsSection() {
               </ul>
             </div>
           ))}
+        </div>
+
+        <div className="card mt-8 p-6 sm:p-8">
+          <h3 className="text-[17px] font-medium text-ink">{freeKeyResources.title}</h3>
+          <p className="mt-2 text-sm text-ink-2">{freeKeyResources.lead}</p>
+          <div className="mt-4 grid gap-3 sm:grid-cols-2">
+            {freeKeyResources.links.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block rounded-xl border border-line bg-paper-2 p-4 transition-colors hover:border-line-strong"
+              >
+                <span className="flex items-center gap-1.5 break-all text-[15px] font-medium text-ink">
+                  {link.label}
+                  <ArrowUpRight className="h-4 w-4 flex-shrink-0 text-ink-3" aria-hidden="true" />
+                </span>
+                <span className="mt-1 block text-sm text-ink-2">{link.description}</span>
+              </a>
+            ))}
+          </div>
+          <p className="mt-4 text-sm leading-relaxed text-ink-2">{freeKeyResources.guidance}</p>
         </div>
       </div>
     </section>

@@ -417,6 +417,30 @@ export const providers = [
   },
 ];
 
+// Free model & API token directories for visitors who don't have a provider
+// key yet (#68). Rendered under the provider grid in ModelsSection and mirrored
+// in support.html, llms.txt, llms-full.txt and the agent SKILL.md — keep the
+// copy in sync across those surfaces (tests/free-resources.test.mjs guards the
+// links and the limits/eligibility caveat).
+export const freeKeyResources = {
+  title: 'No API key yet? Start with a free one.',
+  lead: 'Two community directories for finding a key that works with MILO:',
+  links: [
+    {
+      label: 'free-llm-models.custats.info',
+      href: 'https://free-llm-models.custats.info/',
+      description: 'Compare free LLM models and the providers behind them.',
+    },
+    {
+      label: 'freetokens.custats.info',
+      href: 'https://freetokens.custats.info/',
+      description: 'Find free API tokens, trial credits and provider offers.',
+    },
+  ],
+  guidance:
+    'Pick an offer with API access for a provider MILO supports — OpenAI, Anthropic, Google Gemini, Mistral, Groq or OpenRouter. Sign up on the provider’s site, create an API key in its dashboard, then add it in MILO under Settings → API Keys and choose the model. Check the provider’s current limits and eligibility before claiming an offer — listings change, not every offer works with MILO, and free tiers may not stay free.',
+};
+
 export const comparisonSection = {
   eyebrow: 'Compared',
   title: 'The apps are smart. They just can’t hear you.',
