@@ -49,7 +49,7 @@
         "isPartOf": { "@id": "https://askmilo.pro/#website" },
         "about": { "@id": "https://askmilo.pro/#org" },
         "inLanguage": "en",
-        "dateModified": "2026-09-15"
+        "dateModified": "2026-10-10"
       },
       {
         "@type": "BreadcrumbList",
@@ -75,7 +75,7 @@
 
     <main class="prose">
       <h1 class="display-page">Terms of Service</h1>
-      <p class="meta updated">Last updated: September 15, 2026</p>
+      <p class="meta updated">Last updated: October 10, 2026</p>
 
       <section class="section">
         <h2>1. Agreement to Terms</h2>
@@ -84,7 +84,7 @@
 
       <section class="section">
         <h2>2. Service Description</h2>
-        <p>MILO is an iOS AI assistant that lets you use supported AI providers through chat, Siri, and CarPlay workflows. MILO may support cloud providers such as Google Gemini, Mistral AI, OpenRouter, Anthropic Claude, OpenAI, and Groq, plus on-device or local options where available.</p>
+        <p>MILO is an iOS AI assistant that lets you use supported AI providers through chat, Siri, and CarPlay workflows. MILO may support cloud providers such as Google Gemini, Mistral AI, OpenRouter, Anthropic Claude, OpenAI, and Groq, plus on-device or local options where available. MILO may also let you connect your own OpenAI-compatible server over HTTPS.</p>
         <p>MILO is primarily a client application. You choose the provider, configure your own API key when required, and control whether cloud AI data sharing is allowed.</p>
       </section>
 
@@ -94,6 +94,7 @@
         <p>Optional web search, when enabled in Settings → Tools, sends only the model-generated search query to Brave, Tavily, or TinyFish so the provider can finish an answer with current web results.</p>
         <ul>
           <li>You are responsible for reviewing and complying with each AI provider's terms and policies.</li>
+          <li>If you connect your own OpenAI-compatible server, you are responsible for that server, its terms, and how it stores or uses what MILO sends it. MILO asks for permission for that server's address before sending data.</li>
           <li>You are responsible for charges, quotas, and rate limits associated with your provider accounts and API keys.</li>
           <li>Provider availability, model behavior, data retention, and output quality are controlled by the third-party provider, not MILO.</li>
           <li>If you do not want prompts sent to a third-party AI provider, do not allow AI Data Sharing and use on-device/local options when available.</li>
@@ -120,7 +121,7 @@
         <h2>6. Privacy</h2>
         <ul>
           <li>Conversation history is stored locally on your device unless sent to your selected provider as part of a prompt/context request.</li>
-          <li>API keys are stored locally in iOS Keychain and used only to authenticate requests to the provider you configure.</li>
+          <li>API keys are stored locally in iOS Keychain and used only to authenticate requests to the provider or server you configure.</li>
           <li>MILO does not operate a cloud conversation server or sell your personal data.</li>
           <li>Details about collection, use, retention, and third-party AI sharing are available in the <a href="./privacy-policy.html">Privacy Policy</a>.</li>
         </ul>
