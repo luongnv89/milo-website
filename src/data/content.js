@@ -130,7 +130,7 @@ export const featureCards = [
   },
   {
     title: 'Any model, switched by voice',
-    description: '7 providers and 200+ models, including on-device Apple Intelligence.',
+    description: '7 providers and 200+ models, including on-device Apple Intelligence, or your own OpenAI-compatible server over HTTPS.',
     icon: Layers3,
   },
   {
@@ -362,7 +362,7 @@ export const screenshotGroups = [
 export const modelsSection = {
   eyebrow: 'Models',
   title: 'Your keys. Any model. One voice.',
-  lead: 'Pick from 7 providers, including on-device Apple Intelligence. Switch by voice mid-conversation. Only the provider you choose ever sees a prompt.',
+  lead: 'Pick from 7 providers, including on-device Apple Intelligence, or connect your own OpenAI-compatible server over HTTPS. Type any model ID your provider offers and switch by voice mid-conversation. Only the provider or server you choose ever sees a prompt.',
 };
 
 export const providers = [
@@ -456,17 +456,17 @@ export const faqItems = [
   {
     question: 'Which AI models can I use?',
     answer:
-      'Seven providers you can use today: OpenAI (GPT-5.5), Anthropic (Claude Opus 4.8), Google (Gemini 3.5 Flash), Mistral, Groq, OpenRouter (200+ models), and Apple’s on-device Intelligence. Local Ollama is coming soon and is not available in this release. Switch between the shipped providers by voice.',
+      'Seven providers you can use today: OpenAI (GPT-5.5), Anthropic (Claude Opus 4.8), Google (Gemini 3.5 Flash), Mistral, Groq, OpenRouter (200+ models), and Apple’s on-device Intelligence. Pick a suggested model or type any model ID your provider offers. You can also connect your own OpenAI-compatible server over HTTPS with its address and exact model ID. Local Ollama is coming soon and is not available in this release. Switch between the shipped providers by voice.',
   },
   {
     question: 'How private is it?',
     answer:
-      'Your API keys live in the iOS Keychain and your conversation history stays on your device with SwiftData. There are no accounts and no analytics on your prompts — only the provider you enable ever sees them. On-device Apple Intelligence does not send prompts to a third-party AI service.',
+      'Your API keys live in the iOS Keychain and your conversation history stays on your device with SwiftData. There are no accounts and no analytics on your prompts — only the provider or server you enable ever sees them. On-device Apple Intelligence does not send prompts to a third-party AI service.',
   },
   {
     question: 'Do I need my own API keys?',
     answer:
-      'For the cloud providers, yes — that keeps costs transparent and under your control, and many offer generous free tiers. Apple Intelligence (on-device) needs no key.',
+      'For the cloud providers, yes — that keeps costs transparent and under your control, and many offer generous free tiers. Apple Intelligence (on-device) needs no key, and a key for your own OpenAI-compatible server is optional.',
   },
   {
     question: 'Is it free?',
